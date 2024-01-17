@@ -57,9 +57,11 @@ To contribute:
 - Push to the branch.
 - Open a pull request.
 
-## Author
+## More Info
 
-- **Bryce Benton** - *Initial work* - [bryce.benton@austintexas.gov](mailto:bryce.benton@austintexas.gov)
+- **Bryce Benton** - [bryce.benton@austintexas.gov](mailto:bryce.benton@austintexas.gov)
+
+Reference: https://library.austintexas.gov/slr/calendar?date=2024-01-17
 
 ## Acknowledgments
 
