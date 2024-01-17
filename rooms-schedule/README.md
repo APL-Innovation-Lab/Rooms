@@ -1,5 +1,5 @@
 
-# Rooms - React Application for Room Reservations
+# Rooms Schedule - React Application for Room Reservations
 
 Welcome to the Rooms project, hosted by the APL-Innovation-Lab! This React application is designed for managing and displaying room reservations, primarily developed for use at the Austin Public Library.
 
