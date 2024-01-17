@@ -1,0 +1,36 @@
+.accordion .accordion__heading {
+    position: relative;
+    background-color: rgb(239, 239, 239);
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    background-image: url('/library/misc/add.svg'), linear-gradient(transparent, transparent);
+    background-repeat: no-repeat;
+    background-position: right 4px center;
+    background-size: 1.5rem;
+    color: rgb(27, 27, 27);
+    cursor: pointer;
+    margin-block: 4px 0px;
+    padding-left: 16px !important;
+}
+.accordion .accordion__heading.active {
+    background-image: url('/library/misc/remove.svg'), linear-gradient(transparent, transparent);
+}
+.accordion accordion__heading.active + .accordion__details {
+    margin-bottom: 40px;
+    display: block;
+}
+.accordion__details {
+	display: none;
+	padding-bottom: 16px;
+}
+
+.accordion .accordion__heading a span {
+	position: absolute;
+	right: 40px;
+	top: 8px;
+	border: 1px solid;
+	padding: 4px;
+	font-weight: normal;
+	font-size: 18px;
+}

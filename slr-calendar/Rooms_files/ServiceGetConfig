@@ -1,0 +1,3 @@
+UniqueChat.callbackGetWidgetConfig(1,"","","",0,0,0,0,0,"US");
+if ( typeof UniqueChat.setVisitorCountry == 'function' ) { UniqueChat.setVisitorCountry("US");
+}
