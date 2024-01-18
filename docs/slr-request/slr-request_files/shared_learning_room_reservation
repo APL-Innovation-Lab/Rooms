@@ -1,0 +1,6 @@
+#webform-submission-shared-learning-room-reservation-delete-form {
+	color: transparent;
+}
+.item-list {
+	height: 0;
+}
