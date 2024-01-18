@@ -1,0 +1,5 @@
+services:
+  hi_how_are_you.commands:
+    class: Drupal\hi_how_are_you\Commands\HiHowAreYouCommands
+    tags:
+      - { name: drush.command }
