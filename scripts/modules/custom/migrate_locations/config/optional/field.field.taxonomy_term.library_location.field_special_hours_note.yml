@@ -1,0 +1,21 @@
+uuid: 63351d4c-8aec-44bd-91c3-8e432fc3db3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_special_hours_note
+    - taxonomy.vocabulary.library_location
+  module:
+    - text
+id: taxonomy_term.library_location.field_special_hours_note
+field_name: field_special_hours_note
+entity_type: taxonomy_term
+bundle: library_location
+label: 'Special Hours Note'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

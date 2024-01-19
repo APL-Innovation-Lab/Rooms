@@ -1,0 +1,19 @@
+uuid: 873a8ec7-d8bc-4920-b1f8-5263dac2b91f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_location_code
+    - taxonomy.vocabulary.library_location
+id: taxonomy_term.library_location.field_location_code
+field_name: field_location_code
+entity_type: taxonomy_term
+bundle: library_location
+label: 'Location Code'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

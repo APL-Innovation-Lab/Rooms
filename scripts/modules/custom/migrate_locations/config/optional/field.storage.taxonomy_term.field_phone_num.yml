@@ -1,0 +1,21 @@
+uuid: 754b631a-8b85-4f4a-9535-f00b0acc6ca3
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_phone_num
+field_name: field_phone_num
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 13
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

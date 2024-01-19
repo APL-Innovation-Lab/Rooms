@@ -1,0 +1,105 @@
+uuid: fe660ec6-4ddb-4119-b1b5-13d7d7b4ea78
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_file
+_core:
+  default_config_hash: bVtIrZO_148Rdmcx0OAzI8or1Cn0O2M0sfbrN4SIkkQ
+id: apl_dev_locations
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - taxonomy
+migration_group: apl_dev
+label: 'Library Locations'
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - 'public://migrate_locations/library_locations.json'
+  item_selector: library_location
+  fields:
+    -
+      name: tid
+      selector: tid
+    -
+      name: name
+      selector: name
+    -
+      name: capacities
+      selector: capacities
+    -
+      name: district
+      selector: district
+    -
+      name: latitude_longitude
+      selector: latitude_longitude
+    -
+      name: location_code
+      selector: location_code
+    -
+      name: main_image_file
+      selector: main_image_file
+    -
+      name: notes
+      selector: notes
+    -
+      name: phone_number
+      selector: phone_number
+    -
+      name: staff_recommendations
+      selector: staff_recommendations
+    -
+      name: street_address
+      selector: street_address
+    -
+      name: zipcode
+      selector: zipcode
+    -
+      name: path
+      selector: path
+    -
+      name: description
+      selector: description
+  ids:
+    tid:
+      type: integer
+  constants:
+    file_destination: 'public://locations/'
+process:
+  vid:
+    plugin: default_value
+    default_value: library_location
+  name: name
+  tid: tid
+  field_capacities: capacities
+  field_district: district
+  field_latitude_longitude: latitude_longitude
+  field_location_code: location_code
+  field_location_main_image:
+    plugin: image_import
+    source: main_image_file
+    destination: file_destination
+    title: name
+    alt: name
+    skip_on_missing_source: true
+  field_notes: notes
+  field_phone_num: phone_number
+  field_staff_recommendations: staff_recommendations
+  field_street_address: street_address
+  field_zipcode: zipcode
+  path: path
+  description: description
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 0
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies: {  }

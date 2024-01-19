@@ -1,0 +1,26 @@
+<?php
+
+declare(strict_types = 1);
+
+/**
+ * @file
+ * Install, update, and uninstall functions for migrate_locations.
+ */
+
+use Drupal\Core\File\FileSystemInterface;
+
+/**
+ * Copies the library_locations file to the sites/default/files folder.
+ */
+function migrate_locations_install(): void {
+  // Create the library_locations file directory and ensure it's writable.
+  $directory = \Drupal::config('system.file')->get('default_scheme') . '://migrate_locations';
+  \Drupal::service('file_system')->prepareDirectory($directory, FileSystemInterface::CREATE_DIRECTORY | FileSystemInterface::MODIFY_PERMISSIONS);
+
+  // Copy the library_locations file to migrate_locations directory.
+  // @todo Use \Drupal\Core\Extension\ExtensionPathResolver::getPath() when we
+  // require Drupal > 9.3.0.
+  $module_path = \Drupal::moduleHandler()->getModule('migrate_locations')->getPath();
+  $file_source = $module_path . '/artifacts/library_locations.json';
+  \Drupal::service('file_system')->copy($file_source, $directory . '/library_locations.json', FileSystemInterface::EXISTS_REPLACE);
+}

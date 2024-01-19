@@ -1,0 +1,21 @@
+uuid: e66117f5-80be-4b38-ad5b-a60b81e338e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_phone_num
+    - taxonomy.vocabulary.library_location
+id: taxonomy_term.library_location.field_phone_num
+field_name: field_phone_num
+entity_type: taxonomy_term
+bundle: library_location
+label: 'Phone Number'
+description: 512-974-xxxx
+required: false
+translatable: false
+default_value:
+  -
+    value: (512)
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 53f041cc-dac7-4524-8239-2b34890d9925
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_staff_recommendations
+    - taxonomy.vocabulary.library_location
+id: taxonomy_term.library_location.field_staff_recommendations
+field_name: field_staff_recommendations
+entity_type: taxonomy_term
+bundle: library_location
+label: 'Staff Recommendations'
+description: 'URL for this location''s recommendations list on Bibliocommons'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

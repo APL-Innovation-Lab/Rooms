@@ -1,0 +1,21 @@
+uuid: f1ea026a-717d-4e75-8801-a59d91a1999f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_district
+    - taxonomy.vocabulary.library_location
+  module:
+    - options
+id: taxonomy_term.library_location.field_district
+field_name: field_district
+entity_type: taxonomy_term
+bundle: library_location
+label: District
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

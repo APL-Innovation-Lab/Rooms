@@ -1,0 +1,21 @@
+uuid: 0be283f0-d1c9-4944-ae33-c610800b6281
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_open_hours_html
+    - taxonomy.vocabulary.library_location
+  module:
+    - text
+id: taxonomy_term.library_location.field_open_hours_html
+field_name: field_open_hours_html
+entity_type: taxonomy_term
+bundle: library_location
+label: 'Open Hours HTML'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
