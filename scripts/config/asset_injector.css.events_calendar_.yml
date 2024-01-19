@@ -1,0 +1,182 @@
+uuid: cca0f7aa-626c-46fc-b00e-b7eb57e410d6
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: events_calendar_
+label: events/calendar
+code: |-
+  /* Audiences */
+  .aud29, .aud30, .aud31, .aud32 {
+  	width: 100%;
+    }
+    
+    /* Calendar Table */
+    .calendar-table {
+  	width: 100%;
+  	border-collapse: collapse;
+  	border-radius: 8px;
+  	table-layout: fixed;
+    }
+    
+    .calendar-table td {
+  	width: auto;
+  	border-collapse: collapse;
+  	border: 1px solid #009abf;
+  	padding: 8px;
+  	color: #969696;
+  	min-width: 50px;
+    }
+    
+    /* Calendar Navigation */
+    #calendar-nav a img {
+  	height: 32px;
+  	margin: 8px 0 0 8px;
+    }
+    
+    /* Event Calendar */
+    .calendar-event,
+    .event-cal {
+  	margin: 12px 0;
+  	font-weight: bold;
+  	color: black;
+  	position: relative;
+  	font-size: 1rem;
+    }
+    
+    .calendar-event__audience-row,
+    .aud_row {
+  	display: flex;
+  	height: 4px;
+  	background: #f9f9f9;
+  	position: absolute;
+  	top: -5px;
+  	right: 0;
+  	width: 100%;
+    }
+    
+    .aud29, .aud31, .aud32 {
+  	height: 4px;
+    }
+    
+    .aud29 { background: #ffce0d; }
+    .aud31 { background: #009abe; }
+    .aud32 { background: #a1d096; }
+    
+    /* Other Month */
+    .day.other-month {
+  	opacity: .35;
+    }
+    
+    /* Event Calendar Details */
+    .event-cal > div {
+  	font-weight: normal;
+    }
+    
+    /* Week Days */
+    .week-days {
+  	background: #dfe1e2;
+    }
+    
+    .week-days .day {
+  	text-transform: uppercase;
+  	color: black;
+    }
+    
+    /* Week */
+    .week {
+  	vertical-align: top;
+    }
+    
+    /* Calendar Header */
+    #calendar h2 {
+  	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+    }
+    
+    #calendar-nav {
+  	display: flex;
+  	justify-content: right;
+  	align-items: center;
+  	margin-right: 25px;
+    }
+    
+    /* Main Calendar */
+    #calendar {
+  	padding: 0 30px;
+    }
+    
+    /* Hidden Elements */
+    .apl-event-row,
+    .usa-pagination {
+  	display: none;
+    }
+    
+    /* Font Sizes */
+    h2 a {
+  	font-size: .8em;
+    }
+    
+    h2 span {
+  	font-size: 1.2em;
+    }
+    
+    /* Calendar Links */
+    #calendar a {
+  	text-decoration: none;
+    }
+    
+    #calendar a:hover {
+  	text-decoration: underline;
+    }
+    
+    /* Optional: Apply mobile-first approach for enhancements */
+    @media (max-width: 600px) {
+    .past-date,
+    .list-calendar,
+    .week-days.calendar__week-days,
+    .day.other-month {
+  	  display: none !important; 
+    }
+  	.calendar-table td {
+  	  display: block;
+  	  width: 100%;
+  	  box-sizing: border-box;
+  	  margin-bottom: 8px;
+  	  height: auto;
+  	}
+    
+  	.calendar-table tr {
+  	  margin-bottom: 0.625rem;
+  	}
+    
+  	.calendar-event {
+  	  font-size: 0.8rem;
+  	}
+    
+  	.calendar-event__time,
+  	.calendar-event__location,
+  	.calendar-event__title {
+  	  /* Adjust padding or margins as needed */
+  	}
+    }
+    
+    /* Optional: Apply mobile-first approach for enhancements */
+    @media (min-width: 481px) {
+  	/* Add styles for larger screens */
+    }
+    
+  .views-field.views-field-title.grid-col-10.grid-offset-1 {
+  	display: none;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/events/calendar\r\n/events/calendar/*"
+contexts: {  }
+conditions_require_all: true

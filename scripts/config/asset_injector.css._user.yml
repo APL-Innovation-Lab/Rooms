@@ -1,0 +1,108 @@
+uuid: dbef7e40-d15f-4e1a-98e6-a71b86fd21a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: _user
+label: /user
+code: |-
+  #apl-add-content li {
+  	display: inline;
+  }
+  .layout-container, .region.region-content {
+  	background: white !important;
+  }
+  .region-help {
+      max-width: 960px;
+      margin: 0 auto;
+      background: white;
+  }
+  #views-exposed-form-my-pages-block-1 {
+  	border: none;
+  	box-shadow: none;
+  }
+
+  .block.block-menu.navigation.menu--add-content.active {
+    display: block;
+  }
+  .block.block-menu.navigation.menu--add-content {
+  	display: none;
+  	position: absolute;
+  	background: white;
+  	z-index: 9;
+  	top: 76px;
+  	padding: 0 10px;
+  	border-radius: 4px;
+  }
+
+  .block.block-views.block-views-blocknavigation-block-16 {
+  	margin: 25px 0;
+  }
+  .menu {
+    margin-bottom: 25px !important;
+  }
+  #block-claro-primary-local-tasks,
+  #block-claro2-primary-local-tasks {
+  	display: none;
+  }
+  .region.region-header {
+  	display: none !important;
+  }
+  #toolbar-item-administration {
+  	margin-left: -1000px;
+  }
+  .d-col-3.t-col-3.m-col-2.layout__region.layout__region--first {
+  	max-width: 100% !important;
+  	width: 100%;
+  }
+  form {
+  	margin-left: 30px;
+  }
+  .flex-grid .d-col-9 {
+  	width: 100% !important;
+  }
+  .fieldset--group {
+  	margin-top: 5px;
+  	margin-bottom: 0;
+  }
+  .views-exposed-form__item--actions.views-exposed-form__item--actions .button {
+  	margin-top: 0 !important;
+  }
+  .views-exposed-form.views-exposed-form {
+  	display: flex;
+  	flex-wrap: wrap;
+  	align-items: flex-start;
+  	margin-top: 1.5rem;
+  	margin-bottom: 1.5rem;
+  	padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  	border: 1px solid rgba(216, 217, 224, 0.8);
+  	border-radius: 2px;
+  	background-color: #fff;
+  	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .layout-container,
+  .region.region-content {
+  	background: #f5f5f5;
+  }
+  .page-wrapper .flex-grid {
+  	display: flex;
+  	justify-content: space-between;
+  	text-align: left;
+  	max-width: 960px !important;
+  	margin: 0 auto;
+  	flex-wrap: wrap;
+  	width: 960px;
+  }
+  .block.block-views.block-views-blockmy-pages-block-1 h2 {
+  	padding: 1px 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/user/*\r\n/editor/*"
+contexts: {  }
+conditions_require_all: false

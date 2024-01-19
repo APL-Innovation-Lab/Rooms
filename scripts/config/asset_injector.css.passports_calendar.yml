@@ -1,0 +1,225 @@
+uuid: 3275436c-ec1a-426c-88f7-849a23c86ce3
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: passports_calendar
+label: 'Passports Calendar'
+code: |
+  .layout.layout--twocol-section.layout--twocol-section--25-75 {
+  	display: block;
+  }
+  .unpublished {
+  	display: none;
+  }
+  .node--unpublished, .comment--unpublished {
+  	background-color: white;
+  }
+  .time {
+  	font-size: 14px;
+  	line-height: 10px !important;
+  	display: inline-block;
+  	margin-top: 10px;
+  	text-align: center;
+  }
+  .usa-form-group {
+  	margin-top: 0 !important;
+  }
+  #slr_request {
+  	margin: 0;
+  }
+
+  #date_next {
+  	display: inline;
+  	margin-left: 10px;
+  }
+  .time {
+  	white-space: nowrap;
+  }
+  .event {
+  	background-color: white;
+  	padding: 1px;
+  	position: absolute;
+  	width: 100% !important;
+  	border: 1px solid #f0f0f0;
+  	overflow: hidden;
+  }
+
+  ul#apl-legend li ul li {
+  	text-align: left !important;
+  }
+  li.usa-button {
+  	vertical-align: top;
+  	text-align: left;
+  	min-height: 172px;
+  	min-width: 169px;
+  	margin: 0 0 20px 20px;
+  }
+  .container {
+    height:720px;
+    width: 100%;
+    display: inline-flex;
+  }
+  #loc {
+  	margin-top: 0;
+  }
+  .field.field--name-title {
+  	margin-bottom: 0;
+  }
+  .block-layout-builder .field--name-title, h1 {
+  	line-height: 1;
+  	font-weight: 700;
+  	padding: 0 !important;
+  }
+  .half-width .event.room-793,
+  .half-width .event.room-796,
+  .half-width .event.room-839,
+  .half-width .event.room-801,
+  .half-width .event.room-804,
+  .half-width .event.room-810 {
+  	width: 33.3% !important;
+  	position: absolute;
+  	right: 0;
+  }
+
+  .half-width .event.room-793,
+  .half-width .event.room-796,
+  .half-width .event.room-839,
+  .half-width .event.room-801,
+  .half-width .event.room-804,
+  .half-width .event.room-808 {
+  	width: 33.3% !important;
+      left: 33.3%;
+  } 
+  .half-width .event.room-795,
+  .half-width .event.room-798,
+  .half-width .event.room-840,
+  .half-width .event.room-803,
+  .half-width .event.room-806,
+  .half-width .event.room-810 {
+  	width: 33.3% !important;
+      left: 66.6%;
+  }
+  .half-width .event.room-792 {
+  	width: 50% !important;
+  	position: absolute;
+  	right: 0;
+  }
+  .half-width .event.room-791 {
+  	width: 50% !important;
+  }
+  .messages--error,
+  .open_extra {
+    display: none;
+  }
+  .view-mr-webform-calendar .view-content {
+  	display: none;
+  }
+  .open_extra.active {
+    display: block;
+  }
+  .view-filters {
+    display: none;
+  }
+  .timings {
+    text-align: right;
+    padding-right: 10px;
+    width: 100px;
+    height: 720px;
+    background-color: white;
+    box-sizing: border-box
+  }
+
+  .timings div {
+    height: 60px;
+  }
+
+  .timings span {
+    color: #696969;
+  }
+
+  .days {
+    height: 720px;
+    width: 100%;
+    background-color: #F0F0F0;
+    border-color: #D1D1D1;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box; 
+    position: relative;
+
+  }
+
+  .usa-button.apl-2nd {
+    background: #FFD700!important;
+    color: #000;
+  }
+  .usa-button.apl-4th {
+    background: #a9dd8e!important;
+    color: #000;
+  }
+  .usa-button.apl-5th {
+    background: #ade4e5!important;
+    color: #000;
+  }
+  .usa-button.apl-6th {
+    background: #fcecc8!important;
+    color: #000;
+  }
+  ul#apl-legend li ul li {
+    display: block;
+    text-align: center;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+  ul#apl-legend li ul {
+    margin: 20px 0 0;
+    padding: 0;
+  }
+  .usa-button:hover,
+  ul#apl-legend a {
+    text-decoration: none;
+  }
+  a.usa-button:hover,
+  ul#apl-legend a:hover {
+    text-decoration: underline;
+  }
+  .fc-timeGridDay-button.fc-button.fc-button-primary.fc-button-active,
+  .fc-head,
+  .fc-day-grid {
+  	display: none !important;
+  }
+  .fc-left {
+  	position: absolute;
+  }
+  .fc-center {
+
+  	width: 100%;
+  	text-align: center;
+  	top: 3px;
+  }
+  #request_wrapper {
+  	padding: 10px;
+  	margin: 0 auto;
+  	display: block;
+  	text-align: center;
+  }
+  .fc-time-grid-event {
+    width: 34px !important;
+    color: black;
+    border: none;
+    background: #FFD700;
+  }
+  .fc-time-grid-event:hover {
+    color: black;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /passports/calendar
+contexts: {  }
+conditions_require_all: true

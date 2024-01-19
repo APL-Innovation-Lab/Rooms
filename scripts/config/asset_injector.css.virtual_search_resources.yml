@@ -1,0 +1,82 @@
+uuid: 0bf08ec2-9e51-433d-85ae-6d4621c8045d
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: virtual_search_resources
+label: 'Virtual - Search Resources'
+code: |
+  #block-exposedformvirtual-library-searchpage-1 h2,
+  #views-exposed-form-virtual-library-search-page-1 {
+  	padding: 1px 15px;
+  }
+  .layout.layout--onecol {
+  	background: none;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 a {
+  	text-decoration: none;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 a:hover {
+  	text-decoration: underline;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 li {
+  	list-style-type: none;
+  }
+
+  #block-exposedformvirtual-library-searchpage-1 {
+  	width: 360px;
+  	float: left;
+  }
+
+  #block-claro2-content {
+  	width: 580px;
+  	float: right;
+  }
+  #block-views-block-navigation-block-6 {
+  	width: 360px;
+  	float: left;
+  	clear: left;
+  }
+
+  #views-exposed-form-virtual-library-search-page-1,
+  .layout.layout--onecol
+  {
+  	width: 100%;
+  }
+  .views-field.views-field-field-database-access {
+  	padding: 1px 15px 15px;
+  }
+  .node__content .layout.layout--onecol {
+  	width: 100% !important;
+  }
+  #block-exposedformvirtual-library-searchpage-1 {
+  	padding: 0 !important;
+  }
+  #edit-actions--2 {
+  	margin: 0 0 15px;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 660px) {
+    
+    
+  #block-exposedformvirtual-library-searchpage-1{
+  	width: 500px !important;
+  }
+  .node__content .layout.layout--onecol,
+  #block-claro2-content,
+  #block-views-block-navigation-block-6 {
+  	width: 100% !important;
+  	max-width: 100% !important;
+  	margin: 0 !important;
+  }
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /virtual/search-resources
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,21 @@
+uuid: a4ca1977-c51b-4344-964c-f4a51e5bbedb
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _apltv_branch_events
+label: /apltv/signature/events
+code: |-
+  .view-filters {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/apltv/*'
+contexts: {  }
+conditions_require_all: true

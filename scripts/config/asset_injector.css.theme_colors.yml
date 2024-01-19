@@ -1,0 +1,95 @@
+uuid: 6e5b72cd-ca05-4bbe-81b0-73bed16d70ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: theme_colors
+label: 'Theme colors'
+code: |
+  #edit-field-rec-theme span {
+  	background: gray;
+  	padding: 4px 10px;
+  	color: white;
+  	font-size: bold;
+  }
+
+  #edit-field-rec-theme span.Black,
+  .recommendation-slide.Black,
+  .apl-alert-row.Black,
+  .apl-theme.Black {
+  	background: #202020;
+  }
+  #edit-field-rec-theme span.Blue,
+  .recommendation-slide.Blue,
+  .apl-alert-row.Blue,
+  .apl-theme.Blue {
+  	background: #0069AA;
+  }
+  #edit-field-rec-theme span.Dark.Green,
+  .recommendation-slide.Dark.Green,
+  .apl-alert-row.Dark.Green,
+  .apl-theme.Dark.Green {
+  	background: #546120;
+  }
+  #edit-field-rec-theme span.Gray,
+  .recommendation-slide.Gray,
+  .apl-alert-row.Gray,
+  .apl-theme.Gray {
+  	background: #54555A;
+  }
+  #edit-field-rec-theme span.Green,
+  .recommendation-slide.Green,
+  .apl-alert-row.Green,
+  .apl-theme.Green {
+  	background: #7CC242;
+  }
+  #edit-field-rec-theme span.Lavender,
+  .recommendation-slide.Lavender,
+  .apl-alert-row.Lavender,
+  .apl-theme.Lavender {
+  	background: #9595CD;
+  }
+  #edit-field-rec-theme span.Light.Blue,
+  .recommendation-slide.Light.Blue,
+  .apl-alert-row.Light.Blue,
+  .apl-theme.Light.Blue {
+  	background: #009ABE;
+  }
+  #edit-field-rec-theme span.Orange,
+  .recommendation-slide.Orange,
+  .apl-alert-row.Orange,
+  .apl-theme.Orange {
+  	background: #FF8300;
+  }
+  #edit-field-rec-theme span.Pink,
+  .recommendation-slide.Pink,
+  .apl-alert-row.Pink,
+  .apl-theme.Pink {
+  	background: #AF1556;
+  }
+  #edit-field-rec-theme span.Purple,
+  .recommendation-slide.Purple,
+  .apl-alert-row.Purple,
+  .apl-theme.Purple {
+  	background: #611F66;
+  }
+  #edit-field-rec-theme span.Yellow,
+  .recommendation-slide.Yellow,
+  .apl-alert-row.Yellow,
+  .apl-theme.Yellow {
+  	background: #F7A800;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/virtual\r\n/node/*\r\n/admin/*"
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

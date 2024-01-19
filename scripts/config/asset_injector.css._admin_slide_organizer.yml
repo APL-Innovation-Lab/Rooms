@@ -1,0 +1,21 @@
+uuid: a964fecf-a3af-43fc-88c3-d9499ab32806
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _admin_slide_organizer
+label: /admin/slide-organizer
+code: |-
+  #edit-actions {
+  	margin-top: 12px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/slide-organizer
+contexts: {  }
+conditions_require_all: true

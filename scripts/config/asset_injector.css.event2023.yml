@@ -1,0 +1,172 @@
+uuid: a03e09a0-4ca7-4056-a89c-086d0b3595e0
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: event2023
+label: event2023
+code: |-
+  .apl-event2023 {
+  	border: 1px solid;
+  	padding: 16px;
+  }
+  div.field-title {
+  	line-height: 200%;
+  }
+  .icon_con {
+  	width: 30px;
+  	text-align: center;
+  }
+  .event-loc,
+  .event-time {
+  	display: flex;
+  	align-items: center;
+  }
+  .event-loc .event_location,
+  .event-time .datetime {
+  	padding-top: 2px;
+  }
+  .apl-event2023 .field-title a {
+  	color: black !important;
+  	text-decoration: none;
+  	font-size: 32px;
+  	margin-bottom: 0px !important;
+  	display: block;
+  }
+  .apl-event2023 .field-body ,
+  .apl-event2023 .field-title {
+  	margin-bottom: 24px;
+  }
+  body .apl-event2023 {
+  	background: white;
+  	text-align: left;
+  	border: 1px solid #009abf !important;
+  	border-radius: 3px;
+  	box-shadow: 4px 4px 4px 0 rgba(0,0,0,.15);
+  	margin-bottom: 24px;
+  }
+  #f-1 {
+  	border: 4px solid #f0f0f0;
+  	position: relative;
+  	padding: 16px;
+  	border-top: none;
+  }
+
+  #f-1 > * {
+  	width: 45%;
+  }
+
+  #f-1 fieldset legend {
+  	margin-top: 8px;
+  }
+
+  #f-1 .form-item {
+  	padding: 0;
+  }
+  #f-1 .form-item.form-item-date {
+  	position: absolute;
+  	top: 0;
+  	right: 16px;
+  }
+  #f-1 .form-item.form-item-loc {
+  	position: absolute;
+  	right: 16px;
+  	bottom: 16px;
+  }
+
+
+  .event_location, 
+  .event_time {
+    padding: 0;
+    display: flex;
+    margin-bottom: 5px;
+  }
+  .block.block-layout-builder .field.field--name-name {
+      padding: 24px 0;
+      font-size: 2em;
+  }
+  #main_image img {
+      width: 100%;
+      height: 200px !important;
+      object-fit: cover;
+      object-position: center;
+  }
+  h1.event-title {
+  	padding: 24px 0;
+  	font-size: 2em;
+  }
+  .event-loc,
+  .event-time {
+  	display: flex;
+  }
+  .icon_svg {
+    width: 22px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 5px;
+  }
+  .event-date {
+    color: #009ABF;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+  .apl-event .field-event-loc, .apl-event .datetime {
+    position: relative !important;
+    margin: 0 !important;
+    display: block;
+  }
+  .field-event-time {
+    display: flex;
+    margin-bottom: .8rem;
+  }
+  #block-moreupcomingevents {
+    float: right;
+    margin: 10px 0 !important;
+  }
+  #block-moreupcomingevents .usa-button {
+    margin: 0;
+  }
+  .apl-event .field-title a {
+    color: black;
+    text-decoration: none;
+    font-size: 32px;
+    margin-bottom: 0px !important;
+    display: block;
+  }
+  body .apl-event {
+  	padding: 16px;
+  	background: white;
+  	text-align: left;
+  	margin-bottom: 16px;
+  	border: 1px solid #009abf !important;
+  	border-radius: 3px;
+  	box-shadow: 4px 4px 4px 0 rgba(0,0,0,.15);
+  }
+  .block.block-views.block-views-blockevents-block-4, .block.block-views.block-views-blocksearch-block-8, .block.block-views.block-views-blockmore-navigation-block-23 {
+    background: white;
+  }
+  .block-views-blocksearch-block-8 div.view-footer a, .block.block-views.block-views-blockevents-block-4 .usa-button {
+    margin: 10px 0 20px 15px;
+  }
+  .field-event-date .datetime, .apl-loc {
+    position: absolute;
+    margin-left: 5px;
+  }
+  .apl-title, .apl-item .field-title, .apl-db-subject .field-title, .apl-event-tag .field-title, .apl-item-facet .field-title, .apl-activity .field-title, .apl-page .field-title, .apl-location .field-title, .apl-database .field-title, .apl-event .field-title {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+
+  .apl-event .field-title {
+    margin-bottom: 10px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /app/events
+contexts: {  }
+conditions_require_all: true

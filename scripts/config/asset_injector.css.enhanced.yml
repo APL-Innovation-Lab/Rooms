@@ -1,0 +1,51 @@
+uuid: 830a5708-7345-4f43-97c8-03feb0b42a70
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: enhanced
+label: Enhanced
+code: |-
+  .node__content > div:nth-child(1) {
+  	float: right !important;
+  }
+  .layout.layout--onecol:nth-child(2) {
+  	float: left;
+  	width: 360px !important;
+  	clear: none;
+  	background: white !important;
+  	text-align: left;
+  }
+  .views-element-container.block.block-views.block-views-blocknavigation-block-2 ul {
+  	margin: 0;
+  	list-style: none;
+  }
+  .views-element-container.block.block-views.block-views-blocknavigation-block-2 ul a {
+  	text-decoration: none;
+  }
+  .views-element-container.block.block-views.block-views-blocknavigation-block-2 ul a:hover {
+  	text-decoration: underline;
+  }
+  .views-element-container.block.block-views.block-views-blocknavigation-block-2 {
+  	padding: 15px;
+  }.section-heading {
+  	padding-left: 0 !important;
+  	padding-right: 36px !important;
+  }
+  .region-content .layout.layout--onecol {
+  	background: white !important;
+  	width: 360px !important;
+  	float: left;
+  	text-align: left;
+  	clear: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /enhanced
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,38 @@
+uuid: c560997a-d348-474b-9edb-98d63c8a7926
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: press_release
+label: 'Press Release'
+code: |-
+  .block.block-layout-builder.block-field-blocknodearticletitle,
+  .block.block-layout-builder.block-field-blocknodearticlebody {
+  	background: white;
+  	padding: 1px 15px;
+  }
+  .views-row {
+  	margin-bottom: 20px;
+  }
+  .apl-language-switcher.usa-button.usa-button-outline {
+  	float: right;
+  	margin-left: 20px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/apltv/*'
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

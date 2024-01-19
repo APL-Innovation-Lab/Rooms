@@ -1,0 +1,25 @@
+uuid: 0c6076f9-3564-40d6-b51b-8e68162009f6
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: one_column
+label: 'one column, hero'
+code: |-
+  #beeeelock-claro2-content > div {
+  	background: white;
+  	padding: 1px 15px;
+  }
+  #hero {
+    margin-top: -10px;
+  }
+media: all
+preprocess: false
+conditions:
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

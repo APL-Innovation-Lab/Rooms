@@ -1,0 +1,142 @@
+uuid: 0c58e114-0e4d-4e7c-90e9-fc4d9d2d63cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: kids_block_party
+label: 'kids block party'
+code: |-
+  .field--name-title {
+  	color: #00A3CC;
+  	font-size: 2em;
+  	font-weight: bold;
+  }
+  .region-content .node--type-apl-site-content .layout--onecol {
+  	text-align: left !important;
+  }
+  .view-filters {
+    position: absolute;
+  }
+  .views-exposed-form.views-exposed-form {
+  	display: flex;
+  	flex-wrap: wrap;
+  	align-items: flex-end;
+  	padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  	border: none;
+  	border-radius: 2px;
+  	background-color: transparent;
+  	box-shadow: none;
+  	max-width: 1420px;
+  	margin: 0 auto;
+  }
+  .apl-events .view-content {
+  	max-width: 1420px;
+  	margin: 0 auto;
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-around;
+  }
+  .apl-events-header {
+  	color: #474747;
+  	font-size: 2em;
+  	font-weight: bold;
+  }
+  .apl-events {
+  	background: #f5f5f5;
+  	min-height: 600px;
+  }
+  .apl-events-footer {
+  	text-align: right;
+  }
+  .apl-events-footer a {
+  	background: #00a3cc;
+  	color: white;
+  	padding: 10px;
+  	border-radius: 4px;
+  	text-decoration: none;
+  }
+  .apl-events .view-footer {
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  }
+  .field-event-time div, .field-event-loc a {
+  	display: inline-block;
+  	vertical-align: top;
+  }
+  .material-icons {
+  	color: #00a3cc;
+  }
+  .field-event-loc a {
+  	color: #333;
+  	text-decoration: none;
+  	display: inline-block;
+  	vertical-align: top;
+  }
+
+
+  .region-content .node--type-apl-site-content .layout--onecol {
+  	background: transparent !important;
+  	width: 100%;
+  	text-align: center;
+  }
+
+  .section_icon {
+  	background: #00a3cc;
+  	height: 150px !important;
+  	border-radius: 75px !important;
+  	width: 150px !important;
+  	margin: 20px auto 40px;
+  }
+
+
+  .block.block-views.block-views-blockevents-block-1 .view-content {
+  	display: flex;
+  	max-width: 1420px;
+  	margin: 0 auto;
+  	justify-content: space-between;
+  	flex-flow: wrap;
+  }
+  .block.block-views.block-views-blockevents-block-1 .views-row {
+  	padding: 10px 0;
+  	text-align: left;
+  }
+
+  .field-event-date {
+  	color: #52bdde;
+  	font-weight: bold;
+  	text-transform: uppercase;
+  	font-size: .8em;
+  }
+  .field-title a {
+  	text-decoration: none;
+  	color: #333;
+  	font-weight: bold;
+  	font-size: 1.1em;
+  	padding-bottom: 40px;
+  	display: block;
+  }
+
+  .layout--onecol:nth-child(2) .layout__region.layout__region--content {
+  	background: white;
+  	max-width: 1420px;
+  	margin: 0 auto;
+  	text-align: left;
+  }
+
+  .apl-event {
+  	padding: 20px;
+  	border: none !important;
+  	background: white;
+  	text-align: left;
+  	margin: 20px 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /kids-block-party
+contexts: {  }
+conditions_require_all: true

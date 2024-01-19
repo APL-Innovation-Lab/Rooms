@@ -1,0 +1,29 @@
+uuid: 7ce29f67-e4c2-46fc-abfb-e540526e2b47
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: meeting_rooms_admin_fix
+label: 'meeting rooms admin fix'
+code: |-
+  form {
+  	background: white;
+  	padding: 20px;
+  }
+  form > * {
+  	margin: 10px;
+  }
+media: all
+preprocess: false
+conditions:
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/admin/structure/webform/manage/meeting_room_reservation_request/submission/*'
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,21 @@
+uuid: 3b1031d8-1bac-4816-8d44-d3347937a6ab
+langcode: en
+status: true
+dependencies: {  }
+id: webform
+label: Webform
+code: |-
+  #block-claro2-content,
+  .page-title {
+  	max-width: 960px;
+  	margin: 0 auto;
+  	display: block;
+  }
+  td .button--primary {
+  	color: white !important;
+  }
+media: all
+preprocess: false
+conditions: {  }
+contexts: {  }
+conditions_require_all: false

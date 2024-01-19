@@ -1,0 +1,25 @@
+uuid: 64e984ba-09c6-430a-8ab3-a25e7a898e79
+langcode: eng
+status: true
+dependencies:
+  module:
+    - node
+id: image_rotator_css
+label: 'Image Rotator CSS'
+code: |-
+  .form-item--field-image-audience-10,
+  .form-item--field-image-audience-3 {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      highighted_images: highighted_images
+contexts: {  }
+conditions_require_all: true

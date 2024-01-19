@@ -1,0 +1,139 @@
+uuid: 0e14d770-6555-456a-9cdc-75e600933ec6
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: meeting_rooms_alerts
+label: 'meeting rooms alerts'
+code: |
+  .usa-navbar {
+  	padding: 0 !important;
+  }
+  header .flex-grid {
+  	display: flex;
+  	justify-content: space-between;
+  	text-align: left;
+  	max-width: 960px;
+  	margin: 0 auto;
+  	flex-wrap: wrap;
+  	align-items: flex-start;
+  }
+
+  .node--type-alert {
+   display:flex;
+   max-width:1420px;
+   margin:0 auto;
+   padding:20px 0
+  }
+  #apl-adv-search2 {
+   font-size:14px
+  }
+  .slide-body {
+   width:100%
+  }
+  .alert-cop {
+   float:left;
+   width:95%
+  }
+  .alert-title {
+   width:100%;
+   display:flex
+  }
+  .apl-alert .material-icons-round {
+   padding:0 10px;
+   font-weight:normal;
+   vertical-align:text-bottom;
+   float:left
+  }
+  .apl-alert .apl-alert-row a {
+   border-color:#000!important
+  }
+  .apl-theme,
+  .apl-theme a {
+   color:#000!important
+  }
+  .node__content .layout.layout--onecol {
+   margin-bottom:10px
+  }
+  .pager {
+   clear:both
+  }
+  .flex-grid.expanded {
+   display:none
+  }
+  .active .alert-more,
+  .active+.alert-more {
+   display:block
+  }
+  .alert-more {
+   display:none;
+   padding:20px
+  }
+  .alert-more li {
+   margin-bottom:10px
+  }
+  .expanded+.alert-more {
+   display:block
+  }
+  .material-icons-round.apl-expand {
+   position:absolute;
+   top:11px
+  }
+  .apl-expand {
+   position:absolute;
+   right:0;
+   top:15px;
+   padding:0!important;
+   cursor:pointer
+  }
+  .apl-alert {
+   background:transparent
+  }
+  .apl-alert {
+   transition:background 1s
+  }
+  #block-views-block-alerts-block-2 {
+   background:#f7a700;
+   margin-bottom:10px
+  }
+  #block-views-block-alerts-block-4 .apl-alert {
+   background:#f7a700
+  }
+  .apl-alert .flex-grid {
+   padding:8px 0;
+   position:relative
+  }
+  .apl-alert div {
+   font-size:1em;
+   font-weight:600
+  }
+  .apl-alert .material-icons-round {
+   padding-right:10px;
+   font-weight:normal;
+   vertical-align:text-bottom
+  }
+  .apl-alert .view-footer {
+   margin-top:0
+  }
+  .apl-alert a {
+   margin:0 10px;
+   border:1px solid rgba(0,0,0,0.3);
+   padding:5px 10px;
+   color:#000;
+   text-decoration:none;
+   border-radius:4px;
+   font-size:15px;
+   font-weight:normal;
+   display:inline-block;
+   vertical-align:unset
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/meeting-rooms\r\n/meeting-rooms/*"
+contexts: {  }
+conditions_require_all: true

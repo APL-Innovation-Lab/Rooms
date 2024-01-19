@@ -1,0 +1,15 @@
+uuid: 01cc973d-41e6-42e7-8179-c9535f318c82
+langcode: eng
+status: true
+dependencies: {  }
+id: summer_3
+label: 'summer 3'
+code: |-
+  .views-field-field-biblio-booklist-id- iframe {
+  	margin-left: -15px;
+  }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

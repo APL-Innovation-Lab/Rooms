@@ -1,0 +1,52 @@
+uuid: e88777e3-1656-4d2b-9499-877481b6d425
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: apl_tv_branch_
+label: 'apl-tv/branch/*'
+code: |-
+  #block-claro2-content {
+  	background: white;
+  	width: 580px;
+  	float: right;
+  }
+  .region.region-content a {
+  	text-decoration: none;
+  }
+  .region.region-content a:hover {
+  	text-decoration: underline;
+  }
+
+  #block-views-block-apltv-channel-block-5 {
+  	width: 360px;
+  	background: white;
+  	float: left;
+  }
+
+  .region.region-content {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+  #block-claro2-content .view-content {
+  	padding: 1px 15px;
+  }
+  .view-header {
+  	padding: 1px 15px;
+  	margin-top: 10px;
+  	margin-bottom: 10px;
+  }
+
+  #block-views-block-apltv-channel-block-5 > h2, #block-views-block-apltv-channel-block-5 > div {
+  	padding: 1px 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/apl-tv/branch/*'
+contexts: {  }
+conditions_require_all: true

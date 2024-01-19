@@ -1,0 +1,30 @@
+uuid: f5162cb6-de68-4ae6-ad22-b23603b674bb
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: styleguide
+label: Styleguide
+code: |-
+  .apl-language {
+  	background: white;
+  	border: 1px solid;
+  	border-radius: 3px;
+  	float: right;
+  	margin: 0 0 20px 20px;
+  	padding: 5px 10px;
+  	text-decoration: none;
+  }
+  .apl-language:hover {
+    text-decoration: underline;
+  }
+media: all
+preprocess: false
+conditions:
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

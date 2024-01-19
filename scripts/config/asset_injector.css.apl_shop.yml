@@ -1,0 +1,31 @@
+uuid: a34da654-406e-425a-a0ce-58cf1312d6a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: apl_shop
+label: 'APL Shop'
+code: |-
+  .block-views-blocklocation-info-block-2 {
+  	margin-bottom: 20px;
+  }
+  .apl-day strong {
+  	margin-right: 1em;
+  }
+  .views-field.views-field-field-phone-num {
+  	margin-top: 20px;
+  }
+  .block.block-layout-builder.block-field-blocknodegift-shop-pagetitle,
+  .block.block-layout-builder.block-field-blocknodegift-shop-pagebody {
+  	padding: 0 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/giftshop\r\n/aplshop\r\n/shop\r\n/giftshop/*\r\n/aplshop/*\r\n/shop/*"
+contexts: {  }
+conditions_require_all: true

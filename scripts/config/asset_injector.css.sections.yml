@@ -1,0 +1,62 @@
+uuid: ea68f228-87da-4d1e-849d-a10a1fc3ea47
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+id: sections
+label: sections
+code: |2-
+    #home_sections2 {
+      padding: 40px;
+      background: #00A3CC !important;
+    }
+    #home_sections2 ul ul {
+      margin: 0 0 20px;
+    }
+    #home_sections2>ul li {
+      background: white;
+      list-style: none;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #home_sections2 ul li ul li {
+      padding: 0 10px 10px;
+      margin: 0;
+    }
+  .section_icon {
+  	background: #00a3cc;
+  	height: 150px !important;
+  	border-radius: 75px !important;
+  	width: 150px !important;
+  	margin: 20px auto 40px;
+  }
+    .section_title {
+      height: 4em;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #333;
+      padding: 20px;
+    }
+    #home_sections2 a {
+      text-decoration: none;
+      color: #00a3cc;
+      display: block;
+    }
+    #home_sections2 a:hover {
+      text-decoration: underline;
+    }
+    .section_icon .material-icons {
+      color: white;
+      font-size: 80px;
+      padding: 32px;
+    }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/virtual"
+contexts: {  }
+conditions_require_all: false

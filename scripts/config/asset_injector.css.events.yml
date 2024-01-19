@@ -1,0 +1,56 @@
+uuid: 35d69b24-cb3d-437a-809b-0aabdb1d04e6
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: events
+label: events
+code: |-
+  .block-facet--links.block.block-facets.block-facet-blockaudience- a {
+  	display: block;
+  	float: left;
+  	margin: 0 10px 10px 0;
+  	padding: 10px 15px;
+  	border-radius: 4px;
+  	color: white;
+  	text-decoration: none;
+  }
+  .event_subtitle .apl-carousel div {
+  	width: 100%;
+  	font-weight: bold;
+  }
+  .block-facet--links.block.block-facets.block-facet-blockaudience- a:hover {
+  	text-decoration: underline;
+  }
+
+  .apl-item-list {
+  	margin-left: 29px;
+  }
+
+  a[data-drupal-facet-item-value="32"],
+  .children {
+  	background: #9696c9 !important;
+  }
+  a[data-drupal-facet-item-value="31"],
+  .teen {
+  	background: #009ABE !important;
+  }
+  a[data-drupal-facet-item-value="29"],
+  .adult {
+  	background: #7DC142 !important;
+  }
+
+
+  .block-facet--links.block.block-facets.block-facet-blocklocation- {
+  	clear: left;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /events
+contexts: {  }
+conditions_require_all: true

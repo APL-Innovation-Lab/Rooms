@@ -1,0 +1,30 @@
+uuid: 7cdbfff7-568b-4966-a6f6-f36b7d58c235
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: events_fix
+label: 'Events Fix'
+code: |-
+  #block-intendedaudience-2 {
+  	background: white;
+  }
+  #apl-events-nav {
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+
+  #block-intendedaudience-2 h2, 
+  #block-intendedaudience-2 > div {
+  	padding: 1px 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/events\r\n/events/*"
+contexts: {  }
+conditions_require_all: true

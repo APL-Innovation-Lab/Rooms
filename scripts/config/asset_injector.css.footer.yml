@@ -1,0 +1,110 @@
+uuid: 1374aed6-6f53-4c61-9e95-d90c52d4ecfb
+langcode: en
+status: false
+dependencies: {  }
+id: footer
+label: footer
+code: |-
+  #block-block-36 {
+    background: #ebebec; // #00A3CC; // #36a4c9;
+  }
+  #apl_nav2 {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  #apl_nav2 li {
+    list-style: none;
+    padding: 16px 10px 20px 10px;
+  }
+  #apl_logo_a, #apl_logo {
+    max-height: 100px;
+  }
+  #apl_home {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  #apl_footer #apl_footer_subscribe input[type=submit] {
+    background-color: white;
+    color: #00A3CC;
+    padding: 10px;
+    font-size: 1.3em;
+    margin: 0;
+    border: 1px solid white;
+  }
+  #apl_footer #signup_box {
+    padding: 0 !important;
+  }
+  #apl_footer input[type=email] {
+    border: 1px solid white;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 24px 24px 0 !important;
+    float: left;
+    outline: medium none;
+    width: 300px;
+    font-size: 1.3em;
+    padding: 7.5px;
+    background: transparent;
+    border-radius: 3px;
+    color: black;
+  }
+  #apl_footer #apl_footer_social a {
+    display: block;
+  }
+  #apl_footer #apl_footer_social a:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  #apl_footer #apl_footer_social li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  #apl_footer #apl_footer_social img {
+    width: 24px;
+    height: auto;
+    background: #00A3CC;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  #apl_footer a, #apl_footer p {
+    color: black;
+    display: block;
+    margin: 0;
+    padding: 0 0 24px;
+    text-decoration: none;
+  }
+  #apl_footer a:hover {
+    text-decoration: underline;
+  }
+  #apl_footer ul {
+    margin: 0;
+    padding: 0;
+  }
+  #apl_footer li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #apl_footer a, #apl_footer p {
+    color: #333 !important;
+    display: block;
+    margin: 0;
+    padding: 0 0 24px;
+    text-decoration: none;
+  }
+  #apl_footer #apl_footer_social img {
+    width: 24px;
+    height: auto;
+    background-color: transparent !important;
+    padding: 12px;
+    border-radius: 12px;
+  }
+  #apl_footer #apl_footer_social img:hover {
+    background-color: #333 !important;
+  }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

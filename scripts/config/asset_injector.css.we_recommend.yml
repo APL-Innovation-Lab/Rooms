@@ -1,0 +1,21 @@
+uuid: ea9b8fff-00d4-4e2a-88de-c296b855d2b7
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: we_recommend
+label: 'We Recommend'
+code: |-
+  #block-intendedaudience2 {
+    display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /recommended/titles/covers
+contexts: {  }
+conditions_require_all: true

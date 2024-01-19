@@ -1,0 +1,31 @@
+uuid: 914774b2-4fbb-464e-aa78-a3ac228630bf
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: meeting_rooms_fix
+label: 'Meeting Rooms fix'
+code: |-
+  html .node__content .layout.layout--onecol {
+  	width: 360px;
+  	float: left;
+  	text-align: left;
+  }
+
+  html .layout.layout--onecol:nth-child(2) {
+  	float: right;
+  	width: 580px !important;
+  	clear: none;
+  	background: none;
+  	text-align: left;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /meeting-rooms
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,119 @@
+uuid: 8d4d6117-9f73-4c57-8d8d-0c527f92826b
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: disappear
+label: disappear
+code: |-
+  .account-edit,
+  #block-claro2-breadcrumbs,
+  #edit-revision-information,
+  #toolbar-item-shortcuts {
+  	display: none;
+  }
+  .block.block-views .usa-button {
+  	margin-top: 20px;
+  }
+  .adv_search {
+  	float: right;
+  	margin-top: -34px;
+  	display: block !important;
+  }
+  .adv_search a{
+  	text-decoration: none;
+  }
+  .adv_search a:hover {
+  	text-decoration: underline;
+  }
+  #apl-buttons h2 {
+  	font-size: 22px;
+  }
+  #apl-top-nav a {
+  	text-transform: none !important;
+  }
+  .apl-accounts-link {
+  	border-right: 1px solid silver;
+  }
+  .apl_submenus {
+  	background: white !important;
+  }
+
+  .apl_submenus a {
+  	color: #55565a !important;
+  }
+  .block-views h3 {
+  	font-size: 20px;
+  }
+
+  .views_slideshow_slide .views-field.views-field-title {
+  	padding-left: 5px !important;
+  	font-size: 20px;
+  }
+  .views-field-field-highlighted-image + div span a, .highjump {
+  	padding: 1px 15px !important;
+  }
+  #apl_logo img {
+  	min-width: 85px;
+  }
+
+  .block.block-layout-builder.block-field-blocknodeactivity-pagebody {
+  	padding: 1px 15px;
+  }
+  .layout--onecol {
+  	clear: both;
+  }
+  .node__content {
+  	background: white;
+  }
+  #ask_all {
+  	position: fixed;
+  	bottom: 0;
+  	right: 0;
+  	z-index: 999;
+  }
+  #ask_title span {
+  	padding: 0;
+  }
+  .apl-hotzone {
+  	cursor: pointer;
+  }
+
+
+  .active.apl-my-body {
+  	display: block !important;
+  }
+  .apl_menu .apl_submenus a:hover {
+  	background: none !important;
+  	color: white;
+  	text-decoration: underline;
+  }
+  .page-wrapper :focus, .ui-dialog :focus {
+  	outline: none !important;
+  	box-shadow: none !important;
+  }
+  html {
+  	background: #f5f5f5;
+  }
+  .apl_menu .material-icons-sharp {
+  	vertical-align: middle;
+  	font-size: 1em;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/user/*\r\n/admin/*"
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

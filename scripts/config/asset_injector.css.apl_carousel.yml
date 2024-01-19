@@ -1,0 +1,137 @@
+uuid: 0b52dde3-881b-4b4e-869b-020c659586ca
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+    - system
+id: apl_carousel
+label: apl-carousel
+code: |-
+  .item-list ul.widget_pager_bottom {
+  	margin: 0;
+  }
+  .views-element-container.block.block-views.block-views-blockmore-navigation-block-23 {
+  	background: white;
+  	padding: 1px 15px;
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  }
+  .block.block-views.block-views-blockpress-releases-block-1 {
+  	background: white;
+  	padding: 1px 15px;
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  }
+  .skin-default .views-field.views-field-title {
+  	text-align: left;
+  	font-size: 20px;
+  	font-weight: bold;
+  	padding-left: 20px;
+  	width: 100%;
+  }
+  .slide-body p {
+  	text-align: left !important;
+  	margin: 0;
+  	padding-left: 20px;
+  }
+  .apl-carousel .view-content {
+  	display: flex;
+  	justify-content: space-between;
+  }
+  .skin-default a {
+  	text-decoration: none;
+  }
+  .skin-default a:hover {
+  	text-decoration: underline;
+  }
+  .skin-default {
+  	background: white;
+  	margin-bottom: 20px;
+  }
+
+  .apl-carousel .view-footer .flex-grid a {
+  	background: white;
+  	padding: 10px;
+  	border-radius: 4px;
+          color: #00a3cc;
+  }
+  .apl-carousel .view-footer .flex-grid {
+  	margin-top: 150px;
+          text-align: right;
+  }
+  .apl-carousel .view-header {
+  	font-size: 2em;
+  	font-weight: bold;
+  	text-align: left;
+          padding: 10px 0 20px;
+  }
+  .apl-carousel a {
+  	text-decoration: none;
+  }
+  .apl-carousel .material-icons {
+  	color: white;
+  	display: block;
+  	text-decoration: none !important;
+  	font-size: 100px;
+  	margin-top: 75px;
+  }
+  .apl-carousel .material-icons:hover {
+  	opacity: .8;
+  	text-decoration: none;
+  }
+  .apl-carousel .views_slideshow_controls_text span:hover {
+  	text-decoration: none;
+  }
+  .apl-carousel :focus {
+  	box-shadow: none !important;
+  }
+
+  .view-randomizer .view-footer a {
+  	background: white;
+  	color: #00a3cc;
+  	padding: 10px;
+  	border-radius: 4px;
+  	text-decoration: none;
+  }
+  .views_slideshow_cycle_slide {
+  	display: flex;
+  	justify-content: space-between;
+  }
+  .views-slideshow-controls-bottom.clearfix {
+  	padding: 1em;
+  }
+  .apl-carousel {
+  	background: white;
+  	padding: 0 10px;
+  }
+  .apl-carousel .view-header {
+  	font-size: 2em;
+  	font-weight: bold;
+  	text-align: left;
+  	padding: 10px 0 20px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/virtual"
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      apl_site_content: apl_site_content
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

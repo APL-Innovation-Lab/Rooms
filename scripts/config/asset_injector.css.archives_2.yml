@@ -1,0 +1,29 @@
+uuid: bb27e9e5-fa39-489e-9f93-554d46ad2ebe
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: archives_2
+label: 'Archives 2'
+code: |-
+  .view-archives-and-manuscripts {
+    padding: 1px 15px;
+  }
+  .block-views-blockarchives-and-manuscripts-block-1 h2 {
+  	padding: 1px 15px;
+  	font-size: 28px;
+  }
+
+  .ahc-index-title p {
+  	font-size: 24px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/ahc/archives/home\r\n/ahc/archives/home2"
+contexts: {  }
+conditions_require_all: true

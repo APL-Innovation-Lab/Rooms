@@ -1,0 +1,24 @@
+uuid: 762ab3ba-648b-4e3a-9bb0-218ec203ea2f
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: exhibits_fix
+label: 'Exhibits fix'
+code: |-
+  body .d-col-9.t-col-9.m-col-10.layout__region.layout__region--second {
+  	background: transparent !important;
+  }
+  .apl-exhibit {
+  	background: white;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /events/exhibits
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,43 @@
+uuid: 3a7ea73f-fd24-4c1c-a15a-0983976bf0d1
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: recommended_what_s_hot
+label: 'Recommended - What''s Hot'
+code: |-
+  .region.region-content {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+  #block-claro2-content {
+  	float: right;
+  }
+  @media only screen and (min-width: 0px) and (max-width: 660px) {
+  #block-exposedformvirtual-library-searchpage-1 {
+  	width: 500px;
+  }
+  #block-views-block-alerts-block-4,
+  .content_footer,
+  #block-views-block-sections-block-1,
+  .view.view-search.view-id-search.view-display-id-page_3,
+  #block-title,
+  .region.region-content,
+  .layout.layout--onecol,
+  .layout.layout--onecol:nth-child(1),
+  #block-claro2-content,
+  #block-views-block-navigation-block-6 {
+  	width: 530px !important;
+  	max-width: 530px !important;
+  }
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/recommended/whats-hot/*\r\n/recommended/whats-hot"
+contexts: {  }
+conditions_require_all: true

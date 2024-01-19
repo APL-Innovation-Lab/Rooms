@@ -1,0 +1,31 @@
+uuid: 09331a1e-88a3-463b-ab03-4e3dbfb47118
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: aplplus_spanish
+label: 'aplplus spanish'
+code: |-
+  .block.block-views.block-views-blockaplplus-block-1,
+  .block.block-views.block-views-blockaplplus-block-2,
+  .block.block-views.block-views-blockaplplus-block-3 {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      es: es
+  request_path:
+    id: request_path
+    negate: false
+    pages: /aplplus
+contexts: {  }
+conditions_require_all: true

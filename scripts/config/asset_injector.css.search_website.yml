@@ -1,0 +1,311 @@
+uuid: 8023c2e7-666b-4cba-a288-e205b944991f
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: search_website
+label: search-website
+code: |-
+  .apl-theme {
+  	color: white !important;
+  	padding: 15px;
+  }
+  .block-field-blocknodeeventfield-canceled {
+  	display: none;
+  }
+  .node__content .layout.layout--onecol,
+  .node--type-event .layout__region--content {
+  	margin-bottom: 0 !important;
+  }
+  .view-empty {
+  	padding: 1px 15px;
+  }
+  .region-content .layout--onecol {
+  	text-align: left !important;
+  }
+  .apl-location .field-title {
+  	font-weight: bold;
+  	font-size: 30px !important;
+  }
+  .views-field.views-field-field-location-main-image {
+  	float: right;
+  }
+  .apl-alert .apl-alert-row a:hover {
+  	text-decoration: underline;
+  }
+  .search-result {
+  	margin-bottom: 20px;
+  }
+  .apl-alert-row .apl-theme {
+  	padding: 0;
+  }
+  .apl-alert .apl-alert-row a {
+  	margin: -5px 10px 0;
+  	border: 1px solid rgba(255,255,255,.3);
+  	padding: 5px 10px;
+  	text-decoration: none;
+  	border-radius: 4px;
+  	font-size: 15px;
+  	font-weight: normal;
+  	display: inline-block;
+  	vertical-align: unset;
+  }
+  .path-events .region.region-content,
+  .path-search-website .region.region-content {
+  	max-width: 960px;
+  	margin: 20px auto;
+  }
+  .path-events #block-claro2-content,
+  .path-search-website #block-claro2-content {
+  	float: right;
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+  .office-hours {
+  	text-align: left;
+  }
+  .apl-event-snip .field-event-time {
+  	margin-bottom: 0;
+  }
+  .apl-upcoming {
+  	font-weight: bold;
+  	margin-bottom: 10px;
+  }
+  .apl-event-snip .field-title {
+  	margin-top: 10px;
+  	font-size: 1.2em;
+  }
+  .apl-event-tag {
+  	margin-top: -5px;
+  }
+
+  .view-teasers-tax .view-footer {
+  	background: white;
+  	padding: 1px 15px;
+  	margin-top: -20px;
+  }
+  .recommendation-slide {
+  	background: silver;
+  	padding-bottom: 15px;
+  }
+  .recommendation-slide.Black,
+  .apl-alert-row.Black,
+  .apl-theme.Black {
+  	background: #202020;
+  }
+  .recommendation-slide.Blue,
+  .apl-alert-row.Blue,
+  .apl-theme.Blue {
+  	background: #0069AA;
+  }
+  .recommendation-slide.Dark.Green,
+  .apl-alert-row.Dark.Green,
+  .apl-theme.Dark.Green {
+  	background: #546120;
+  }
+  .recommendation-slide.Gray,
+  .apl-alert-row.Gray,
+  .apl-theme.Gray {
+  	background: #54555A;
+  }
+  .recommendation-slide.Green,
+  .apl-alert-row.Green,
+  .apl-theme.Green {
+  	background: #7CC242;
+  }
+  .recommendation-slide.Lavender,
+  .apl-alert-row.Lavender,
+  .apl-theme.Lavender {
+  	background: #9595CD;
+  }
+  .recommendation-slide.Light.Blue,
+  .apl-alert-row.Light.Blue,
+  .apl-theme.Light.Blue {
+  	background: #009ABE;
+  }
+  .recommendation-slide.Orange,
+  .apl-alert-row.Orange,
+  .apl-theme.Orange {
+  	background: #FF8300;
+  }
+  .recommendation-slide.Pink,
+  .apl-alert-row.Pink,
+  .apl-theme.Pink {
+  	background: #AF1556;
+  }
+  .recommendation-slide.Purple,
+  .apl-alert-row.Purple,
+  .apl-theme.Purple {
+  	background: #611F66;
+  }
+  .recommendation-slide.Yellow,
+  .apl-alert-row.Yellow,
+  .apl-theme.Yellow {
+  	background: #F7A800;
+  }
+
+
+  .node__content .layout.layout--onecol {
+  	width: 580px;
+  }
+  .recommendation-slide .view-content {
+  	display: flex;
+  	justify-content: space-between;
+  	padding: 0 !important;
+  	min-height: 150px;
+  	max-height: 180px;
+  	overflow: hidden;
+  	margin: 0 15px;
+  }
+
+  .recommendation-slide img {
+  	width: 100px !important;
+  }
+
+  .path-taxonomy #block-claro2-content {
+  	max-width: 960px;
+  }
+  #block-claro2-content {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+  .block-facets {
+  	width: 360px;
+  }
+
+  #block-exposedformsearchsearch-2 {
+  	display: none;
+  }
+
+  .block-facet--links {
+  	margin-bottom: 20px;
+  }
+  .block-facet--links h2 {
+  	font-size: 20px;
+  }
+  .my-biblio-list {
+  	display: flex;
+  	max-width: 580px;
+  	margin: 10px auto 30px;
+  	flex-wrap: wrap;
+  }
+  .biblio_row {
+  	width: 100%;
+  	margin-bottom: 10px;
+  	background: white;
+  }
+  .apl-item .field-title {
+  	margin-top: 10px;
+  }
+  .apl-item-details {
+  	width: 100%;
+  }
+
+  .apl-content-type, .apl-type {
+  	background: silver;
+  	padding: 10px 15px;
+  	font-weight: bold;
+  	text-align: left;
+  }
+  .apl-db-subject,
+  .apl-event-tag,
+  .apl-item-facet,
+  .apl-activity,
+  .apl-page,
+  .apl-location,
+  .apl-database,
+  .apl-event {
+  	padding: 15px;
+  	border: none !important;
+  	background: white;
+  	text-align: left;
+  }
+  .apl-title,
+  .apl-item .field-title,
+  .apl-db-subject .field-title,
+  .apl-event-tag .field-title,
+  .apl-item-facet .field-title,
+  .apl-activity .field-title,
+  .apl-page .field-title,
+  .apl-location .field-title,
+  .apl-database .field-title,
+  .apl-event .field-title {
+  	margin-bottom: 10px;
+  	font-size: 22px;
+  }
+  .apl-item a,
+  .apl-title a, 
+  .field-title a {
+    text-decoration: none;
+  }
+  .apl-item a:hover,
+  .apl-title a:hover, 
+  .field-title a:hover {
+    text-decoration: underline;
+  }
+  i + div, i + a {
+  	display: inline-block !important;
+  	vertical-align: top;
+  }
+
+  .more-link {
+  	display: block;
+  	text-align: center;
+  	border: 1px solid #0036b1;
+  	padding: 5px;
+  }
+  .pager__item.pager__item--mini.pager__item--current {
+  	display: none;
+  }
+
+  .views-exposed-form {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+
+  .field-event-time {
+  	display: flex;
+  	justify-content: left;
+  	margin-bottom: 10px;
+  }
+  .skin-default .views-row {
+  	display: flex;
+  	justify-content: flex-start;
+  	flex-wrap: wrap;
+  }
+  .apl-item-image {
+  	width: 150px;
+  	margin-right: 20px;
+  	float: left;
+  	min-height: 150px;
+  }
+  .apl-event .material-icons,
+  .apl-event .material-icons-round,
+  .apl-event .material-icons-two-tone,
+  .apl-event .material-icons-sharp,
+  .apl-event .material-icons-outlined,
+  .apl-event-snip .material-icons,
+  .apl-event-snip .material-icons-round,
+  .apl-event-snip .material-icons-two-tone,
+  .apl-event-snip .material-icons-sharp,
+  .apl-event-snip .material-icons-outlined {
+  	width: 1.2em;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search-website\r\n/node/preview/*\r\n/search-website2\r\n/ahc/archives/*\r\n/locations\r\n/event-tags/*\r\n/events/*\r\n/event/*\r\n/recommended/whats-hot\r\nrecommended/whats-hot/*\r\n/events\r\n/search-facets\r\n/search\r\n/virtual\r\n/virtual/*\r\n/events22\r\n/locations/map"
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

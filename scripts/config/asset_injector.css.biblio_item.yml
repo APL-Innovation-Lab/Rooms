@@ -1,0 +1,15 @@
+uuid: 94061c6e-334c-4acc-9e84-c6fceb16f899
+langcode: eng
+status: true
+dependencies: {  }
+id: biblio_item
+label: 'Biblio Item'
+code: |-
+  .bc-widget.bc-item-widget {
+  	margin-top: 1em;
+  }
+media: all
+preprocess: false
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

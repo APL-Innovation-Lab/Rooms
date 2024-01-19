@@ -1,0 +1,63 @@
+uuid: 08c5d515-fa87-4e82-8ee1-9d15ae95f797
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: hotfixes_dec2
+label: 'hotfixes dec2'
+code: |-
+  .fragger {
+  	font-weight: normal;
+  	display: none;
+  	padding: 2px;
+  	font-size: 16px;
+  	background-image: url(/library/misc/share.svg);
+  	color: transparent !important;
+  	background-repeat: no-repeat;
+  }
+  /*
+  .accordion .details {
+  	display: none;
+  }
+
+  .accordion h2.section-heading {
+  	position: relative;
+  	background-color: #efefef;
+  	padding: 10px;
+  	background-image: url(/library/misc/add.svg),linear-gradient(transparent,transparent);
+  	background-repeat: no-repeat;
+  	background-position: right 5px center;
+  	background-size: 1.5rem;
+  	color: #1b1b1b;
+  	cursor: pointer;
+  	padding-left: 20px !important;
+  	padding-right: 30px !important;
+  	margin-block-end: 0;
+  	margin-block-start: 5px;
+  }
+  .accordion h2.section-heading.active, .accordion .accordion__heading.active {
+  	background-image: url('/library/misc/remove.svg'), linear-gradient(transparent, transparent);
+  }
+  */
+  .grid-col-10.grid-offset-1 {
+  	text-align: left;
+  	width: 80%;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+  request_path:
+    id: request_path
+    negate: true
+    pages: /x
+contexts: {  }
+conditions_require_all: true

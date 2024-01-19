@@ -1,0 +1,22 @@
+uuid: fe3a268b-0776-40fe-9410-c57b2bc45bc3
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: press
+label: film-photo
+code: |-
+  .block.block-layout-builder.block-field-blocknodesales-events-pagebody,
+  .block.block-layout-builder.block-field-blocknodesales-events-pagetitle {
+  	padding: 1px 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /film-photo
+contexts: {  }
+conditions_require_all: true

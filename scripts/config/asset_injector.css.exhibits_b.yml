@@ -1,0 +1,222 @@
+uuid: edeb0d38-cbb9-4ef9-b9a4-ab2b47feea09
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: exhibits_b
+label: 'Exhibits B'
+code: |-
+  #block-claro2-content {
+  	width: 580px;
+  }
+  .individual_more {
+  	margin-top: 40px;
+  }
+  .exhibit-time,
+  .exhibit-location {
+  	font-weight: normal;
+  	font-size: 16px;
+  	position: relative;
+  }
+
+  .about-exhibit,
+  .image-credit,
+  .about-artist {
+  	font-size: 18px;
+  }
+  .exhibit-time span,
+  .exhibit-location span {
+  	position: absolute;
+  	padding-left: 3px;
+      z-index: 98;
+  }
+  html .path-events .region.region-content {
+  	margin: 0 auto;
+  }
+  .view-exhibits-b .views-row {
+  	clear: both;
+  }
+  .apl-exhibit.apl-card {
+  	min-height: 153px;
+  }
+  .apl-sidebar {
+  	width: 330px;
+  }
+  #block-views-block-navigation-block-31-2 {
+    float: left;
+  }
+  .apl-sidebar,
+  #apl-events-sidebar {
+      padding: 1px 15px;
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 15px !important;
+  	margin-top: 0;
+  	padding-bottom: 10px;
+  }
+  .column-2.flat,
+  .apl-sidebar.flat,
+  #apl-events-sidebar.flat {
+  	box-shadow: none;
+  	margin-bottom: none;
+  }
+  .apl-sidebar a {
+      text-decoration: none;
+  }
+  .apl-sidebar.blog,
+  .apl-sidebar.flat {
+      box-shadow: none;
+  }
+  .apl-sidebar a:hover,
+  .apl-sidebar a.active {
+      text-decoration: underline;
+  }
+
+  .apl-sidebar ul {
+  	padding: 0;
+  	margin: 0;
+  }
+
+  .apl-sidebar li {
+  	list-style: none;
+  }
+  .apl-sidebar li a {
+  	text-decoration: none;
+  }
+  .apl-sidebar li a:hover,
+  .apl-sidebar li a.active {
+  	text-decoration: underline;
+  }
+
+  .apl-sidebar .apl-event {
+      padding: 0;
+  }
+  .datetime, .apl-loc {
+  	position: relative !important;
+  	margin: -30px 0 10px 30px !important;
+  	display: block;
+  }
+  .apl-sidebar .apl-event .field-title {
+  	font-weight: normal;
+  	margin-bottom: 10px !important;
+  }
+  .exhibit-title a {
+  	text-decoration: none;
+  	color: black;
+  }
+  .apl-exhibit h3 {
+  	margin: 0;
+  	font-size: 22px;
+  	font-weight: normal;
+  }
+  .column-2.apl-cards {
+  	background: none;
+  	box-shadow: none;
+  	padding-bottom: 0;
+  }
+  .apl-exhibit.apl-card {
+  	margin-bottom: 15px;
+  }
+
+  .exhibit-copy {
+  	background: white;
+  	padding: 5px 10px;
+  	box-shadow: 3px 3px 8px silver;
+  }
+  .apl-exhibit.individual {
+  	box-shadow: 3px 3px 8px silver;
+  }
+  .apl-exhibit.individual .exhibit-copy {
+  	box-shadow: none;
+      margin-top: -10px;
+  }
+  .apl-exhibit.individual .exhibit-title {
+  	margin: 10px 0 5px 0;
+  }
+  .exhibit-title {
+      margin: 0 0 5px 0;
+  }
+
+
+
+  .exhibit-time-and-location {
+  	float: left;
+  	width: 350px;
+  }
+
+
+  .apl-exhibit.individual .exhibit-time-and-location {
+  	float: none;
+      width: 100%;
+  }
+  .apl-exhibit h3.exhibit-artist {
+  	margin: 0 0 10px 0;
+  }
+
+  .apl-exhibit.apl-card img {
+  	float: left;
+  	margin-right: 15px;
+  	object-fit: cover;
+  	width: 150px;
+  	height: 190px;
+  }
+
+  .individual a.more {
+      display: none;
+  }
+  .apl-details {
+      display: none;
+      text-align: left;
+      margin-top: 15px;
+  }
+  .more.active .apl-details,
+  .individual .apl-details,
+  .apl-details.active {
+      display: block !important;
+  }
+  .more1 {
+  	text-align: left;
+  	z-index: 99;
+  	position: relative;
+  	clear: left;
+  	cursor: pointer;
+  }
+
+  .more {
+  	background-color: #efefef;
+  	width: 100%;
+  	display: block;
+  	padding: 10px;
+  	margin-left: -10px;
+  	margin-bottom: -5px;
+  	margin-top: 10px;
+  	background-image: url(/library/misc/add.svg),linear-gradient(transparent,transparent);
+  	background-repeat: no-repeat;
+  	background-size: 1.5rem;
+  	-moz-osx-font-smoothing: inherit;
+  	-webkit-font-smoothing: inherit;
+  	border: 0;
+  	border-radius: 0;
+  	box-shadow: none;
+  	text-align: left;
+  	background-repeat: no-repeat;
+  	background-position: right 5px center;
+  	background-size: 1.5rem;
+  	color: #1b1b1b;
+  	font-weight: 700;
+  	text-decoration: none;
+  }
+  .more.active {
+  	background-image: url(/library/misc/remove.svg),linear-gradient(transparent,transparent);
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/x/events/exhibits\r\n/x/events/exhibits/*"
+contexts: {  }
+conditions_require_all: true

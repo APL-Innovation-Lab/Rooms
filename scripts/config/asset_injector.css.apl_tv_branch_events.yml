@@ -1,0 +1,43 @@
+uuid: a1df4aa3-cef1-4502-b07b-f37bb23f87c1
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: apl_tv_branch_events
+label: 'APL TV Branch Events'
+code: |-
+  .field-title {
+  	font-size: 50px;
+  }
+  .field-event-loc {
+  	font-size: 32px;
+  }
+  .view-empty {
+  	margin: 200px 0 0 120px !important;
+  	font-size: 58px;
+  	max-width: 1140px;
+  }
+  .field-event-date {
+  	font-size: 32px;
+  }
+  .view-content {
+    	max-width: 1460px;
+    	height: 710px;
+  }
+  .apl-event {
+  	margin-top: 50px;
+  	margin-bottom: 50px;
+  }
+  .apl-events {
+  	padding: 50px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/apltv/branch/*\r\n/apltv/signature/*"
+contexts: {  }
+conditions_require_all: true

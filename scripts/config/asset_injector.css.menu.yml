@@ -1,0 +1,30 @@
+uuid: 140eded8-3352-4509-95a0-3f0857b6d89c
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: menu
+label: menu
+code: |-
+  html body #apl-menu-2015, html body .container.apl_menu, 
+  html body #block-menu-menu-apl-menu-2014 {
+  	background: #009abf none repeat scroll 0 0 !important;
+  	margin-bottom: 0px;
+  }
+  #block-block-155 {
+  	margin-bottom: 10px;
+  }
+
+  .page-content.clearfix {
+  	margin-top: 10px;
+  }
+media: all
+preprocess: false
+conditions:
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,50 @@
+uuid: 95454ecd-744b-45ac-ad16-a9e74f141982
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: apltv_fixes
+label: 'apltv fixes'
+code: |-
+  html .layout-container {
+  	margin-right: 0 !important;
+  	margin-left: 0 !important;
+  }
+  .page-wrapper .layout-container {
+  	margin: 0 !important;
+  }
+  article div.node__content .layout.layout--onecol {
+  	width: 1920px !important;
+  	height: 1080px;
+  	max-width: 1920px !important;
+  }
+  .apltv-iffy {
+  	background: black;
+  	height: 1080px;
+  	position: absolute;
+  	border: none;
+  	z-index: 9;
+  	top: 0;
+  	left: 0;
+  }
+  .apltv-iffy img {
+  	width: 1920px !important;
+  	height: 1080px !important;
+  }
+  @media screen {
+  html .layout-container {
+  	margin-right: 0 !important;
+  	margin-left: 0 !important;
+  }
+
+  }
+media: screen
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/apltv/*\r\n/apltv/fullscreen/*\r\n/x"
+contexts: {  }
+conditions_require_all: false

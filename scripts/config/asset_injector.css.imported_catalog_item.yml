@@ -1,0 +1,29 @@
+uuid: a09e0e7d-a191-4154-8ec2-93bf4efe2ed3
+langcode: eng
+status: true
+dependencies:
+  module:
+    - node
+id: imported_catalog_item
+label: 'Imported Catalog Item'
+code: |-
+  .form-item--editor-format,
+  #edit-field-apl-authors-0-format-guidelines,
+  #edit-field-apl-authors-0-format,
+  #edit-field-description-0-format-help,
+  #edit-field-display-title-0-format,
+  .tabledrag-toggle-weight-wrapper {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      apl_item: apl_item
+contexts: {  }
+conditions_require_all: true

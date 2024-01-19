@@ -1,0 +1,37 @@
+uuid: d68ccba1-f876-4155-af87-85205a2e2836
+langcode: en
+status: false
+dependencies:
+  module:
+    - node
+id: blue_block_under_header
+label: 'Blue block under header'
+code: |-
+  .content-header::after {
+  	content: "";
+  	height: 200px;
+  	background: #00a3cc;
+  	display: block;
+  }
+  article {
+  	background: white;
+  	max-width: 980px;
+  	margin: -180px auto 30px;
+  	padding: 20px;
+  }
+  .field--name-body {
+  	text-align: left;
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
+      teen_page: teen_page
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,95 @@
+uuid: d6b97c64-366a-43ca-854b-552e0e596825
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: summer_2
+label: 'summer 2'
+code: |-
+  .block.block-views.block-views-blockactivities-and-activity-pages-block-2 h2 {
+  	padding: 1px 15px;
+  }
+  .region-content .layout.layout--onecol {
+      width: 100% !important;
+      background: white !important;
+  }
+
+
+  #summer_nav {
+      display: flex;
+      justify-content: space-between;
+  }
+  #summer_nav a {
+      width: 18% !important;
+      display: block;
+  }
+  .usa-button.usa-button-primary {
+      text-align: center;
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      width: 150px;
+  }
+  .section-heading {
+      padding-left: 45px;
+  }
+
+  .views-field.views-field-body {
+      padding-top: 0;
+  }
+  .usa-button-outline {
+  	display: inline-block;
+  	margin-bottom: 15px;
+  }
+  .view-activities.views-row > div span {
+  	font-size: 1.5em;
+  	font-weight: bold;
+  }
+  .booklist {
+  	clear: both;
+  }
+  .region-content .layout--onecol {
+  	text-align: left;
+  }
+  .block.block-layout-builder.block-field-blocknodepagetitle {
+  	clear: both;
+  	text-align: left;
+  }
+  .summer-icon {
+  	margin-right: 10px;
+  	margin-left: 10px;
+  	float: left;
+  	width: 60px;
+  	height: 58px;
+  }
+
+  .views-field.views-field-field-act-video .field-content {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-around;
+  }
+  .video-embed-field-provider-vimeo {
+  	margin-bottom: 20px;
+  }
+  #summer h3 {
+  	padding: 0;
+  	margin: 20px 0 0px 10px;
+  	font-weight: normal;
+  }
+  #summer img.plants {
+  	float: right;
+  	max-width: 30%;
+  }
+  #summer > div {
+  	clear: both;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/summer\r\n/summer/*\r\n/verano\r\n/es/verano\r\n/verano/*\r\n/es/verano/*"
+contexts: {  }
+conditions_require_all: true

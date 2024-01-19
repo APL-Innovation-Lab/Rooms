@@ -1,0 +1,75 @@
+uuid: 9439e807-c9f9-47ae-a882-13fee599b720
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: accordion
+label: Accordion
+code: |-
+  .details iframe {
+  	width: 100%;
+  }
+  .accordion .grid-offset-1.grid-col-10 {
+  	padding-bottom: 0 !important;
+  }
+  .accordion h2 a span {
+  	position: absolute;
+  	right: 40px;
+  	top: 8px;
+  	border: 1px solid;
+  	padding: 5px;
+  	font-weight: normal;
+  	font-size: 18px;
+  }
+  .views-field-field-accordions article {
+  	padding: 0;
+  }
+  .margin-0 {
+  	display: none;
+  }
+  .accordion .section-heading {
+  	padding-left: 32px;
+  }
+  .accordion h2 img {
+  	position: absolute;
+  	top: -1px;
+  	left: 1px;
+  	width: 50px;
+  	height: auto;
+  }
+  .accordion ul {
+  	margin-left: 15px !important;
+  	padding-left: 15px;
+  }
+
+  .accordion h2 {
+  	position: relative;
+  	background-color: #efefef;
+  	padding: 10px;
+      background-image: url(/library/misc/add.svg),linear-gradient(transparent,transparent);
+  	background-repeat: no-repeat;
+  	background-position: right 5px center;
+  	background-size: 1.5rem;
+  	color: #1b1b1b;
+    cursor: pointer;
+  	padding-left: 20px !important;
+  }
+  .accordion h2.active {
+  	background-image: url(/library/misc/remove.svg),linear-gradient(transparent,transparent);
+  }
+  .accordion .details {
+  	display: none;
+  }
+  .accordion h2.active + .details {
+  	display: block !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/stage/*'
+contexts: {  }
+conditions_require_all: true

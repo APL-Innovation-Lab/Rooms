@@ -1,0 +1,21 @@
+uuid: ca779123-e906-4534-a8e6-24e510f86eee
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: slr_confirm
+label: 'SLR Confirm'
+code: |-
+  #slr_created {
+    display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/slr/confirm/*'
+contexts: {  }
+conditions_require_all: true

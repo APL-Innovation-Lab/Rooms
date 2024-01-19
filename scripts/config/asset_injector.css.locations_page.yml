@@ -1,0 +1,41 @@
+uuid: c7c89cf1-0915-44c4-ae15-14381782f6b8
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: locations_page
+label: 'Locations page'
+code: |-
+  .d-col-9 {
+  	background: none !important;
+  	box-shadow: none !important;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 30px;
+  }
+
+  .apl-library-location {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 1px;
+  }
+  .image-style-medium {
+  	float: right;
+  	padding-top: 25px;
+  }
+  .office-hours {
+  	padding: 0 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /locations
+contexts: {  }
+conditions_require_all: true

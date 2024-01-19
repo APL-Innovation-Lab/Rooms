@@ -1,0 +1,23 @@
+uuid: 311f08b1-1e2b-4f89-89dd-a874373c7b1e
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: rental
+label: Rental
+code: |-
+  .block.block-layout-builder.block-field-blocknodesales-events-pagetitle,
+  .block.block-layout-builder.block-field-blocknodesales-events-pagebody,
+  .field.field--name-field-se-gallery.field--type-image.field--label-hidden.field__items.quickedit-field {
+  	padding: 0 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/rental\r\n/rental/*"
+contexts: {  }
+conditions_require_all: true

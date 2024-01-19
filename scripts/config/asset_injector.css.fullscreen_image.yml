@@ -1,0 +1,24 @@
+uuid: b183f3a4-97bf-47d8-9c0d-f6527229f2e2
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: fullscreen_image
+label: 'fullscreen image'
+code: |-
+  .layout-container {
+  	margin: 0 !important;
+  }
+  body {
+    background: black !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/apltv/*'
+contexts: {  }
+conditions_require_all: false

@@ -1,0 +1,63 @@
+uuid: 2ec74538-6d4f-4abf-8feb-ad5dbb4a3bed
+langcode: eng
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: event_tags__
+label: 'Event Tags'
+code: |-
+  #block-intendedaudience-2 h2, 
+  #block-intendedaudience-2 > div {
+  	padding: 1px 15px;
+  }
+
+  h3 strong, h3 {
+  	font-size: 22px;
+  	font-weight: bold;
+  }
+  .block.block-layout-builder.block-field-blocktaxonomy-termevent-tagsfield-term-subtitle {
+  	margin-left: 15px;
+  	font-size: 24px;
+  	line-height: 2em;
+  }
+  #block-intendedaudience-2 {
+  	background: white;
+  }
+  #apl-events-nav {
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+  .children {
+  	background: #9696c9 !important;
+  }
+
+  .teen {
+  	background: #009ABE !important;
+  }
+
+  .adult {
+  	background: #7DC142 !important;
+  }
+  .apl-rec-age,
+  .apl-event-summary {
+  	margin-bottom: 20px;
+  }
+  .apl-free {
+  	margin: 20px 0 10px;
+  }
+  .apl-item-list {
+  	margin: 0 0 0 29px;
+  }
+media: all
+preprocess: true
+conditions:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      event_tags: event_tags
+contexts: {  }
+conditions_require_all: true

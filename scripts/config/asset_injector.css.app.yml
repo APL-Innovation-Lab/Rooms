@@ -1,0 +1,168 @@
+uuid: 506d0baf-3849-4687-8e6b-a3d325155955
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: app
+label: App
+code: |-
+  html .region-content .layout--onecol {
+  	text-align: left;
+  }
+  .usa-section {
+  	padding-top: 0 !important;
+  }
+
+  .usa-header--basic .usa-nav {
+  	padding: 0 !important;
+  }
+  .navigation .views-row {
+  	margin: 0;
+  }
+  .navigation .field-content {
+  	height: 100px;
+  	background-color: #069abe !important;
+  	text-align: center;
+  }
+
+  .navigation .field-content img {
+  	height: 100%;
+  }
+
+  .apl-event-row {
+  	padding: 20px 20px 0;
+  }
+  .usa-label.control-label {
+  	font-weight: bold;
+  	padding-bottom: 0;
+  }
+  .virtual-library header {
+  	padding: 15px 20px 0;
+  }
+  .virtual-library header h1 {
+  	margin: 0;
+  }
+  .virtual-library .form-item.js-form-item.form-type-textfield.js-form-type-textfield.form-item-title.js-form-item-title label {
+  	margin-top: 0;
+  }
+  .virtual-library .usa-accordion__content {
+  	background-color: #f0f0f0 !important;
+  }
+  #f-1 {
+  	background: white !important;
+  }
+
+  html .usa-checkbox__label {
+  	margin-top: 8px;
+  	padding-bottom: 0;
+  }
+  .glossary-letter,
+  #glossary-index {
+  	display: none;
+  }
+  .virtual-library .usa-accordion .usa-accordion__button {
+  	padding-left: 20px !important;
+  	margin-top: 20px;
+  }
+  .form-item {
+  	margin-right: 20px;
+  }
+  #edit-access--wrapper {
+  	margin-top: 20px;
+  }
+  .fieldset-legend {
+  	font-weight: bold;
+  	padding-bottom: 0;
+  	margin-bottom: 0;
+  }
+  .fieldset-wrapper .usa-form-group {
+       margin-top: 0; 
+  }
+
+  #edit-title,
+  #edit-subject,
+  #edit-loc {
+  	margin-right: 20px;
+  	max-width: 95%;
+  	margin-bottom: 0;
+  	width: 400px;
+  }
+  #edit-access {
+  	margin-top: 0;
+  	padding-top: 0;
+  }
+  .usa-legend {
+  	padding-bottom: 0;
+  	margin-bottom: 0;
+  }
+  html .usa-legend {
+  	margin-top: 10px;
+  }
+  form > .form-item {
+  	padding-left: 20px;
+  	margin-bottom: 20px;
+  }
+  #views-exposed-form-database-by-subject-2-block-3 {
+  	padding-bottom: 20px;
+  }
+  img {
+  	max-width: 100%;
+  	height: auto;
+  }
+  i + div, i + a {
+  	display: inline-block !important;
+  	vertical-align: top;
+  }
+  #views-exposed-form-events-2023-block-1,
+  #views-exposed-form-database-by-subject-2-block-3 {
+  	width: 100% !important;
+  	max-width: 100%;
+  }
+  .apl-event .material-icons, .apl-event .material-icons-round, .apl-event .material-icons-two-tone, .apl-event .material-icons-sharp, .apl-event .material-icons-outlined, .apl-event-snip .material-icons, .apl-event-snip .material-icons-round, .apl-event-snip .material-icons-two-tone, .apl-event-snip .material-icons-sharp, .apl-event-snip .material-icons-outlined {
+  	width: 1.2em;
+  }
+  .field-event-time {
+  	display: flex;
+  	justify-content: left;
+  	margin-bottom: 10px;
+  }
+  .apl-title, .apl-item .field-title, .apl-db-subject .field-title, .apl-event-tag .field-title, .apl-item-facet .field-title, .apl-activity .field-title, .apl-page .field-title, .apl-location .field-title, .apl-database .field-title, .apl-event .field-title {
+  	margin-bottom: 10px;
+  	font-size: 22px;
+  }
+  .apl-db-subject, .apl-event-tag, .apl-item-facet, .apl-activity, .apl-page, .apl-location, .apl-database, .apl-event {
+  	padding: 0 16px 16px 0;
+  	border: none !important;
+  	background: white;
+  	text-align: left;
+  }
+  .usa-button.usa-button-outline.apl-language-switcher {
+  	display: none;
+  }
+  .layout.layout--onecol,
+  .field-content {
+  	width: 100% !important;
+  	display: block;
+  	background: white !important;
+  }
+  .social span {
+  	display: none;
+  }
+  .block.block-layout-builder.block-field-blocknodepagetitle {
+  	padding: 16px !important;
+  	background: white;
+  }
+  .views-element-container.contextual-region.block.block-views.block-views-blockevents-block-1 {
+  	max-width: 64rem;
+  	margin: 0 1em;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/app/*'
+contexts: {  }
+conditions_require_all: true

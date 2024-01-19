@@ -1,0 +1,32 @@
+uuid: 764f67ac-13cc-4222-b644-e41d0e484eb0
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _stats_slr
+label: /stats/slr
+code: |2-
+   .js-form-item.form-item.js-form-type-select.form-type--select.js-form-item-emailo.form-item--emailo.form-item--no-label {
+  	float: left;
+  	width: 200px;
+  }
+
+  #edit-email-wrapper {
+  	width: 300px;
+  }
+
+  #edit-actions {
+  	margin: 2em;
+  	width: 300px;
+  	float: left;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /stats/slr
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,24 @@
+uuid: 8c77b883-19b5-4410-92c7-5f91a745f879
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: admin_fix
+label: 'admin fix'
+code: |-
+  .form-item--settings-label-display {
+  	display: block !important;
+  }
+  .ui-front {
+  	font-family: "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/admin/*'
+contexts: {  }
+conditions_require_all: true

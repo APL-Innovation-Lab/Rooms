@@ -1,0 +1,58 @@
+uuid: c094d135-55c5-47c8-9568-dbc3650b1042
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: ahc_booklists
+label: 'ahc booklists'
+code: |-
+  .block-views-blockahc-booklists-block-1 {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 1px;
+  }
+  #ahc-more-lists {
+    margin-top: 25px !important;
+  }
+
+  body .layout.layout--onecol:nth-child(2) {
+  	float: right !important;
+  	width: 580px !important;
+  	clear: right;
+  	background: none;
+  	padding-bottom: 1px !important;
+  }
+  #ahc-booklist-links {
+  	margin-left: 10px;
+  	text-align: center;
+  }
+  #ahc-booklist-links p,
+  #ahc-booklist-links a {
+  	margin: 0;
+  }
+  #ahc-booklist {
+  	border: none;
+  	margin-left: -6px !important;
+    margin-bottom: 0px;
+  	padding: 0 8px;
+  	position: relative;
+  	}
+  	
+  @media only screen and (min-width: 0px) and (max-width: 959px) {
+  #ahc-booklist {
+  	width: 528px;
+  }
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /ahc/about-us
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,85 @@
+uuid: e0930dd0-95f5-44cb-9fa6-af9cc5379d48
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - taxonomy
+id: virtual_library_subjects
+label: 'Virtual Library Subjects'
+code: |-
+  .views-field.views-field-field-database-access {
+  	padding: 1px 15px 15px;
+  }
+  .block.block-views.block-views-blockdatabase-by-subject-database-by-subject {
+  	margin-top: 20px;
+  }
+  .block.block-views.block-views-exposed-filter-blockvirtual-library-search-page-1 {
+  	background: white;
+  	padding: 1px 15px;
+  	margin-bottom: 20px;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 a {
+  	text-decoration: none;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 a:hover {
+  	text-decoration: underline;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 li {
+  	list-style-type: none;
+  }
+  .d-col-4.t-col-6.m-col-12 {
+  	width: auto !important;
+  }
+  .layout.layout--onecol {
+  	width: 360px;
+  	float: left;
+  	clear: none;
+  }
+  .layout--onecol {
+  	background: none !important;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 {
+  	background: white;
+  }
+
+  .layout.layout--onecol:nth-child(1) {
+  	width: 580px;
+  	float: right;
+  	clear: none;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 660px) {
+  #block-exposedformvirtual-library-searchpage-1 {
+  	width: 500px;
+  }
+  #block-views-block-alerts-block-4,
+  .content_footer,
+  #block-views-block-sections-block-1,
+
+  .layout.layout--onecol,
+  .layout.layout--onecol:nth-child(1),
+  #block-claro2-content,
+  #block-views-block-navigation-block-6 {
+  	width: 530px !important;
+  }
+  }
+media: all
+preprocess: false
+conditions:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      database_subjects: database_subjects
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

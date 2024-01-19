@@ -1,0 +1,35 @@
+uuid: 765ce0f1-c390-4f90-855b-fad662b71ff9
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _list
+label: /list
+code: |-
+  .fieldset-wrapper {
+  	display: flex;
+  }
+  .usa-form-group {
+  	width: 32%;
+  	float: left !important;
+  	margin-right: 10px;
+  }
+  .usa-form-group.js-form-item.form-no-label {
+  	margin-right: 10px;
+  }
+  fieldset .form-item {
+  	margin-right: 10px;
+  }
+  .usa-form-group {
+  	margin-top: 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/meeting-rooms/list\r\n/passports/list"
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,21 @@
+uuid: 722fbc5d-2cd1-4698-8122-483bf8b86969
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: new_immigrants_project
+label: 'New Immigrants Project'
+code: |-
+  .apl-language {
+  	border: none !important;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/nip/*\r\n/nip\r\n/es/pni\r\n/es/pni/*\r\n/pni/*"
+contexts: {  }
+conditions_require_all: true

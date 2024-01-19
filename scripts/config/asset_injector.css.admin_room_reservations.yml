@@ -1,0 +1,43 @@
+uuid: ea960911-eedc-4c28-aae0-2b6c601f3cd2
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: admin_room_reservations
+label: admin/room-reservations
+code: |-
+  .fieldset {
+  	margin: 12px 25px 0 10px;
+  	box-shadow: none;
+  	border: none;
+  }
+  .js-form-item.form-item.js-form-type-select.form-type--select.js-form-item-webform-submission-value-1-op.form-item--webform-submission-value-1-op.form-item--no-label {
+  	margin: 0;
+  }
+  #edit-status--wrapper {
+  	margin: 5px 15px;
+  }
+  .fieldset__wrapper,
+  .form-item--date-op {
+  	margin: 0;
+  }
+  .fieldset__label {
+  	padding: 12px 0 !important;
+  }
+  #edit-actions {
+  	margin: 12px;
+  }
+
+  .js-form-item.form-item.js-form-type-select.form-type--select.js-form-item-date-op.form-item--date-op.form-item--no-label {
+  	margin: 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/admin/room-reservations\r\n/admin/room-reservations/*\r\n/admin/structure/views/view/meeting_room_reservations/*\r\n/admin/structure/views/view/meeting_room_reservations_admin/*"
+contexts: {  }
+conditions_require_all: true

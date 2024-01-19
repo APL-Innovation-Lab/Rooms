@@ -1,0 +1,29 @@
+uuid: d8858433-c308-4cf6-8e49-326fb36d497f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: sales_events_pages
+label: 'Image Gallery'
+code: |-
+  .field--name-field-se-gallery .field__item {
+  	display: inline-block;
+  	margin-right: 20px;
+  	margin-bottom: 20px;
+  }
+  tr {
+  	border-color: black;
+  }
+  th {
+  	position: inherit !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/rental/*\r\n/recycled-reads\r\n/recycled-reads/*\r\n/rental\r\n"
+contexts: {  }
+conditions_require_all: false

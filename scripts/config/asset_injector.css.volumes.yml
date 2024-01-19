@@ -1,0 +1,29 @@
+uuid: 99b1f11c-1e82-443a-bccb-a06e1cc76d96
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: volumes
+label: Volumes
+code: |-
+  .field.field--name-name.field--type-string.field--label-hidden.field__item {
+  	font-size: 30px;
+  	font-weight: bold;
+  	padding: 15px;
+  }
+  #block-claro2-content > div.content > div {
+  	background: white !important;
+  }
+  .block.block-layout-builder.block-field-blocktaxonomy-termevent-tagsdescription {
+  	padding: 15px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /volumes
+contexts: {  }
+conditions_require_all: false

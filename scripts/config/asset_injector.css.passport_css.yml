@@ -1,0 +1,93 @@
+uuid: 28a38e6a-22a1-4c31-96fa-ba5c7e387cee
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: passport_css
+label: 'slr and passport css'
+code: |-
+  #node-passport-reservation-form {
+      max-width: 1420px;
+      margin: 0 auto;
+  }
+  .check_date {
+  	display: none;
+  }
+  #rez_date {
+  	font-size: 18px;
+  	font-weight: bold;
+  	padding-bottom: 10px;
+  }
+  .inactive {
+  	display: none;
+  }
+  .check {
+  	position: absolute;
+  	cursor: pointer;
+  }
+  .room_name {
+  	font-weight: bold;
+  	margin-bottom: 10px;
+  }
+  .room_wrapper {
+  	background: #efefef;
+  	margin-bottom: 10px;
+  	padding: 10px;
+  }
+  .form-item__label.option,
+  #edit-field-slr-agreement-value--description {
+  	font-size: 16px;
+  } 
+  #edit-field-slr-room-wrapper,
+  #edit-field-ac-wrapper,
+  #edit-scheduler-settings,
+  #edit-field-slr-time-end-wrapper,
+  #edit-field-slr-time-start-0,
+  .entity-meta {
+    display: none;
+  }
+  .pp_avail {
+  	background: blue;
+  	color: white;
+  	border-radius: 4px;
+  	padding: 10px !important;
+  	margin: 0 10px 10px 0;
+  	display: inline-block;
+  	text-align: center;
+  	width: 160px;
+  }
+  .pp_avail:hover {
+  	background: purple;
+  	color: white;
+  }
+  .pp_avail.active {
+  	background: purple;
+  }
+  .pp_avail.inactive {
+  	opacity: 0.5;
+  	display: none;
+  }
+  .pp_less,.pp_less2,.pp_more {
+  	text-decoration: none;
+  }
+  .pp_less:hover,.pp_less2:hover,.pp_more:hover {
+  	text-decoration: underline;
+  }
+  #edit-footer,
+  #edit-field-pp-date-0,
+  .layout-region--node-secondary {
+  	display: none;
+  }
+  .material-icons {
+  	margin-right: 5px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /slr-request
+contexts: {  }
+conditions_require_all: false

@@ -1,0 +1,32 @@
+uuid: 6ae60750-f675-4021-8c72-02113df13254
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+    - user
+id: apltv_preview
+label: 'APLTV Preview'
+code: |-
+  iframe body {
+  	scroll-padding-top: 0px;
+  	transform: scale(.1);
+  	transform-origin: 0 0;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/apltv/item/*'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      item_editor: item_editor
+contexts: {  }
+conditions_require_all: true

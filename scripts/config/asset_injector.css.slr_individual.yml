@@ -1,0 +1,21 @@
+uuid: fab60a50-c635-4344-b4e0-0fe378ccad33
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: slr_individual
+label: 'SLR Individual'
+code: |-
+  .view-slr-availability {
+  	padding: 1px 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/slr/*'
+contexts: {  }
+conditions_require_all: true

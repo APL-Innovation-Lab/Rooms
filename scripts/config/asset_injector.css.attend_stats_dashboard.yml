@@ -1,0 +1,22 @@
+uuid: f8021884-e2d9-4384-84e1-d036231a75cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: attend_stats_dashboard
+label: 'Attend Stats Dashboard'
+code: |-
+  #views-exposed-form-attend-stats-dashboard__-page-1 > * {
+  	margin-right: 1em;
+  	align-content: center;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/attendance-stats
+contexts: {  }
+conditions_require_all: true

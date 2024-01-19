@@ -1,0 +1,39 @@
+uuid: 904d41c9-0041-4ff9-a54b-aadf25ee37b8
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: ahc_hotfixes_
+label: 'AHC hotfixes'
+code: |-
+  h1.views-field.views-field-title.grid-col-10.grid-offset-1,
+  .usa-nav {
+  	display: none;
+  }
+  .block-views.block-views-blocknews-ahc-block-4 {
+  	margin-left: auto;
+  	margin-right: auto;
+  	max-width: 64rem;
+  	padding-left: 30px;
+  	padding-right: 30px;
+  	background: white;
+  	padding-bottom: 24px;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/ahc\r\n/ahc/staging"
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,30 @@
+uuid: bcd96e83-8d95-4c04-9512-4f14f186da6d
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _ahc_news_events
+label: /ahc/news-events
+code: |-
+  .views-element-container.block {
+  	padding: 1px 15px;
+  }
+  .field-title {
+  	margin-top: 15px;
+  }
+  .views-element-container.block a {
+    text-decoration: none;
+  }
+  .views-element-container.block a:hover {
+    text-decoration: underline;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/ahc/news-events\r\n/ahc/outreach"
+contexts: {  }
+conditions_require_all: true

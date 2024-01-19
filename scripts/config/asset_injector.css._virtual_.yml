@@ -1,0 +1,22 @@
+uuid: 956ab2a7-1f6e-45ee-99e6-0032a93ab98f
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _virtual_
+label: /virtual/
+code: |-
+  .pager__items.js-pager__items {
+  	background: white;
+  	padding-bottom: 1em;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/virtual/*'
+contexts: {  }
+conditions_require_all: true

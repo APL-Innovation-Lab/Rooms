@@ -1,0 +1,59 @@
+uuid: ac9e1794-f68c-4eb4-9b3e-4e06bfc15da0
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: admin_content_search
+label: admin/content-search
+code: |-
+  .views-exposed-form__item.views-exposed-form__item--preceding-actions.js-form-item.form-item.js-form-type-select.form-type--select.js-form-item-type.form-item--type.form-item--no-label,
+  .views-exposed-form__item.js-form-item.form-item.js-form-type-textfield.form-type--textfield.js-form-item-title.form-item--title.form-item--no-label {
+  	margin-top: .75em;
+  }
+  html #edit-actions {
+  	margin-top: 3.25em !important;
+  }
+  .fieldset__wrapper {
+  	margin-left: 0;
+  }
+  .fieldset__label {
+  	padding-left: 0;
+  }
+  .js-form-item.form-item.js-form-type-select.form-type--select.js-form-item-date-op.form-item--date-op.form-item--no-label {
+  	margin-top: 0 !important;
+  }
+  #edit-uid {
+  	width: 15em;
+  }
+  #edit-date-wrapper {
+  	margin: 0 25px 0 10px;
+  	box-shadow: none;
+  	border: none;
+  }
+  .js-form-item.form-item.js-form-type-select.form-type--select.js-form-item-date-op.form-item--date-op.form-item--no-label {
+  	margin-top: .3em;
+  }
+  #edit-date-wrapper {
+  	margin: 0 25px 0 10px;
+  }
+  html .fieldset__label, .form-item__label {
+  	display: table;
+  	margin-top: 0.25rem;
+  	font-size: 0.889rem;
+  	font-weight: bold;
+  	line-height: 1.125rem;
+  	color: black;
+  }
+  .form-item__label {
+  	margin-bottom: 0.3rem !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/content-search
+contexts: {  }
+conditions_require_all: true

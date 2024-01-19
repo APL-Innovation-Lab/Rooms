@@ -1,0 +1,111 @@
+uuid: 2fe15daa-56cb-4fad-8964-ccc569fcd185
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: job_portal
+label: 'Accordion like on Job Portal'
+code: |-
+  .block.block-layout-builder.block-field-blocknodejob-portal-pagetitle,
+  #views_slideshow_cycle_div_highlighted-block_3_1 div span a,
+  #views_slideshow_cycle_div_highlighted-block_3_1 span,
+  .field.field--name-body {
+  	padding: 0;
+  }
+  #summer .section-heading {
+  	padding-left: 0;
+  }
+  h3 {
+  	margin-left: 15px;
+  }
+  p, 
+  .field--name-title {
+  	padding: 0 15px !important;
+  }
+  .details iframe {
+  	width: 100%;
+  }
+  .filter-wrapper {
+  	display: none;
+  }
+  .field--name-body h2 img,
+  #jobportal h2 img {
+  	position: absolute;
+  	top: -1px;
+  	left: 1px;
+  	width: 50px;
+  }
+  #jobportal ul {
+  	margin-left: 15px !important;
+  	padding-left: 15px;
+  }
+  .field--name-body h2 img {
+  	position: absolute;
+  	top: 5px;
+  	left: 5px;
+  	width: 40px;
+  }
+  .virtual-library h2,
+  .field--name-body h2,
+  .field--name-body h4,
+  #jobportal h2 {
+  	position: relative;
+  	background-color: #efefef;
+  	padding: 10px;
+      background-image: url(/library/misc/add.svg),linear-gradient(transparent,transparent);
+  	background-repeat: no-repeat;
+  	background-position: right 5px center;
+  	background-size: 1.5rem;
+  	color: #1b1b1b;
+    cursor: pointer;
+  }
+  .virtual-library h2 {
+  	padding-left: 20px !important;
+  }
+  .virtual-library h2.active,
+  .field--name-body h2.active,
+  .field--name-body h4.active,
+  #jobportal h2.active {
+  	background-image: url(/library/misc/remove.svg),linear-gradient(transparent,transparent);
+  }
+  .virtual-library .details,
+  .field--name-body .details,
+  #jobportal .details {
+  	display: none;
+  }
+  .virtual-library h2.active + .details,
+  .field--name-body h2.active + .details,
+  .field--name-body h4.active + .details,
+  h2.active + .details {
+  	display: block !important;
+  }
+  .layout-region.layout-region--node-secondary {
+  	display: none;
+  	position: absolute;
+  }
+  .layout-region__content {
+  	max-width: 960px !important;
+  }
+  .layout-region.layout-region--node-main {
+  	float: none;
+  	margin: 0 auto;
+  	padding: 0 !important;
+  }
+  #jp-admin,
+  #edit-group-survey {
+  	display: none;
+  }
+  .help {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/jobportal\r\n/jobportal/*\r\n/portaldeempleo\r\n/portaldeempleo/*\r\n/community-resource-hub\r\n/enhanced\r\n/summer\r\n/verano\r\n/es/verano\r\n"
+contexts: {  }
+conditions_require_all: true

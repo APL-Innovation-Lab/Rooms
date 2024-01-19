@@ -1,0 +1,76 @@
+uuid: 1aed2f7e-71ae-4c98-8688-e0ae23571155
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: community_resource_hub
+label: community-resource-hub
+code: |-
+  .d-col-9.t-col-9.m-col-10.layout__region.layout__region--second {
+  	width: 100% !important;
+  }
+  h2 {
+  	font-size: 24px;
+  }
+  .ipad p, .ipad li {
+  	font-size: 22px;
+  	line-height: 1.6em;
+  }
+  .field.field--name-field-main-image.field--type-image img {
+  	width: 100%;
+  }
+  html .content_footer {
+  	padding-top: 0;
+  }
+  html .d-col-3, 
+  html .d-col-9 {
+  	background: white;
+  	box-shadow: none;
+  	margin-bottom: 0;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 30px;
+  }
+  html .region-content {
+  	margin-top: 0 !important;
+  }
+  html #block-claro2-content, .page-title {
+  	max-width: 100%;
+  }
+  html p,
+  html .field--name-title {
+  	padding: 0 !important;
+  }
+  .field.field--name-title.field--type-string.field--label-hidden {
+  	margin: 0;
+  	padding-top: 10px !important;
+  }
+  .ipad header {
+  	display: none;
+  }
+  html .page-content.clearfix {
+  	margin-top: 0;
+  }
+  html .region.region-content {
+  	max-width: 100%;
+  	margin: 0 auto;
+  }
+  html .page-wrapper .flex-grid {
+  	display: flex;
+  	justify-content: space-between;
+  	text-align: left;
+  	max-width: 100%;
+  	margin: 0 auto;
+  	flex-wrap: wrap;
+  	align-items: flex-start;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /community-resource-hub
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,115 @@
+uuid: 4709a4d8-fa97-449a-af3d-b4445c6ef4c9
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - node
+    - system
+id: _events_exhibits
+label: /events/exhibits
+code: |-
+  .field-title {
+  	font-size: 40px !important;
+  	font-weight: bold;
+  	margin-bottom: 20px !important;
+  }
+  #apl-events-nav {
+  	width: 300px;
+  }
+  .exhibit-title a {
+  	text-decoration: none;
+  	color: black;
+  }
+  .exhibit-title a:hover {
+  	text-decoration: underline;
+  }
+  .d-col-3.t-col-3.m-col-2.layout__region.layout__region--first {
+  	padding-bottom: 0;
+  }
+  body .layout.layout--onecol:nth-child(2) {
+  	float: right !important;
+  	width: 580px !important;
+  	clear: none;
+  	background: white !important;
+  }
+  .layout.layout--onecol:first-child {
+  	width: 360px !important;
+  	float: left !important;
+  }
+
+  #apl-events-nav li {
+  	list-style: none;
+  }
+
+  .layout.layout--onecol:first-child h2 {
+  	padding-left: 15px !important;
+  }
+  .page-node-type-exhibit #apl-events-nav {
+  	margin-left: 15px;
+  }
+  .exhibit_copy {
+  	padding: 0 15px 15px;
+  }
+  .messages__content .usa-button.usa-button-outline {
+  	text-decoration: none;
+  }
+  .messages__content .usa-button.usa-button-outline:hover {
+  	text-decoration: underline;
+  }
+  #block-intendedaudience-2 h2, 
+  #block-intendedaudience-2 > div {
+  	padding: 1px 15px;
+  }
+
+  #block-intendedaudience-2 {
+  	background: white;
+  }
+  #apl-events-nav {
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+  .children {
+  	background: #9696c9 !important;
+  }
+
+  .teen {
+  	background: #009ABE !important;
+  }
+
+  .adult {
+  	background: #7DC142 !important;
+  }
+  .apl-rec-age,
+  .apl-event-summary {
+  	margin-bottom: 20px;
+  }
+  .apl-free {
+  	margin: 20px 0 10px;
+  }
+  .apl-item-list {
+  	margin: 20px 20px 0 0;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/events/exhibits\r\n/events/exhibits/*"
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      exhibit: exhibit
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

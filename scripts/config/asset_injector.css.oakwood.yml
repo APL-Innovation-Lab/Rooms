@@ -1,0 +1,45 @@
+uuid: 0b3915a5-a3e3-4f31-9090-8f31951634cc
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: oakwood
+label: Cemeteries
+code: |-
+  /*
+  .oakwood .view-content {
+  	display: grid;
+  	grid-template-columns: repeat(2,50%);
+  	width: 100%;
+  	grid-gap: 15px;
+  }
+
+  .oakwood-row {
+  	background: #e3e3e3;
+  	padding: 10px;
+  }
+
+  .views-field.views-field-operations {
+  	margin-top: 20px;
+  }
+  */
+  .oakwood-row td {
+  	padding: 5px 20px 10px 0;
+  	vertical-align: top;
+  }
+  #block-claro2-content {
+  	width: 100% !important;
+  	max-width: 100% !important;
+  	padding: 0 1em;
+  	box-sizing: border-box;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/ahc/oakwood\r\n/ahc/cemeteries"
+contexts: {  }
+conditions_require_all: true

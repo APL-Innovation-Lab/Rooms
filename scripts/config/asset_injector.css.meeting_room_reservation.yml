@@ -1,0 +1,34 @@
+uuid: f90001d7-7549-4c0b-af6c-46e961caf972
+langcode: eng
+status: true
+dependencies:
+  module:
+    - node
+id: meeting_room_reservation
+label: 'Meeting Room Reservation'
+code: |-
+  .form-item--editor-format.js-form-item.form-item.js-form-type-select.form-type--select.js-form-item-field-purpose-of-group-0-format.form-item--field-purpose-of-group-0-format,
+  #edit-field-purpose-of-group-0-format,
+  #edit-meta-published {
+  	display: none;
+  }
+
+  h1 {
+  	margin: 0;
+  	background: white;
+  }
+  .content-header.clearfix {
+  	padding: 0;
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      room_reservation: room_reservation
+contexts: {  }
+conditions_require_all: false

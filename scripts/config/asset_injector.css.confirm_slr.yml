@@ -1,0 +1,47 @@
+uuid: 9c6fe3dc-7122-444d-abc8-8890fb7b9f5c
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: confirm_slr
+label: 'Confirm or Cancel SLR'
+code: |-
+  li span,
+  .dropbutton-toggle,
+  .js-form-item.form-item,
+  .vertical-tabs.clearfix.js-vertical-tabs {
+  	display: none;
+  }
+
+  .js .dropbutton--multiple .dropbutton__item:first-of-type {
+  	margin-right: 0 !important;
+  }
+  html {
+    opacity:0;
+  }
+  #edit-actions {
+  	background: #efefef;
+  	max-width: 920px;
+  	padding: 20px;
+  	margin: 0 auto;
+  }
+
+  #edit-actions h1 {
+  	padding: 0 0 10px 0;
+  	margin: 0 !important;
+  	font-size: 24px;
+  }
+  #edit-actions .start-time {
+  	font-size: 22px;
+  	padding: 0 0 20px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/confirm/slr\r\n/confirm/slr/*\r\n/cancel/slr/*\r\n/cancel/slr\r\n"
+contexts: {  }
+conditions_require_all: true

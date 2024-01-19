@@ -1,0 +1,921 @@
+uuid: cc282552-73b1-4595-b9e5-0ef4d70007c5
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: nav
+label: Nav
+code: |+
+  .usa-layout-docs__main.desktop\:grid-col-fill {
+      background: #f0f0f0;
+      background-image: url(/library/nav_img/bg.png);
+      background-repeat: repeat-x;
+      background-position-y: -177px;
+  }
+
+  #newsletter input {
+  	padding: 10px;
+  	width: 245px;
+  	margin-bottom: 8px;
+  }
+
+  #newsletter button {
+  	background: #009abf !important;
+  	border: none;
+  	padding: 12px !important;
+  	color: white;
+  	cursor: pointer;
+  	border-radius: 4px;
+  	margin-left: 8px;
+  }
+
+  #newsletter button:hover {
+      text-decoration: underline;
+  }
+
+  .layout__region.layout__region--content {
+  	margin-top: -5px;
+  }
+  #block-views-block-footer-block-1 p {
+  	padding: 0 !important;
+  }
+  .dropdown-menu.biblionav_my_account {
+  	background: red;
+  }
+  article h1, aside h1, nav h1, section h1, form h1 {
+  	padding: 1.5rem 0;
+    margin-block-start: 0 !important;
+    margin-block-end: 0 !important;
+  }
+
+  .last.main-menu-links {
+  	position: absolute;
+  	right: 0;
+  }
+  #search.last img {
+  	vertical-align: bottom;
+  	padding: 0 0 0 8px;
+  	height: 1.8rem;
+  	width: auto;
+  }
+
+  .views-element-container.contextual-region.block.block-views.block-views-block24v-block-1 {
+  	padding-bottom: 10px
+  }
+  .usa-checkbox__label.control-label.option {
+  	margin-bottom: 1em;
+  }
+  #edit-submit {
+  	margin: 2rem 1rem;
+  }
+  .views-field.views-field-title {
+  	padding-left: 1rem;
+  }
+  .form-item {
+  	padding: 0 1rem;
+  }
+  #edit-introduction {
+  	padding: 0;
+  }
+
+  #block-uswds-base-content,
+  #block-views-block-press-releases-grid-container, .grid-container, .layout.layout--onecol {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 64rem;
+      width: auto;
+  }
+  #block-views-block-press-releases-grid-container, .grid-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+  .layout__region.layout__region--content,
+  .grid-row {
+      flex-wrap: wrap;
+  }
+  #block-uswds-base-content {
+      margin-top: 50px;
+      background: white;
+  }
+  .views-field.views-field-tid img,
+  .views-field.views-field-field-main-image img {
+      width: 100%;
+      height: 200px !important;
+      object-fit: cover; /* This will zoom the image to cover the div completely */
+      object-position: center; /* This will make sure the middle part of the image is shown */
+  }
+
+
+  .views-field.views-field-field-main-image {
+      height: 200px;
+      overflow: hidden;
+      width: 100%;
+  }
+  .usa-footer.usa-footer--slim {
+      background: #f0f0f0;
+  }
+  .usa-section {
+      padding-bottom: 1rem;
+      background: #f0f0f0;
+  }
+  .block.block-layout-builder.block-field-blocknodejob-portal-pagetitle,
+  #views_slideshow_cycle_div_highlighted-block_3_1 div span a,
+  #views_slideshow_cycle_div_highlighted-block_3_1 span,
+  .field.field--name-body,
+  .views-field-body {
+      padding: 0;
+  }
+  #summer .section-heading {
+      padding-left: 0;
+  }
+  h3 {
+      margin-left: 15px;
+  }
+
+  .details iframe {
+      width: 100%;
+  }
+
+  .views-field-body h2 img,
+  .field--name-body h2 img,
+  #jobportal h2 img {
+      position: absolute;
+      top: -1px;
+      left: 1px;
+      width: 50px;
+  }
+  #jobportal ul {
+      margin-left: 15px !important;
+      padding-left: 15px;
+  }
+  .view-field-body h2 img,
+  .field--name-body h2 img {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 40px;
+  }
+
+
+  .virtual-library h2,
+  .field--name-body h4,
+  .views-field-body h4,
+  #jobportal h2 {
+      position: relative;
+      background-color: #efefef;
+      padding: 10px;
+    background-image: url(/library/misc/add.svg),linear-gradient(transparent,transparent);
+      background-repeat: no-repeat;
+      background-position: right 5px center;
+      background-size: 1.5rem;
+      color: #1b1b1b;
+    cursor: pointer;
+  }
+  .virtual-library h2 {
+      padding-left: 20px !important;
+  }
+  .virtual-library h2.active,
+  .field--name-body h2.active,
+  .field--name-body h4.active,
+  .views-field-body h2.active,
+  .views-field-body h4.active,
+  #jobportal h2.active {
+      background-image: url(/library/misc/remove.svg),linear-gradient(transparent,transparent);
+  }
+  .virtual-library .details,
+  .field--name-body .details,
+  .views-field-body .details,
+  #jobportal .details {
+      display: none;
+  }
+  .virtual-library h2.active + .details,
+  .field--name-body h2.active + .details,
+  .field--name-body h4.active + .details,
+  .views-field-body h2.active + .details,
+  .views-field-body h4.active + .details,
+  h2.active + .details {
+      display: block !important;
+  }
+  .layout-region.layout-region--node-secondary {
+      display: none;
+      position: absolute;
+  }
+  .layout-region__content {
+      max-width: 960px !important;
+  }
+  .layout-region.layout-region--node-main {
+      float: none;
+      margin: 0 auto;
+      padding: 0 !important;
+  }
+  #jp-admin,
+  #edit-group-survey {
+      display: none;
+  }
+  .help {
+      max-width: 960px;
+      margin: 0 auto;
+  }
+
+  .user-logged-in .layout-region.layout-region--node-secondary {
+      display: block !important;
+      position: relative !important;
+  }
+
+  .usa-form {
+      max-width: 100% !important;
+  }
+
+  #lang_switcher {
+  	position: absolute;
+  	padding: 4px 0px;
+  	left: 17px;
+  	display: flex;
+  }
+  .grid-row.left .hero-text2 {
+  	margin-left: 16px;
+  }
+  .grid-row.right .hero-text2 {
+  	margin-right: 16px;
+  }
+  #get-library-card {
+  	float: left;
+  }
+  .footer_section form + a {
+  	display: block;
+  	width: 108px;
+  	float: right;
+  	margin-top: 24px;
+  }
+  #newsletter button {
+  	background: #009abf !important;
+  	border: none;
+  	padding: 12px !important;
+  	color: white;
+  	cursor: pointer;
+  	border-radius: 4px;
+  	margin-left: 8px;
+  	min-width: 108px !important;
+  }
+  #lang_switcher a {
+  	text-decoration: none;
+  	margin: 0 5px;
+  }
+  #books-movies-more.active,
+  #services.active,
+  #education-research.active {
+  	border-bottom: 4px solid #009abf;
+  }
+  #books-movies-more,
+  #services,
+  #education-research {
+  	padding-bottom: 13px;
+  }
+  #main-content>.grid-container {
+  	width: 100%;
+  	max-width: 100%;
+  	padding: 0;
+  	margin: 0;
+  }
+  .views-field-body .grid-container {
+  	background: white;
+  }
+  .grid-row.right {
+  	justify-content: right;
+  }
+  .apl-grid-container.grid-container {
+  	padding-left: 0;
+  	padding-right: 0;
+  	position: relative;
+  }
+  html #nav-events {
+  	padding-right: 0;
+  }
+  .menu.menu--languages.nav {
+  	display: none;
+  }
+  #nav-events, #nav-locations {
+  	padding: 4px 12px 4px 30px;
+  	position: relative;
+  }
+  #nav-events a, #nav-locations a {
+  	color: black;
+  	text-decoration: none;
+  }
+  #nav-events img {
+  	position: absolute;
+  	top: 6px;
+  	left: 8px;
+  }
+  #nav-locations img {
+  	position: absolute;
+  	top: 6px;
+  	left: 12px;
+  }
+  #apl-nav a {
+  	color: white;
+  	text-decoration: none;
+  	text-align: center;
+  }
+  #apl-nav {
+  	min-height: 55px;
+  }
+  .menucopy {
+  	font-size: 12px;
+  	padding: 3px 0 0 0;
+  	margin: 0;
+  }
+  #apl-nav .first {
+  	padding: 5px 0;
+  	position: absolute;
+  }
+  .first.apllogo {
+  	margin: 0 auto;
+  	margin-top: 2px;
+  }
+  .first img:nth-child(2) {
+  	margin-left: 8px !important;
+  	margin-bottom: 0 !important;
+  }
+  .apl-grid-container li {
+  	list-style: none;
+  	padding: 0 30px 0 0;
+  	margin: 0;
+  }
+  .apl-submenu ul {
+  	float: left;
+  }
+  .apl-submenu a {
+  	color: black;
+  	text-decoration: none;
+  }
+  .apl-submenu a:hover {
+  	color: black;
+  	text-decoration: underline;
+  }
+
+  .active.apl-submenu {
+  	display: block !important;
+  	background: white;
+  	width: 100%;
+  	padding: 0;
+  	position: absolute;
+  	z-index: 9999;
+  	left: 50%;
+  	transform: translate(-50%,0%);
+  	
+  	box-shadow: 4px 4px 4px 0 rgba(0,0,0,.15);
+  }
+
+  .apl-submenu li {
+  	list-style: none;
+  	padding: 2px 0;
+  	margin: 0 auto;
+  	padding-right: 30px;
+  	min-height: 32px;
+  	margin-bottom: 5px;
+  }
+  ul.apllinks {
+  	padding: 0;
+  	margin-block-start: 0;
+  	margin-block-end: 0;
+  	padding-top: 6px;
+  	padding-right: 20px;
+  }
+  .apllinks.onlybig.grid-offset-5.grid-col-5, .apllinks.onlybig.grid-offset-4.grid-col-6, .apllinks.onlybig.grid-offset-4.grid-col-5, .apllinks.onlybig.grid-offset-4.grid-col-6 {
+  	margin: 6px auto 2px;
+  }
+  .last.aplsearch {
+  	right: 18px;
+  	margin-top: 4px;
+  }
+  #searchCat, #searchWeb {
+  	height: 24px !important;
+  	width: 24px !important;
+  }
+  #searchText::placeholder {
+  	color: #A9AEB1;
+  }
+  #searchText {
+  	font-size: 24px;
+  	font-weight: bold;
+  	padding: 8px 16px;
+  	width: 100%;
+  }
+  #search.active img.onlyActive {
+  	display: block !important;
+  	float: right;
+  	padding: 5px 10px 5px 6px !important;
+  }
+  #search.active img, #search.active span {
+  	display: none;
+  }
+  .opt {
+  	float: left;
+  	margin: 8px 16px 8px 8px;
+  	padding-left: 8px !important;
+  	display: flex;
+  }
+  .opt>input {
+  	margin-right: 8px;
+  }
+  #catalog_search input {
+  	border: none;
+  }
+  .imageButton {
+  	float: right;
+  	width: auto !important;
+  	padding: 0 !important;
+  	position: absolute;
+  	right: 2px;
+  	top: 6px;
+  }
+
+  #catalog_search {
+  	border-bottom: 1px solid;
+  	position: relative;
+  	margin-right: 16px;
+  }
+  #block-biblioaccountlogin .field.field--name-body.field--type-text-with-summary.field--label-hidden.field__item {
+  	background: white;
+  	box-shadow: 4px 4px 4px 0 rgba(0,0,0,.15);
+  }
+  #services-menu ul {
+  	padding: 0;
+  }
+  #apl-subsubmenu-1,
+  #apl-subsubmenu-2 {
+  	float: left;
+  }
+  .menu-img {
+  	width: 400px;
+  	float: left;
+  	display: none;
+  }
+
+
+  #block-views-block-events-block-4 {
+  	padding: 0 16px;
+  }
+  .layout.layout--onecol a.usa-button {
+  	color: white;
+  }
+  .layout.layout--onecol a.usa-button.usa-button-outline {
+  	border: 1px solid;
+  	color: #0069aa;
+  }
+  .usa-button.usa-button-outline img {
+  	background-color: #0069aa;
+  	padding: 5px;
+  	vertical-align: middle;
+  	margin-right: 5px;
+  	margin-top: 0px;
+  	border-radius: 3px;
+  	width: 2em;
+  	height: 2em;
+  }
+  .grid-offset-1.grid-col-10 {
+  	padding-bottom: 40px;
+  }
+  ul, ol, p {
+  	line-height: 1.5em;
+  }
+  .layout.layout--onecol a {
+  	color: #329abf;
+  }
+  h1.grid-offset-1.grid-col-10, .grid-offset-1.grid-col-10 h1 {
+  	padding: 24px 0;
+  	font-size: 2em;
+  }
+  .virtual-library24 .usa-accordion.usa-accordion--bordered {
+  	margin-bottom: 40px;
+  }
+  .virtual-library24 .usa-button.usa-button-outline {
+  	border: 1px solid;
+  	margin-bottom: 2em;
+  }
+  .virtual-library-resource>a:nth-child(1) {
+  	font-size: 24px;
+  	font-weight: bold;
+  	text-decoration: none;
+  	padding: 16px 0 !important;
+  }
+  .virtual-library-resource>a:hover {
+  	text-decoration: underline;
+  }
+  .apl-language-switcher {
+  	float: right;
+  }
+  .apl-language-switcher .usa-button.usa-button-outline {
+  	border: 1px solid #0069aa;
+  	margin: -1em 0 0 0;
+  }
+  .bibliocommons_embed_block .dropdown-menu {
+  	position: absolute !important;
+  	top: 0;
+  	right: 0 !important;
+  	z-index: 1000;
+  	left: unset !important;
+  	min-width: 160px;
+  	padding: 5px 0;
+  	margin: 2px 0 0;
+  	list-style: none;
+  	font-size: 14px;
+  	text-align: left;
+  	background-color: #fff;
+  	border: 1px solid #ccc;
+  	border: 1px solid rgba(0, 0, 0, 0.15);
+  	border-radius: 0px;
+  	-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  	background-clip: padding-box;
+  }
+  #main-content .grid-row.grid-gap>* {
+  	padding-left: 0;
+  	padding-right: 0;
+  }
+  #main-content .grid-row.grid-gap {
+  	margin-left: 0;
+  	margin-right: 0;
+  }
+  #aplmenu.active img:nth-child(2) {
+  	display: block !important;
+  }
+  #aplmenu.active img:nth-child(1) {
+  	display: none !important;
+  }
+  #sub-search {
+  	padding: 36px 36px 145px 36px;
+  }
+  #sub-aplmenu {
+  	width: 51%;
+  }
+  #sub-aplmenu.active {
+  	display: block !important;
+  	width: 100%;
+  	padding: 32px;
+  }
+  #apl-nav .grid-row.left {
+  	justify-content: flex-start;
+  	width: 100%;
+  	padding: 12px 18px 15px;
+  	position: relative;
+  }
+  .menu-button {
+  	background: #009abf;
+  	color: white !important;
+  	padding: 18px;
+  	margin-top: 24px !important;
+  	display: inline-block;
+  	width: auto;
+  	border-radius: 3px;
+  	font-weight: ;
+  }
+  .usa-nav-container {
+  	background: black;
+  	max-width: 100%;
+  }
+  header .usa-nav-container {
+  	display: none !important;
+  }
+  .aplmenu.onlysmall, .last.aplsearch {
+  	position: absolute;
+  }
+  #search.last {
+  	padding: 0 !important;
+  	width: 80px;
+  	text-align: right !important;
+  	position: relative;
+  }
+  .apllinks, .last.aplsearch {
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: right;
+  }
+  .aplmenu.onlysmall {
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  	height: 33px;
+  	width: 28px;
+  }
+  .last .onlybig {
+  	display: inline-block;
+  	position: absolute;
+  	left: 0;
+  	top: 2px;
+  }
+  .aplmenu, .onlysmall {
+  	display: none !important;
+  }
+  .last .onlybig {
+  	display: inline-block;
+  }
+  #search.last img {
+  	vertical-align: bottom;
+  	height: 1.8rem !important;
+  	width: auto;
+  	padding: 4px 0 0 8px !important;
+  }
+  ul.apllinks {
+  	padding: 0;
+  	padding-top: 6px;
+  	padding-right: 20px;
+  }
+  .news-card-row {
+  	margin-bottom: 16px;
+  }
+  .news-card-row.row2 {
+  	margin-right: 16px;
+  }
+  @media (min-width: 800px) {
+  	.menu-img {
+  		display: block;
+  	}
+  	#apl-nav .home {
+  		flex: 0 1 auto;
+  		width: 25%;
+  	}
+  }
+  @media screen and (max-width: 600px) {
+  #sub-aplmenu li a {
+  	min-height: 32px;
+  	display: block;
+  	text-align: left;
+  }
+  	#apl-nav .first {
+  		width: 200px;
+  	}
+  	#lang_switcher {
+  		position: relative;
+  		width: 100%;
+  		background: #f0f0f0;
+  		left: 0;
+  		justify-content: right;
+  	}
+  	#lang_switcher img {
+  		margin-left: 20px;
+  	}
+  }
+  @media (min-width: 960px) {
+  	.row1, .row3 {
+  		margin-right: 16px !important;
+  	}
+  	.desktop\:grid-col-6, .desktop-grid-col-6 {
+  		flex: 0 1 auto;
+  		width: 50%;
+  	}
+  	.desktop\:grid-col-3, .desktop-grid-col-3 {
+  		flex: 0 1 auto;
+  		width: 25%;
+  	}
+  	#block-views-block-press-releases-grid-container, .grid-container {
+  		padding-left: 2rem;
+  		padding-right: 2rem;
+  	}
+  }
+  @media screen and (max-width: 1040px) {
+  	#sub-services img {
+  		display: none;
+  	}
+  }
+  @media screen and (max-width: 990px) {
+  	#sub-education-research img,
+  	#sub-books-movies-more img {
+  		display: none;
+  	}
+  }
+  @media screen and (max-width: 960px) {
+
+  	.footer_section {
+  		width: 100%;
+  		padding: 0 16px;
+  	}
+  	.news-card-row.row2 {
+  		margin-right: 0;
+  	}
+  	.grid-offset-5 {
+  		margin-left: 0;
+  	}
+  	img.onlybig {
+  		display: none;
+  	}
+  	#apl-nav .first {
+  		position: relative;
+  		margin: 0 auto;
+  	}
+  	.first.apllogo {
+  		margin: 0;
+  	}
+  	.active.apllinks.onlybig {
+  		position: absolute;
+  		display: block !important;
+  		background: silver;
+  	z-index: 999;
+  	background: black;
+  	top: 60px;
+  	left: 0;
+  	padding-bottom: 69px !important;
+  }
+  	.active .apllinks.onlybig a {
+  		text-align: left;
+  	}
+  	.last img {
+  		padding: 0 !important;
+  	}
+  	.first.apllogo {
+  		margin-top: 0;
+  	}
+  	.aplmenu, .onlysmall {
+  		display: flex !important;
+  		padding-top: 12px;
+  	}
+  	.apllinks.onlybig {
+  		position: relative;
+  	}
+  	.first.apllogo .onlybig, .apllinks, .onlybig {
+  		display: none !important;
+  	}
+  	.active .apllinks.onlybig {
+  		position: absolute;
+  		display: block !important;
+  	}
+  }
+
+
+  header#header {
+  	width: 100%;
+  }
+  #widget_pager_bottom_heroes-block_1 {
+  	position: relative;
+  	margin-top: -72px;
+  	z-index: 999;
+  }
+  .views_slideshow_cycle_teaser_section {
+  	width: auto !important;
+  }
+  .usa-nav-container {
+  	background: black;
+  	max-width: 100%;
+  	display: none !important;
+  }
+
+  .main-menu-links a {
+  	padding: 12px 24px;
+  	display: inline-block;
+  }
+
+  .first.grid-col-auto {
+  	padding: 12px 36px 4px 0;
+  }
+  @media (min-width: 40em) {
+  .tablet\:grid-col-6,
+  .tablet-grid-col-6 {
+  	flex: 0 1 auto;
+  	width: 50%;
+  }
+
+  .tablet\:grid-col-3,
+  .tablet-grid-col-3 {
+  	flex: 0 1 auto;
+  	width: 25%;
+  }
+  }
+
+
+  #apl-nav .home {
+  	color: transparent;
+  	background-image: url(/themes/custom/apl/assets/img/APL.png);
+  	background-repeat: no-repeat;
+  	display: inline-block;
+  	padding: 3px 0;
+  	margin: 20px;
+  	background-position: 0px 16px;
+  	height: 46px;
+  }
+
+  #block-views-block-press-releases-grid-container,
+  .grid-container {
+  	margin-left: auto;
+  	margin-right: auto;
+  	max-width: 64rem;
+  	padding-left: 1rem;
+  	padding-right: 1rem;
+  }
+  #apl-nav {
+  	background: black;
+  }
+
+  .full-width {
+  	background: black;
+  }
+  .views_slideshow_cycle_slide {
+  	width: 100% !important;
+  }
+  .img_container {
+  	display: block;
+  	height: 140px;
+  }
+
+
+
+  .menu.menu--main.nav {
+  	display: flex;
+  	list-style: none;
+  	margin: 0;
+  	padding: 0;
+  }
+
+  .menu.menu--main.nav li {
+  	display: inline-block;
+  	height: 112px;
+  }
+
+
+
+  .button360 .skin-default img, .button504 .skin-default img {
+  	width: 100%;
+  	height: auto;
+  	position: absolute;
+  	opacity: 0;
+  }
+
+  div.hero-image {
+  	height: 480px;
+  	overflow: hidden;
+  	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	position: relative;
+  }
+  #main-content {
+  	padding-top: 0;
+  	border-top: none;
+  }
+  .hero-text2 p {
+  	margin: 0;
+  	padding: 0 0 10px !important;
+  }
+  .hero-title2 {
+  	font-weight: bold;
+  	font-size: 30px;
+  }
+  .hero-text2 {
+  	background: white;
+  	padding: .8em 1em 1em;
+  	position: absolute;
+  	top: 54px;
+  	border-radius: 2px;
+  	opacity: .9;
+  	display: block;
+  }
+  .hero-action a {
+  	background: #009ABF;
+  	padding: 10px;
+  	color: white;
+  	border-radius: 4px;
+  	display: inline-block;
+  	width: auto;
+  	text-decoration: none;
+  	margin-top: 10px;
+  }
+  #block-views-block-sections-block-1 p {
+  	color: #009ABF;
+  	font-size: 30px;
+  	text-align: center;
+  	line-height: 1.5em;
+  	display: block;
+  }
+  #sections {
+  	text-align: center;
+  }
+  .card-link {
+  	background: white;
+  	padding: 24px;
+  }
+
+  #sections .usa-link {
+  	display: block;
+  	margin-bottom: 2em;
+  	text-decoration: none;
+  	color: black;
+  	font-size: 18px;
+  }
+  #sections .usa-link:hover {
+  	text-decoration: underline;
+  }
+  .usa-button.grid-col-right {
+  	float: right;
+  }
+
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/stage/*'
+contexts: {  }
+conditions_require_all: true

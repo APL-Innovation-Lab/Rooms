@@ -1,0 +1,25 @@
+uuid: 13404206-e05e-46d0-ae7b-75576fef9648
+langcode: eng
+status: true
+dependencies:
+  module:
+    - node
+id: qr
+label: qr
+code: |-
+  .node__content .layout.layout--onecol {
+  	width: 580px;
+  	float: left !important;
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      qr: qr
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,28 @@
+uuid: 4a9ac699-a781-46e3-9475-7cdde7fe39e2
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: search_2023
+label: 'Search 2023'
+code: |-
+  .field.field--name-name.field--type-string.field--label-hidden.field__item {
+  	font-size: 2em;
+  	margin: 0 15px;
+  }
+  .clearfix.text-formatted.field.field--name-description.field--type-text-long.field--label-hidden.field__item p {
+  	padding: 0 15px;
+  }
+  #block-claro2-content div {
+  	background: white !important;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search-website\r\n/events/*"
+contexts: {  }
+conditions_require_all: true

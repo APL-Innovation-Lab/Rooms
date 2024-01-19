@@ -1,0 +1,21 @@
+uuid: 590e2699-0fc7-4601-9adc-d5269c776e31
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _admin_
+label: '/admin/*'
+code: |-
+  #edit-actions {
+  	margin-top: .75em;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/admin/*'
+contexts: {  }
+conditions_require_all: true

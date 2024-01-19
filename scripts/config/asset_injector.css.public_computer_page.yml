@@ -1,0 +1,104 @@
+uuid: e16a9ddb-5326-4eba-bacd-3520b46b5c25
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+id: public_computer_page
+label: 'Public Computer Page'
+code: |-
+  #apl_public_computers a {
+  	text-decoration: none;
+  }
+  .field--name-title {
+  	padding: 10px 20px 0;
+  	display: block;
+  }
+  #apl_public_computers {
+  	display: flex;
+  	flex-wrap: wrap;
+  	background: white;
+  	justify-content: space-around;
+  	margin-top: 25px;
+  }
+  .apl_pc_icon {
+  	margin-left: 10px !important;
+  	margin-bottom: 10px;
+  	float: right;
+  	padding: 10px;
+  	width: 180px;
+  	height: auto;
+  }
+  body .node__content > div {
+  	padding-bottom: 0 !important;
+  }
+
+  #apl_public_computers a:hover {
+  	text-decoration: underline;
+  }
+
+  #apl_find {
+  	background-color: #0069aa;
+  }
+  #apl_email {
+  	background-color: #b01657;
+  }
+  #apl_google {
+  	background-color: #622066;
+  }
+  #apl_online {
+  	background-color: #ff8300;
+  }
+  #apl_search2 {
+  	background-color: #7dc242;
+  }
+  #apl_information {
+  	background-color: #a93437;
+  }
+  #apl_computer {
+  	background-color: #009abf;
+  }
+  #apl_computer_classes {
+  	background-color: #55565a;
+  }
+  #apl_printing {
+  	background-color: #0069aa;
+  }
+  #apl_public_computers img {
+      margin: 15px;
+      width: 130px;
+  }
+  #apl_public_computers div {
+  	height: 205px;
+  	margin-bottom: 20px;
+  	width: 200px;
+  }
+
+  #apl_public_computers a {
+      color: white;
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+      padding-bottom: 10px;
+      text-align: center;
+  }
+  #apl-item-list2 {
+      width: 580px;
+  }
+media: all
+preprocess: false
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      public_computer_page: public_computer_page
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/public-computer-home\r\n/public-computer-home/*"
+contexts: {  }
+conditions_require_all: false

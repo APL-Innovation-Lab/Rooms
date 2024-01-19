@@ -1,0 +1,26 @@
+uuid: 4a231090-7377-4fcc-a91f-bd3f17c7476c
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: node_
+label: 'node/*'
+code: |-
+  #drupal-off-canvas ul li, #drupal-off-canvas ol li {
+  	border: none !important;
+  	padding: 0 !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

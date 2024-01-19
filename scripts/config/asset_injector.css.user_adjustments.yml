@@ -1,0 +1,29 @@
+uuid: ceccace2-c7b4-4878-8093-7ef2955070c5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+id: user_adjustments
+label: 'User adjustments'
+code: |
+  #toolbar-item-administration {
+  	margin-left: -1000px;
+  }
+media: all
+preprocess: false
+conditions:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

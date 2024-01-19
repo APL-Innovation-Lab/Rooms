@@ -1,0 +1,21 @@
+uuid: a3c83f8f-5987-4055-aa1f-4239687a4545
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _admin_batch_cancel_events
+label: /admin/batch-cancel-events
+code: |-
+  .js-form-item {
+  	margin: 10px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/batch-cancel-events
+contexts: {  }
+conditions_require_all: true

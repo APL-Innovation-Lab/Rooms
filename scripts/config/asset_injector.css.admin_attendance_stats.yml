@@ -1,0 +1,21 @@
+uuid: 80e9ca52-9fe0-48dc-8ac9-0b1c829c1cef
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: admin_attendance_stats
+label: admin/attendance-stats
+code: |-
+  #edit-dateq-wrapper {
+  	margin-right: 20px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/attendance-stats
+contexts: {  }
+conditions_require_all: true

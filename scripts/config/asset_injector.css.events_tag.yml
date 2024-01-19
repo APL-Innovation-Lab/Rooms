@@ -1,0 +1,68 @@
+uuid: 103dc97b-4e30-4f75-9c2f-17bb58a1998a
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: events_tag
+label: 'Events - Tag'
+code: |-
+  .field--name-name {
+  	font-size: 28px;
+  	font-weight: bold;
+  }
+  .views-row .node--type-event .layout.layout--onecol {
+  	width: 580px;
+  }
+  .d-col-9 {
+  	background: none !important;
+  	box-shadow: none !important;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 30px;
+  }
+
+  .apl-event-row {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 1px;
+  }
+
+  .block.block-layout-builder.block-field-blocktaxonomy-termevent-tagsname,
+  .block.block-layout-builder.block-field-blocktaxonomy-termevent-tagsdescription {
+  	background: white;
+  	padding: 1px 15px;
+  }
+
+  .d-col-9.t-col-9.m-col-10.layout__region.layout__region--second {
+  	background: white !important;
+  }
+
+  .block.block-views.block-views-blockevents-by-category-block-7 h2 {
+  	margin: 20px 0 15px 15px;
+  }
+
+  .apl-events .apl-event-row {
+  	box-shadow: none;
+
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/event-tags/*\r\n/events/*\r\n/events222"
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

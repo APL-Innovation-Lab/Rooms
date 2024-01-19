@@ -1,0 +1,93 @@
+uuid: 957e1db2-f362-4b4b-93e0-55c4db6a7b0a
+langcode: eng
+status: false
+dependencies:
+  module:
+    - system
+id: _book_a_librarian
+label: /book-a-librarian
+code: |-
+  .alert-title {
+  	width: 100%;
+  	display: flex;
+  }
+  .fieldset-legend {
+  	padding-left: 0 !important;
+  }
+  #block-claro2-content {
+  	width: 500px !important;
+  	float: right;
+  }
+  #apl_main_image {
+  	width: 530px !important;
+  	max-width: 530px !important;
+  	margin: -25px 0 0 -15px;
+  }
+  .region.region-content > div {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	padding: 1px 15px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 30px;
+  }
+  .region.region-content {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+
+  #block-views-block-navigation-block-1 {
+  	width: 330px;
+  	float: left;
+  }
+
+  #block-views-block-navigation-block-1 li {
+  	list-style: none;
+  	margin-left: -25px;
+  }
+
+  #block-views-block-navigation-block-1 li a {
+  	text-decoration: none;
+  }
+  #block-views-block-navigation-block-1 li a:hover {
+  	text-decoration: underline;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 959px) {
+  .layout.layout--onecol, 
+  .layout.layout--onecol:nth-child(1), .layout.layout--onecol:nth-child(2)
+   {
+  	width: 100%;
+  }
+
+  body .region.region-content {
+  	width: 530px !important;
+  	max-width: 530px !important;
+  	margin: 0 auto;
+  }
+
+  body #block-claro2-content {
+  	width: 500px !important;
+  }
+
+  #apl_main_image {
+  	width: 530px !important;
+  	max-width: 530px !important;
+  	margin: -25px 0 0 -15px;
+  }
+  #block-views-block-navigation-block-1 {
+  	width: 500px;
+  	float: left;
+  	margin-top: 20px;
+  }
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /book-a-librarian
+contexts: {  }
+conditions_require_all: true

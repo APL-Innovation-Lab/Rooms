@@ -1,0 +1,508 @@
+uuid: 1662e737-aeef-4cd1-b936-61862ed2e8b3
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: theme
+label: Theme
+code: |-
+  html body #main-content > .grid-container,
+  html body #main-content .layout--onecol {
+  	width: 100% !important;
+  	max-width: 100% !important;
+  	padding: 0 !important;
+  }
+  .field-title,
+  .field-event-reg {
+  	clear: both;
+  }
+  .field-event-time i {
+  	padding-top: 1px;
+  }
+  .field-remote-loc a {
+  	float: left;
+  	height: 4em;
+  	padding-top: 2px;
+  	color: black !important;
+  }
+
+  .apl-events .usa-pagination__link {
+  	display: none;
+  }
+  .apl-free {
+  	padding-top: 1em;
+  }
+  .apl-rec-age {
+  	margin-bottom: 1em;
+  }
+  .field-title {
+  	line-height: 150%;
+  }
+  .example {
+  	margin-bottom: 2em;
+  }
+  html body .block.block-layout-builder.block-field-blocknodepagebody {
+  	padding: 0;
+  }
+
+  .virtual-library .usa-accordion__button {
+  	padding-left: 0;
+  }
+  .usa-footer.usa-footer--slim {
+  	display: none;
+  }
+  html body .usa-accordion__heading > a:nth-child(1) {
+  	font-size: 24px;
+  	font-weight: bold;
+  	text-decoration: none;
+  	padding: 16px 0 !important;
+  }
+  .usa-accordion--bordered .usa-accordion__heading {
+  	margin-bottom: 0;
+  	background: #f0f0f0;
+  	padding-left: 1em;
+  	padding-top: 1em;
+  }
+  .usa-accordion__heading p {
+  	margin: 1em 0 0;
+  }
+  html .usa-button {
+    font-size: normal;
+    line-height: normal;
+    background-color: #009ABF;
+  }
+  ul li>div {
+    padding: 5px;
+  }
+  html body .usa-button--outline.usa-button--active, html body .usa-button--outline:active {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #3D4551;
+    color: #3D4551;
+  }
+  html body .usa-button--outline.usa-button--hover, html body .usa-button--outline:hover {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #005289;
+    color: #005289;
+  }
+  html body .usa-button--outline {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px #009ABF;
+    color: #009ABF;
+  }
+  html body .usa-button--base {
+    color: #fff;
+    background-color: #565C65;
+  }
+  html body .usa-button--base.usa-button--active, html body .usa-button--base:active {
+    color: #fff;
+    background-color: #3D4551;
+  }
+  html body .usa-button--base.usa-button--hover, html body .usa-button--base:hover {
+    color: #fff;
+    background-color: #565C65;
+  }
+  html .usa-button.usa-button--hover, html .usa-button:hover {
+    background-color: #005289;
+    color: #fff;
+  }
+  html .usa-button.usa-button--active, html .usa-button:active {
+    background-color: #1B264D;
+    color: #fff;
+  }
+  html body .usa-button--secondary {
+    background-color: #D83933;
+    color: #fff;
+  }
+  html body .usa-button--secondary.usa-button--hover, html body .usa-button--secondary:hover {
+    background-color: #B50909;
+    color: #fff;
+  }
+  html body .usa-button--secondary.usa-button--active, html body .usa-button--secondary:active {
+    background-color: #9C3D10;
+    color: #fff;
+  }
+  html body .usa-button--accent-cool, html body .usa-button--accent-cool:visited {
+    color: #F0F0F0;
+    background-color: #00BDE3;
+  }
+  html body .usa-button--accent-cool.usa-button--hover, html body .usa-button--accent-cool:hover {
+    color: #FFFFFF;
+    background-color: #28A0CB;
+  }
+  html body .usa-button--accent-cool.usa-button--active, html body .usa-button--accent-cool:active {
+    color: #FFFFFF;
+    background-color: #07648D;
+  }
+  html body .usa-button--accent-warm, html body .usa-button--accent-warm:visited {
+    color: #FFFFFF;
+    background-color: #fa9441;
+  }
+  html body .usa-button--accent-warm.usa-button--hover, html body .usa-button--accent-warm:hover {
+    color: #FFFFFF;
+    background-color: #C05600;
+  }
+  html body .usa-button--accent-warm.usa-button--active, html body .usa-button--accent-warm:active {
+    color: #FFFFFF;
+    background-color: #775540;
+  }
+  .xxxs {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .xxs {
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .xs {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  h4>*, .sm {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .md {
+    font-size: 17px;
+    line-height: 23px;
+  }
+  h3>*, .lg {
+    font-size: 22px;
+    line-height: 30px;
+  }
+  .xl {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .xxl {
+    font-size: 40px;
+    line-height: 54px;
+  }
+  .xxxl {
+    font-size: 48px;
+    line-height: 65px;
+  }
+  #font-sizes>div {
+    display: flex;
+    border-bottom: 2px solid #A9AEB1;
+    padding: 20px 0 3px;
+    align-items: center;
+  }
+  #font-sizes>div>div {
+    width: 100px;
+  }
+  #font-sizes>div>div:nth-child(1) {
+    width: 70px;
+  }
+  #font-sizes>div>div:nth-child(2) {
+    width: 370px;
+  }
+  #theme-palette li, #state-palette li {
+    width: 150px;
+    display: inline-block;
+  }
+  .base-lightest {
+    background: #F0F0F0;
+  }
+  .base-lighter {
+    background: #DFE1E2;
+  }
+  .base-light {
+    background: #A9AEB1;
+  }
+  .base {
+    color: #fff;
+    background: #71767A;
+  }
+  .base-dark {
+    color: #fff;
+    background: #565C65;
+  }
+  .base-darker {
+    color: #fff;
+    background: #3D4551;
+  }
+  .base-darkest {
+    color: #fff;
+    background: #1B1B1B;
+  }
+  .primary-white {
+    background: #FFFFFF;
+  }
+  .primary-lighter {
+    background: #DFECF3;
+  }
+  .primary-light {
+    background: #A9AEB1;
+  }
+  .primary {
+    color: #fff;
+    background: #009ABF;
+  }
+  .primary-dark {
+    color: #fff;
+    background: #005289;
+  }
+  .primary-darker {
+    color: #fff;
+    background: #1B264D;
+  }
+  .primary-vivid {
+    color: #fff;
+    background: #026E98;
+  }
+  .secondary-lighter {
+    background: #F8DFE2;
+  }
+  .secondary-light {
+    background: #F2938C;
+  }
+  .secondary {
+    color: #fff;
+    background: #D83933;
+  }
+  .secondary-dark {
+    color: #fff;
+    background: #B50909;
+  }
+  .secondary-darker {
+    color: #fff;
+    background: #9C3D10;
+  }
+  .secondary-vivid {
+    color: #fff;
+    background: #E41D3D;
+  }
+  .accent-cool-lighter {
+    background: #E1F3F8;
+  }
+  .accent-cool-light {
+    background: #97D4EA;
+  }
+  .accent-cool {
+    color: #fff;
+    background: #00BDE3;
+  }
+  .accent-cool-dark {
+    color: #fff;
+    background: #28A0CB;
+  }
+  .accent-cool-darker {
+    color: #fff;
+    background: #07648D;
+  }
+  .accent-warm-lighter {
+    background: #F2E4D4;
+  }
+  .accent-warm-light {
+    background: #FFBC78;
+  }
+  .accent-warm {
+    color: #fff;
+    background: #FA9441;
+  }
+  .accent-warm-dark {
+    color: #fff;
+    background: #C05600;
+  }
+  .accent-warm-darker {
+    color: #fff;
+    background: #775540;
+  }
+  .gray-05 {
+    background: #F0F0F0;
+  }
+  .gray-10 {
+    background: #E6E6E6;
+  }
+  .gray-30 {
+    background: #ADADAD;
+  }
+  .gray-50 {
+    color: #fff;
+    background: #757575;
+  }
+  .gray-70 {
+    color: #fff;
+    background: #454545;
+  }
+  .gray-90 {
+    color: #fff;
+    background: #171717;
+  }
+  .info-lighter {
+    background: #E7F6F8;
+  }
+  .info-light {
+    background: #99DEEA;
+  }
+  .info-dark {
+    color: #fff;
+    background: #009EC1;
+  }
+  .info-darker {
+    color: #fff;
+    background: #2E6276;
+  }
+  .error-lighter {
+    background: #F4E3DB;
+  }
+  .error-light {
+    background: #F39268;
+  }
+  .error {
+    color: #fff;
+    background: #D54309;
+  }
+  .error-dark {
+    color: #fff;
+    background: #B50909;
+  }
+  .error-darker {
+    color: #fff;
+    background: #6F3331;
+  }
+  .warning-lighter {
+    background: #FAF3D1;
+  }
+  .warning-light {
+    background: #FEE685;
+  }
+  .warning {
+    color: #fff;
+    background: #FFBE2E;
+  }
+  .warning-dark {
+    color: #fff;
+    background: #E5A000;
+  }
+  .warning-darker {
+    color: #fff;
+    background: #936F38;
+  }
+  .success-lighter {
+    background: #ECF3EC;
+  }
+  .success-light {
+    background: #70E17B;
+  }
+  .success {
+    color: #fff;
+    background: #00A91C;
+  }
+  .success-dark {
+    color: #fff;
+    background: #4D8055;
+  }
+  .success-darker {
+    color: #fff;
+    background: #446443;
+  }
+  .disabled-light {
+    background: #E6E6E6;
+  }
+  .disabled {
+    color: #fff;
+    background: #C9C9C9;
+  }
+  .disabled-dark {
+    color: #fff;
+    background: #ADADAD;
+  }
+  h1.margin-0 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  .block-field-blocknodepagetitle {
+  	padding: 0 0 .5em !important;
+  }
+  html h1, .usa-prose-h1,
+  .block-field-blocknodepagetitle {
+    font-size: 40px;
+    line-height: 47px;
+    font-weight: 700;
+  }
+  html h2, .usa-prose-h2 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+  }
+  html h3, .usa-prose-h3 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+  html h4, .usa-prose-h4 {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+  }
+  html h5, .usa-prose-h5 {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+  html h6, .usa-prose-h6 {
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+  }
+  .usa-prose-intro {
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 162%;
+  }
+  html ul, .usa-prose-ul, html ol, .usa-prose-ol {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding-left: 1em;
+  }
+  html body, html p, .usa-prose-body {
+    font-weight: 400;
+    font-size: 18px !important;
+    line-height: 27px !important;
+  }
+  html a, .usa-link {
+    color: #009ABF;
+    text-decoration-color: #009ABF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  html a:visited, .usa-link-visited {
+    color: #562B97;
+    text-decoration-color: #562B97;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .flexy {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+  }
+  .flexyee>div:first-child {
+    width: 175px;
+    padding: 1em;
+  }
+  .flexyee>div:nth-child(3) {
+    width: 250px;
+    padding: 1em;
+    position: absolute;
+    right: -120px;
+    display: none;
+  }
+  .flexyee> :nth-child(2) {
+    width: 600px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/theme/*\r\n/app/*\r\n/meeting-rooms/calendar/monthly\r\n/meeting-rooms/calendar/monthly/*\r\n/admin/apltv/*"
+contexts: {  }
+conditions_require_all: true

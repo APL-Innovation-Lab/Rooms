@@ -1,0 +1,24 @@
+uuid: 907e1574-340a-4c32-bfe8-613eae7344f0
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: skillmill_fixes
+label: 'skillmill fixes'
+code: |-
+  body fieldset legend .fieldset-legend {
+  	padding: 0 !important;
+  }
+  .webform-confirmation__message {
+  	padding: 20px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/skillmill/*'
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,114 @@
+uuid: 8006dd9a-d262-4143-95a4-b23e384a89e5
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: passports
+label: Passports
+code: |-
+  .block.block-entityform-block,
+  .field.field--name-title.field--type-string.field--label-hidden,
+  .block.block-layout-builder.block-field-blocknodepassports-pagebody {
+  	padding: 1px 15px;
+  }
+  #edit-field-pp-date-0 {
+  	margin-bottom: 20px !important;
+  	display: block !important;
+  }
+  #pp_avail_wrapper {
+  	margin-top: 20px;
+  }
+  .vefl-1col {
+  	width: 360px;
+  	float: left;
+  	clear: left;
+  	margin-right: 20px;
+  }
+  .vefl-1col:nth-child(3) {
+  	display: none;
+  }
+  .user-logged-in .vefl-1col:nth-child(3) {
+  	display: block;
+  }
+  .vefl-1col:nth-child(2) {
+  	width: 580px;
+  	float: right;
+  	clear: none;
+  	margin-right: 0;
+  }
+  .block.block-views.block-views-blocknavigation-block-14 {
+  	padding: 1px 15px;
+  }
+
+  #edit-field-pp-date-0 {
+  	box-shadow: none;
+  	border: none;
+  	margin-bottom: 0 !important;
+  }
+  .form-item.form-datetime-wrapper {
+  	margin-top: 14px !important;
+  	margin-bottom: 0 !important;
+  }
+  .no_slots,
+  .fieldset__wrapper {
+  	margin: 0;
+  }
+  .form-item__label,
+  .fieldset__label.js-form-required.form-required {
+  	font-size: 15px;
+  	color: black !important;
+  }
+
+  .field.field--name-title.field--type-string.field--label-hidden,
+  .block.block-layout-builder.block-field-blocknodepassports-pagebody {
+  	padding: 1px 15px;
+  }
+  .fieldset__label.js-form-required.form-required {
+  	padding: 0;
+  	border: none;
+  	box-shadow: none;
+  }
+  #edit-field-reservation-status-wrapper,
+  .pp_less,
+  .pp_avail.inactive,
+  #edit-field-pp-date-0-value-time,
+  #edit-footer,
+  #edit-advanced,
+  #block-entityform {
+  	display: none;
+  }
+  .layout-region.layout-region-node-main {
+  	width: 100%;
+  	padding-right: 0;
+  }
+
+  #pp_avail_wrapper .pp_avail {
+  	display: block !important;
+  	border: 1px solid #0036b1;
+  	border-radius: 4px;
+  	background: white !important;
+  	color: #0036b1 !important;
+  	text-align: center;
+  	margin: 0 0 15px !important;
+  	padding: 0 !important;
+  	min-width: 330px !important;
+  	width: 330px !important;
+  }
+  #pp_avail_wrapper .pp_avail.inactive {
+  	display: none !important;
+  }
+  #pp_avail_wrapper .pp_avail.active, 
+  #pp_avail_wrapper .pp_avail:hover {
+  	background: #0036b1 !important;
+  	color: white !important;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/passports\r\n/passports/*\r\n/pasaportes\r\n/es/pasaportes"
+contexts: {  }
+conditions_require_all: true

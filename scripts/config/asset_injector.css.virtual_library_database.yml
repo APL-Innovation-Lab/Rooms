@@ -1,0 +1,61 @@
+uuid: 7ce880eb-009d-48b9-84d6-7c12e6860b9b
+langcode: eng
+status: true
+dependencies:
+  module:
+    - node
+id: virtual_library_database
+label: 'Virtual Library Database'
+code: |-
+  .node__content .layout.layout--onecol {
+  	width: 580px;
+  	float: right;
+  }
+  .views-field.views-field-field-help-text,
+  .views-field.views-field-field-associated-file {
+  	margin: 30px 0;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 a {
+  	text-decoration: none;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 a:hover {
+  	text-decoration: underline;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 li {
+  	list-style-type: none;
+  }
+  .layout__region--content {
+  	margin-bottom: 0;
+  }
+  .block.block-views.block-views-exposed-filter-blockvirtual-library-search-page-1 {
+  	padding: 1px 15px;
+  	margin-bottom: 20px;
+  	background: white;
+  }
+  .block.block-views.block-views-blocknavigation-block-6 {
+  	background: white;
+  }
+  .layout.layout--onecol:nth-child(2) {
+  	float: left;
+  	width: 360px;
+  	clear: none;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 660px) {
+  .node__content .layout.layout--onecol,
+  .layout.layout--onecol:nth-child(2) {
+  	width: 100%;
+  }
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      database: database
+contexts: {  }
+conditions_require_all: true

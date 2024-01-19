@@ -1,0 +1,22 @@
+uuid: 7d8553db-7432-426b-be25-05e4cc8130a4
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _admin_people_create
+label: /admin/people/create
+code: |-
+  .js-form-item.form-item.js-form-type-email.form-type--email.js-form-item-mail.form-item--mail,#block-claro-help,#edit-pass-disabled,#edit-ldap-user-fields,#edit-field-first-name-wrapper,#edit-field-last-name-wrapper,#edit-field-division-wrapper,#edit-field-phone-number-wrapper,#edit-user-picture-wrapper,#edit-language,#edit-contact,#edit-path-wrapper,#edit-field-api-key-wrapper,
+  #edit-field-locations-wrapper {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /admin/people/create
+contexts: {  }
+conditions_require_all: true

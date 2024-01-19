@@ -1,0 +1,83 @@
+uuid: 6cb34a03-0a6f-43ce-9469-c3b3852547af
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: footer_
+label: Footer
+code: |-
+  .view-colophon {
+  	display: none;
+  }
+  .colophon.reveal {
+  	display: block !important;
+  	font-size: x-large;
+  	padding: 2em;
+  	line-height: 1.7em;
+  	background: black;
+  	color: white;
+  	border-color: white;
+  }
+  .reveal {
+  	display: block !important;
+  }
+  .usa-footer__secondary-section {
+  	padding-top: 0;
+  	background: #DFE1E2;
+  }
+  .grid-container.usa-footer__return-to-top {
+  	padding: 24px 16px;
+  }
+  .usa-footer__secondary-section > .grid-container {
+  	padding-left: 0 !important;
+  	padding-right: 0 !important;
+  }
+  .usa-footer__secondary-section .grid-container .grid-container {
+  	width: 100%;
+  }
+  #block-views-block-footer-block-24 p {
+  	padding: 0 !important;
+  	margin: 32px 0;
+  }
+  #footer_links {
+  	list-style: none;
+  	margin: 0;
+  	padding: 0;
+  	font-weight: bold;
+  }
+  #footer_links a {
+  	text-decoration: none;
+  }
+  #footer_links a:hover {
+  	text-decoration: underline;
+  }
+  footer .views-row {
+  	margin-bottom: 0;
+  }
+  .footer_section {
+  	width: 45%;
+  	float: left;
+  }
+  .footer_section:nth-of-type(2) {
+  	float: right;
+  	text-align: right;
+  }
+  #footer_social_links {
+  	list-style: none;
+  	margin: 0;
+  	padding: 0;
+  }
+  #footer_social_links li {
+  	display: inline-block;
+  	margin: 24px 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/stage/*'
+contexts: {  }
+conditions_require_all: true

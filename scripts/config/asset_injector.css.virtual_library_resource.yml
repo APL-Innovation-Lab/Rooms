@@ -1,0 +1,42 @@
+uuid: 7c9f00b5-05e3-4ad8-a090-ad3e36bae6de
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: virtual_library_resource
+label: 'Virtual Library Resource'
+code: |-
+  .d-col-9 {
+  	background: none !important;
+  	box-shadow: none !important;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 30px;
+  }
+  #edit-search {
+  	max-width: 325px;
+  }
+  .block.block-layout-builder.block-field-blocktaxonomy-termdatabase-subjectsdescription,
+  .block.block-layout-builder.block-field-blocktaxonomy-termdatabase-subjectsname {
+  	background: white;
+  	padding: 1px 15px;
+  }
+  .apl-hh,
+  .apl-virtual-resource {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 1px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/virtual/*'
+contexts: {  }
+conditions_require_all: true

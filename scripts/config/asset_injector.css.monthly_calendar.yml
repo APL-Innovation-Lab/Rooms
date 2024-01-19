@@ -1,0 +1,107 @@
+uuid: bcccbe81-44c2-47e0-98a1-95596ace49da
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: monthly_calendar
+label: 'Monthly Calendar'
+code: |-
+  #calendar {
+    width: 100%;
+    margin: 0 auto;
+  }
+    
+   #calendar table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .day {
+      width: 100px;
+      height: 40px;
+      text-align: center;
+    }
+    
+    
+    .other-month {
+      opacity: 0.5;
+    }
+
+
+  p {
+    text-align: center;
+  }
+  .node__content .layout.layout--onecol {
+    width: 100% !important;
+  }
+  .calendar-month-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #calendar h2 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .day {
+  	width: 100px;
+  	height: 40px;
+  	text-align: left;
+  	font-weight: bold;
+  	vertical-align: top;
+  }
+  .mr-rez {
+  	border-radius: 4px;
+  	margin-bottom: 5px;
+  	font-weight: normal;
+  	padding: 0 4px;
+  }
+  .mr-rez:last-child {
+  	margin-bottom: 2em;
+  }
+  .week {
+  	border-top: 1px solid silver;
+  }
+  .grid-container {
+  	padding: 0 !important;
+  	max-width: 100% !important;
+  }
+
+  html body #block-uswds-base-content .layout.layout--onecol {
+  	width: 100% !important;
+  	max-width: 100% !important;
+  }
+  .block.block-layout-builder.block-field-blocknodepagebody {
+  	padding: 0 !important;
+  }
+  .usa-alert.usa-alert--error {
+  	display: none;
+  }
+  h2 span {
+  	text-align: center;
+  }
+  h2 a {
+  	width: 20%;
+  	font-size: 18px;
+  }
+  h2 a:last-child {
+    text-align: right;
+  }
+  .anon {
+  	display: none;
+  }
+  .is_admin .anon {
+  	display: inline-block;
+  	color: white;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/theme/calendar\r\n/meeting-rooms/calendar/monthly\r\n/meeting-rooms/calendar/monthly/*\r\n/admin/apltv/*"
+contexts: {  }
+conditions_require_all: true

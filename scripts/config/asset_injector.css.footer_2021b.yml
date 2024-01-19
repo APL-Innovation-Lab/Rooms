@@ -1,0 +1,130 @@
+uuid: 4d79cc59-922c-4fd4-9cda-29191f02ee7f
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+id: footer_2021b
+label: 'fixer 2021b'
+code: |-
+  body #more-than-books h2.pane-title {
+  	margin-left: 5px;
+  	background-image: url("/library/misc/more_than_books_tagline-01b.jpg") !important;
+  	margin-top: 5px;
+  	background-color: transparent !important;
+  }
+  .region-content {
+  	margin-top: 10px !important;
+  }
+  .apl-alert-row {
+  	background: #f7a700;
+  	padding: 1px 0 3px !important;
+  }
+  .apl-alert .apl-alert-row a {
+  	margin: 0 10px 0;
+  	border: 1px solid rgba(255,255,255,.3);
+  	padding: 5px 10px;
+  	text-decoration: none;
+  	border-radius: 4px;
+  	font-size: 15px;
+  	font-weight: normal;
+  	display: inline-block;
+  	vertical-align: unset;
+  }
+  #apl_logo img {
+  	height: 85px !important;
+  }
+  #block-block-155 {
+  	margin-bottom: 0 !important;
+  }
+  .input-group input[type="submit"] {
+  	height: 48px !important;
+  	padding: 10px !important;
+  }
+  .layout--onecol {
+  	padding: 0 !important;
+  }
+  #block-block-93 {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+
+  .top-my, .top-es {
+  	float: none !important;
+  	list-style: none;
+  }
+
+  #apl-top-nav {
+  	text-align: right;
+  }
+  .field.field--name-title.field--type-string.field--label-hidden {
+  	padding-top: 10px;
+  }
+  .block.block-layout-builder.block-field-blocknodelibrary-infotitle,
+  .block.block-layout-builder.block-field-blocknodelibrary-infobody {
+  	padding: 0 15px;
+  }
+  .usa-button.usa-button-outline.apl-translate {
+  	float: right;
+  	margin-left: 20px;
+  }
+  h2 {
+  	margin-top: 10px;
+  }
+
+  h3 {
+  	margin-top: 30px;
+  }
+  .block-layout-builder .field--name-title, h1 {
+  	font-size: 39px;
+  	line-height: 1.15em;
+  	font-weight: 700;
+  	display: block;
+  	margin-bottom: 30px;
+  }
+  .d-col-3 > div {
+  	padding: 1px 15px;
+  }
+  .d-col-9 {
+  	width: 580px !important;
+    
+  }
+  .d-col-3,
+  .d-col-9 {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 30px;
+  }
+  #apl-connect:hover,
+  #footer li a:hover {
+  	color: white;
+  	text-decoration: underline;
+  }
+  #block-views-block-sections-block-6 span {
+  	display: none;
+  }
+  body #more-than-books h2.pane-title {
+  	margin-left: 5px;
+  	background-image: url("/library/misc/more_than_books_tagline-01b.jpg") !important;
+  	text-indent: -9999px;
+  	background-color: transparent !important;
+  	display: block;
+  	background-size: 220px;
+  	background-repeat: no-repeat;
+  	margin-top: 20px;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

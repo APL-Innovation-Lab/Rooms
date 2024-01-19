@@ -1,0 +1,23 @@
+uuid: dce2f483-a186-40f0-b8ff-34508a240814
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: title
+label: title
+code: |-
+  .views-field.views-field-title,
+  .field.field--name-name.field--type-string.field--label-hidden.field__item {
+  	font-size: 44px;
+  	font-weight: bold;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/virtual/*\r\n/ahc/*"
+contexts: {  }
+conditions_require_all: false

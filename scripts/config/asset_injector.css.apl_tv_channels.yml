@@ -1,0 +1,63 @@
+uuid: ce56892e-ae78-4619-9613-8959dc0a3aad
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+    - taxonomy
+id: apl_tv_channels
+label: 'apl-tv channels'
+code: |
+  .layout__region--second h2,
+  .layout__region--second .view-header a,
+  .layout__region--second h1 {
+  	padding: 1px 15px;
+  }
+  .usa-button {
+  	display: inline-block !important;
+  }
+  .views-field.views-field-title {
+  	width: 200px;
+  }
+  .views-field-field-tv-sequence img {
+    max-width: 300px;
+  }
+  .region.region-content a {
+  	text-decoration: none;
+  }
+  .region.region-content a:hover {
+  	text-decoration: underline;
+  }
+  .view-header a {
+  	padding: 1px 15px;
+  	margin-top: 15px;
+  	margin-bottom: 10px;
+  	display: block;
+  }
+  .block.block-views.block-views-blockapltv-channel-block-2 {
+  	margin-bottom: 20px;
+  }
+  .apl-invisible {
+  	display: none;
+  	opacity: 0;
+  }
+  .usa-button {
+  	padding: 10px !important;
+  	margin-left: 15px;
+  }
+media: all
+preprocess: false
+conditions:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      apltv_channel: apltv_channel
+  request_path:
+    id: request_path
+    negate: false
+    pages: /apltv/channel/
+contexts: {  }
+conditions_require_all: false

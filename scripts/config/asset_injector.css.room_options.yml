@@ -1,0 +1,127 @@
+uuid: 2f336c08-5e8e-4638-a13b-a7a638faddfe
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: room_options
+label: 'Room Options'
+code: |-
+  .room-image img {
+  	width: 150px;
+  	height: auto;
+  }
+  .a_more {
+  	margin-top: 10px;
+  }
+  .room-option.inactive {
+  	display: none !important;
+  }
+  .modalOpen.usa-button.usa-button-outline {
+  	margin-top: 10px;
+  	text-decoration: none;
+  }
+  .modal {
+    display: none;
+  }
+
+  .a_room {
+  	font-size: 28px;
+  }
+  .modal img {
+  	border-radius: 0;
+  	width: 484px;
+  }
+  .modal .modalClose {
+  	border: 1px solid #0069aa;
+  	display: inline-block !important;
+  	margin-bottom: 0 !important;
+  	padding: 5px 10px;
+  	right: 20px;
+  	position: absolute;
+      text-decoration: none;
+  }
+  .modal .a_map_toggle {
+  	width: auto;
+  	float: left;
+  	border: 1px solid #0069aa;
+  	padding: 5px 10px;
+      text-decoration: none;
+  }
+  .modal {
+  	background: #FFF;
+  	left: 50%;
+  	padding: 20px 20px 5px;
+  	position: fixed;
+  	right: 0;
+  	top: 50%;
+  	transform: translate(-50%,-50%);
+  	width: 444px;
+  	z-index: 1000;
+  	overflow-x: hidden;
+  	overflow-y: auto;
+  	max-height: 90%;
+  	border-radius: 3px;
+  }
+  .modal span, .modal a {
+  	display: block;
+  	line-height: 1.3em;
+  	margin-bottom: .5em;
+  	text-align: left;
+  	border-radius: 3px;
+  }
+  .room-option {
+  	width: 95%;
+  	background: #e0e0e0;
+  	display: inline-block;
+  	margin: 5px;
+  	display: none;
+  }
+  .a_room_number {
+  	text-align: center;
+  	display: block;
+  }
+  .a_options {
+  	display: block;
+  	text-align: center;
+  }
+  .modalOpen.usa-button.usa-button-outline {
+  	margin: 0;
+  }
+  .modal-overlay {
+  	background: rgba(0,0,0,.7);
+  	display: none;
+  	height: 100%;
+  	left: 0;
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+  	z-index: 999;
+  }
+  .modal .a_map {
+  	display: none;
+  }
+  .usa-button.room-select {
+  	display: none;
+  }
+  .a_room_number {
+  	display: none !important;
+  }
+  .option-thumbnail span {
+  	float: left;
+  	margin-right: 10px;
+  }
+  .room_wrapper {
+  	display: block;
+  	clear: left;
+  	padding-left: 5px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/central/slr/options\r\n/slr/request\r\n/webform/shared_learning_room_reservation/submissions/*/edit"
+contexts: {  }
+conditions_require_all: true

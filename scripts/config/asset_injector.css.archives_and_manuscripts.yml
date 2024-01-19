@@ -1,0 +1,68 @@
+uuid: d70c11b0-8e3e-414e-a261-1b7834b32ebc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: archives_and_manuscripts
+label: 'Archives and Manuscripts'
+code: |-
+  #block-persons {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+  .ahc-index-title {
+  	font-size: 28px;
+  	padding-top: 10px;
+  }
+  .view-archives-and-manuscripts .views-field .views-label + .field-content .item-list {
+  	display: none;
+  }
+  .view-archives-and-manuscripts .views-field .views-label.active + .field-content .item-list {
+  	display: block;
+  }
+  .block-facets {
+  	width: 100%;
+  	margin: 40px 0 !important;
+  }
+
+  #block-persons .facets-widget-links {
+  	width: 360px;
+  }
+  #block-views-block-sections-block-6 {
+  	clear: both;
+  }
+  #block-persons h2 {
+  	padding: 10px;
+  	width: 340px;
+  }
+  .page-content.clearfix {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+
+  #block-exposedformarchives-and-manuscriptspage-2 {
+  	width: 360px;
+  	float: left;
+  	padding: 0;
+  }
+  #block-persons-2 {
+  	max-width: 360px;
+  	margin: 0 auto;
+  	float: left;
+  	clear: left;
+  }
+
+  #block-claro2-content {
+  	width: 580px;
+  	float: right;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /ahc/archives/index
+contexts: {  }
+conditions_require_all: true

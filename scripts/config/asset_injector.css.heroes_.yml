@@ -1,0 +1,43 @@
+uuid: 0e969222-1cc1-42e6-a9aa-4cfe512f136d
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: heroes_
+label: Heroes
+code: |-
+  .hero img {
+  	position: absolute;
+  	display: none;
+  }
+  .hero-title2 {
+  	font-weight: bold;
+  	font-size: 30px;
+  	line-height: 1.1em !important;
+  }
+  .hero-text2 p {
+  	margin: 0;
+  	padding: 0 0 10px !important;
+  }
+  .widget_pager_bottom {
+  	padding-left: 0;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      es: es
+      en: en
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/ahc\r\n/ahc/staging\r\n/staging/1"
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,27 @@
+uuid: 169cfcb3-5fc5-48b7-9718-eb02618879f2
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: delete_webform
+label: 'Delete webform'
+code: |-
+  #webform-submission-meeting-room-reservation-request-delete-form {
+  	color: transparent;
+  }
+  .usa-alert__text strong {
+  	display: none;
+  }
+  .item-list {
+  	height: 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/webform/meeting_room_reservation_request/submissions/*'
+contexts: {  }
+conditions_require_all: true

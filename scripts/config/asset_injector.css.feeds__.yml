@@ -1,0 +1,30 @@
+uuid: d78c40c0-fcf7-4598-bfb6-2bbf932efd58
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+    - user
+id: feeds__
+label: feeds
+code: |-
+  #block-claro2-local-actions,
+  article {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  user_role:
+    id: user_role
+    negate: true
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/feed/*'
+contexts: {  }
+conditions_require_all: true

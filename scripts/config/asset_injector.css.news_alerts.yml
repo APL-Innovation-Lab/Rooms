@@ -1,0 +1,24 @@
+uuid: 8a303ef2-5bd8-4910-8ab9-2204d151600e
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: news_alerts
+label: 'News & Alerts'
+code: |-
+  .node--type-alert {
+  	display: flex;
+  	max-width: 960px !important;
+  	margin: 0 auto;
+  	padding: 20px 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/announcement/*\r\n/alert/*\r\n/news/*"
+contexts: {  }
+conditions_require_all: true

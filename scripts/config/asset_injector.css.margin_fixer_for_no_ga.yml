@@ -1,0 +1,26 @@
+uuid: 5da20f35-e271-4cb3-b970-3f56d338154b
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: margin_fixer_for_no_ga
+label: 'margin fixer for no GA'
+code: |
+  .d-col-9.t-col-9.m-col-10.layout__region.layout__region--second,
+  .page-wrapper .flex-grid {
+  	width: 100% !important;
+  	max-width: 100% !important;
+  }
+  .region.region-content-footer {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/slr/calendar/room/*'
+contexts: {  }
+conditions_require_all: true

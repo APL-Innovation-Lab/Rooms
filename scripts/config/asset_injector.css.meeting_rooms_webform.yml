@@ -1,0 +1,160 @@
+uuid: 1c14c53c-5357-4d6d-bd1b-784927882cfa
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: meeting_rooms_webform
+label: 'Meeting Rooms webform'
+code: |-
+  .pp_avail.truly_available {
+  	border-width: 2px;
+  	border-style: solid !important;
+  	border-color: green !important;
+  	display: inline-block !important;
+  }
+
+  #edit-status--wrapper {
+  	padding-bottom: 15px;
+  	margin-left: -1px;
+  }
+  #edit-group {
+  	margin-top: 15px;
+  }
+  #edit-digital-signature {
+  	margin-bottom: 20px;
+  }
+  #edit-meeting-room-reservation {
+  	margin-top: 20px;
+  }
+  .usa-button.usa-button-outline {
+  	text-decoration: none;
+  }
+  .usa-form a.pp_avail {
+  	text-decoration: none;
+  	background: white;
+  }
+  .usa-checkbox.js-form-item-i-agree-to-ensure-that-my-organization-will-abide-by-the-policie {
+  	margin-bottom: 20px;
+  }
+
+  .view_calendar {
+  	display: none;
+  }
+  .room_wrapper {
+  	width: 95%;
+  	background: #e0e0e0;
+  	display: inline-block;
+  	margin: 5px;
+  	padding: 5px 10px;
+  }
+  #edit-group-representative {
+  	margin-top: 1em;
+  }
+  .pp_avail.anon.inactive,
+  .pp_avail.mra.inactive,
+  .anon {
+    display: none !important;
+  }
+  .mra,
+  .truly_available.anon {
+    display: inline-block !important;
+  }
+  body .pp_avail {
+  	display: none;
+  }
+  .pp_avail.active, 
+  .pp_avail:hover {
+  	cursor: pointer !important;
+  	background: red !important;
+  	color: white !important;
+  }
+
+  .pp_avail.truly_available.active, 
+  .pp_avail.truly_available:hover {
+  	background: green !important;
+  	color: white !important;
+  }
+  .pp_avail {
+  	border: 2px solid red;
+  }
+
+  #block-claro2-content form {
+  	background: white;
+  	padding: 1px 15px;
+  }
+  #block-claro2-local-tasks {
+  	display: none;
+  }
+  .room_wrapper.active {
+  	border: 1px solid black;
+  	padding: 1em;
+  	display: inline-block;
+  	border-radius: 3px;
+  }
+  .usa-form a.pp_avail {
+  	text-decoration: none;
+  }
+  .user-logged-in #block-claro2-local-tasks {
+  	display: block;
+  }
+  .button {
+  	background: #0071bc !important;
+  	color: white !important;
+  }
+  .room_wrapper {
+  	margin-bottom: 20px;
+  }
+  .room_name {
+    margin-bottom: 15px;
+  }
+  #avail_label {
+  	margin-top: 20px;
+  	display: block;
+  }
+
+  .new_check {
+  	margin-bottom: 15px;
+  	display: block;
+  }
+
+  /*
+  .form-item--is-this-meeting-for-internal-use-,
+  */
+
+  .form-item--meeting-room,
+  .form-item--date-time-start,
+  .form-item--date-time-end,
+
+
+  .form-item-meeting-room,
+  .form-item-date-time-start,
+  .form-item-date-time-end,
+  #edit-path-wrapper,
+
+
+  .room_wrapper.inactive,
+  .pp_avail.inactive {
+    display: none;
+  }
+  .pp_avail.not_available.mra {
+  	border: 2px solid red !important;
+  }
+  .pp_avail {
+  	border-radius: 4px;
+  	padding: 10px;
+  	margin: 0 10px 10px 0;
+  	display: inline-block;
+  	text-align: center;
+  	border: 1px solid #0071bc;
+  	width: 175px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/admin/structure/webform/manage/meeting_room_reservation_request/submission/*\r\n/meeting-rooms/request"
+contexts: {  }
+conditions_require_all: true

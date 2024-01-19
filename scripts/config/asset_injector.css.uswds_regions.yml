@@ -1,0 +1,74 @@
+uuid: b95dccbd-aeca-40a6-bcd6-240ea3347483
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: uswds_regions
+label: 'USWDS regions'
+code: |
+  .layout__region--first li {
+  	list-style: none;
+  	line-height: 1.5em;
+  }
+  .views-field.views-field-operations {
+  	margin-top: 20px;
+  }
+  .block.block-layout-builder.block-field-blocknodepagebody {
+  	line-height: 1.5em;
+  }
+  .layout__region--first li a {
+  	text-decoration: none;
+  }
+  .layout__region--first li a:hover {
+  	text-decoration: underline;
+  }
+  .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--first, .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--second {
+  	flex: none !important;
+  }
+  .layout__region--first ul {
+  	padding: 0;
+  	margin: 0;
+  }
+  .layout__region--first  .views-element-container  {
+  	padding: 1px 15px;
+  }
+
+  .layout__region--second {
+   padding-bottom: 30px; 
+  }
+  .layout__region--first,
+  .layout__region--second {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	width: 580px !important;
+  }
+
+  .layout__region--first {
+  	width: 330px !important;
+  	max-width: 330px !important;
+  }
+  .layout--twocol-section{
+  	display: flex;
+  	justify-content: space-between;
+  	text-align: left;
+  	max-width: 960px;
+  	margin: 0 auto;
+  	flex-wrap: wrap;
+  	align-items: flex-start;
+  }
+  .layout--twocol-section.layout--twocol-section--33-67 > .layout__region--second, .layout--twocol-section.layout--twocol-section--67-33 > .layout__region--first {
+  	flex: 0 1 580px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/meeting-rooms\r\n/blog/*\r\n/skillmill/*\r\n/how-to/*"
+contexts: {  }
+conditions_require_all: true

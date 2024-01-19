@@ -1,0 +1,25 @@
+uuid: 9a7c35c2-26e0-4cc4-af74-437a47ead8cd
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: summer_img
+label: 'summer img'
+code: |-
+  #babies .details img,
+  #kids .details img,
+  #tweens .details img,
+  #teens .details img,
+  #adults .details img {
+  	float: right;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/summer\r\n/summer/*"
+contexts: {  }
+conditions_require_all: true

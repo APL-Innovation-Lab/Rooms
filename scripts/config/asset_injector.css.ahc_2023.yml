@@ -1,0 +1,45 @@
+uuid: f6995015-50b8-4452-b639-b525ccf6ac6d
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: ahc_2023
+label: 'ahc 2023'
+code: |-
+  #block-uswds-base-content {
+  	margin-top: 0 !important;
+  }
+  .block-views-blockpress-releases-block-4 {
+  	margin-left: auto;
+  	margin-right: auto;
+  	max-width: 64rem;
+  	padding-left: 30px;
+  	padding-right: 30px;
+  	background: white;
+  	padding-bottom: 24px;
+  }
+  .news, .news-block, .news-card-section {
+  	align-items: stretch !important;
+  	justify-content: left !important;
+  	display: flex;
+  	flex-wrap: wrap;
+  	padding-right: 30px;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      en: en
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/ahc\r\n/ahc/*"
+contexts: {  }
+conditions_require_all: true

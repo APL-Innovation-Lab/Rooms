@@ -1,0 +1,47 @@
+uuid: f8a22bad-2c05-4e3c-8598-52d70a2ae183
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: events_calendar
+label: events/calendar
+code: |-
+  .fc-center {
+  	margin: 0 auto;
+  }
+  .fc-head-container.fc-widget-header {
+  	background: #f3f4f9;
+  }
+  .views-exposed-form__item.views-exposed-form__item {
+  	margin: 0 0.5rem 0 0 !important;
+  }
+  .fc-right {
+  	display: none !important;
+  	opacity: 0 !important;
+  }
+  .fc-left {
+  	position: absolute;
+  }
+  .fc-day-top, .fc-day-header {
+  	height: auto;
+  }
+  .region.region-content {
+  	margin: 0 auto !important;
+  }
+  #views-exposed-form-events-calendar-10-eventscalendar {
+  	background: none;
+  	box-shadow: none !important;
+  	padding: 0;
+  	margin-top: 0;
+  	border: none;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/x/events/calendar\r\n/x/events/calendar/*"
+contexts: {  }
+conditions_require_all: false

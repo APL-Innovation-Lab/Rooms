@@ -1,0 +1,74 @@
+uuid: e85138b7-c006-4ec7-8979-5be34e2a3232
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: hotfixes
+label: hotfixes
+code: |-
+  .accordion {
+  	padding: 0 20px;
+  }
+  .views-exposed-form__item.js-form-item.form-item.js-form-type-select.form-type--select.js-form-item-loc.form-item--loc {
+  	margin-right: 1em !important;
+  }
+  .virtual-library-resource.usa-accordion__heading {
+  	border: 1px solid #0071bc;
+  	padding: 10px;
+  	margin-bottom: 20px;
+  }
+  .usa-accordion__button {
+  	display: none;
+  }
+  .event_location, .event_time {
+  	padding: 0;
+  	display: flex;
+  	margin: 3px 0 12px;
+  	line-height: 1.3em;
+  }
+  .icon_con {
+  	width: 22px;
+  	display: block;
+  	text-align: center;
+  	margin-right: 5px;
+  	float: left;
+  }
+  .views-field.views-field-title.grid-col-10.grid-offset-1,
+  .views-field.views-field-field-body-top-.grid-col-10.grid-offset-1,
+  .views-field.views-field-body {
+  	text-align: left;
+  	padding: 0 20px;
+  }
+  #calendar-nav {
+  	text-align: right;
+  	display: flex;
+  	justify-content: right;
+  	align-items: center;
+  	display: none;
+  }
+  .event-time, .event-loc {
+  	display: flex;
+  	justify-content: left;
+  	gap: 5px;
+  }
+  .icon_svg {
+  	width: 1em;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+  request_path:
+    id: request_path
+    negate: true
+    pages: /ee
+contexts: {  }
+conditions_require_all: true

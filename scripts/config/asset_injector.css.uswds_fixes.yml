@@ -1,0 +1,310 @@
+uuid: 756c089a-317a-4c91-9375-a7ce55f7f58a
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: uswds_fixes
+label: 'uswds fixes'
+code: |-
+  body .usa-form, body .webform-submission-form {
+  	max-width: 960px;
+  	margin: 0 auto;
+      font-size: 16px;
+  }
+  #uswds-accordion,
+  #webform-submission-navigation-meeting_room_reservation_request {
+  	display: none;
+  }
+  .grid-container .fieldset-legend {
+  	font-size: 1em;
+  }
+  #edit-status--wrapper .fieldset-legend,
+  .checkboxes--wrapper .fieldset-legend {
+  	padding-left: 0;
+  	font-size: 1em;
+  }
+  .form-radios {
+  	display: inline-block !important;
+  	line-height: 2em;
+  }
+  #edit-please-select-your-type-of-facility-use---wrapper-legend span {
+  	padding-left: 0 !important;
+  }
+  body fieldset fieldset legend, 
+  body fieldset fieldset legend .fieldset-legend {
+      padding: 0;
+  }
+  body fieldset legend .fieldset-legend {
+  	font-size: 1.3rem;
+  	padding: 0 10px;
+  	background: white;
+  	display: inline-block;
+  }
+
+  body fieldset {
+  	border: 2px solid #c0c0c0;
+  	padding-bottom: 1.5em;
+  }
+  body .usa-label {
+  	padding-bottom: 0;
+  	padding-top: 0;
+  	font-size: 16px;
+  	margin-bottom: 0.064rem;
+  }
+  label.button,
+  .usa-button.usa-button-outline, 
+  .usa-button.usa-button-outlined, 
+  .usa-button.usa-button-outline:hover, 
+  .usa-button.usa-button-outlined:hover {
+  	background-color: white;
+  	color: #0071bc;
+  	border: 1px solid #0071bc !important;
+  	padding: 7px 10px;
+  	border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  body .usa-label, 
+  body .usa-legend {
+  	max-width: none;
+  }
+  #apl_search_input {
+  	padding: 7px !important;
+  	width: 240px;
+  }
+  button, html input[type="button"], 
+  input[type="reset"], 
+  .input-group input[type="submit"] {
+  	-webkit-appearance: button;
+  	cursor: pointer;
+  	color: white;
+  	background: #0071bc;
+  	border: none;
+  	height: auto !important;
+  	padding: 10px !important;
+  	border-radius: 3px;
+  }
+  .d-col-3 {
+    background: white;
+  }
+  body .usa-form img {
+  	height: auto;
+  }
+  .usa-form-group h1 {
+  	margin: 10px 0;
+  }
+  .grid-row.grid-gap {
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+  #edit-intro {
+  	margin: 0;
+  }
+  aside h2 {
+  	margin-top: 0;
+  }
+  aside ul {
+  	margin: 0;
+  	padding: 0;
+  }
+  aside li {
+  	list-style: none;
+  }
+  aside ul a {
+  	text-decoration: none;
+  	line-height: 1.3em;
+  }
+  aside ul a:hover {
+  	text-decoration: underline;
+  }
+  .usa-header + .usa-section, 
+  .usa-header + main,
+  .usa-header--extended .usa-nav {
+  	border: none;
+  }
+  .usa-section {
+  	padding-top: 0;
+  }
+  .social span {
+  	display: none;
+  }
+  .usa-checkbox__label::before {
+  	border-radius: 0 !important;
+  }
+  #main-content {
+  	padding-bottom: 0;
+  }
+  .grid-container.usa-footer__return-to-top {
+  	max-width: 960px !important;
+  }
+  .grid-container.usa-footer__return-to-top a{
+  	padding: 0 1rem;
+  }
+
+  .usa-footer__primary-section {
+  	background: #56565a;
+  }
+  .apl_menu .apl-nav-link {
+  	padding: .5rem 1rem !important;
+  }
+  .adv_search a {
+  	text-decoration: none;
+  	line-height: 2rem;
+  }
+  #apl-top-nav a {
+  	padding: 5px 1rem 5px .5rem;
+  }
+  #apl-top-nav .top-es a.apl-accounts-link {
+  	padding-right: .5rem;
+  }
+  #apl_logo_and_search {
+  	margin: 0 1rem;
+  }
+  .webform-submission-form {
+  	padding: 0 !important;
+  }
+  #footer-links1 {
+  	padding-left: 2rem;
+  }
+  fieldset legend .fieldset-legend {
+  	font-size: 1.3rem;
+  }
+
+  fieldset fieldset legend .fieldset-legend {
+  	font-size: 1rem;
+  }
+  #edit-date, .form-date {
+  	padding: 8px;
+  }
+  .usa-accordion__header.uswds-uncollapsible-title {
+  	background: #f0f0f0;
+  	padding: 16px 20px;
+  }
+  .usa-footer > .grid-container {
+  	max-width: none;
+  }
+  .region.region-content {
+  	width: 100% !important;
+  	max-width: 100% !important;
+  	margin: 0 auto;
+  }
+  .usa-button-group {
+  	flex-wrap: nowrap;
+  	flex-direction: row;
+  }
+
+  #edit-path-wrapper,
+  .usa-menu-btn {
+  	display: none;
+  }
+
+  .usa-radio {
+  	clear: left;
+  }
+  body {
+  	background: white;
+  }
+  fieldset {
+  	margin-top: 1.2em;
+  }
+
+
+  /*
+
+  EXAMPLE: Expand theme to full width
+
+   */
+  @media (min-width: 64em) {
+      .usa-header--extended .usa-navbar
+      , .usa-header--extended .usa-nav__inner {
+          max-width: none;
+      }
+  }
+
+  div.usa-banner__inner
+  , div.grid-container {
+      max-width: none;
+  }
+
+
+  /*
+
+  EXAMPLE: Fix small USWDS form size issue
+
+   */
+  @media (min-width: 30em) {
+      .usa-form {
+          max-width: none;
+      }
+  }
+
+
+  /*
+
+  EXAMPLE: add asterisk to any required field on a form, optionally add color
+
+  */
+  .form-required::after {
+    display: inline-block;
+    margin-right: 0.15em;
+    margin-left: 0.15em;
+    content: "*";
+    color: #d72222;  //optional: add a red color
+  }
+
+
+  body a.usa-sr-only.focusable {
+    background: #1e384b;
+    color: #fff;
+    left: 50%;
+    padding: .5rem 1rem;
+    position: absolute;
+    transform: translateY(-100%);
+  }
+
+  body a.usa-sr-only.focusable:focus {
+      transform: translateY(0%)
+   }
+
+
+  .usa-footer__nav {
+  	padding: 0 !important;
+  }
+  .grid-container {
+  	padding-left: 0 !important;
+  	padding-right: 0 !important;
+  }
+  #footer-links,
+  body #more-than-books h2.pane-title {
+  	margin-left: 1rem;
+  }
+  .menu li {
+  	list-style: none;
+  }
+  .menu {
+  	padding: 0 15px;
+  }
+
+  body .usa-checkbox__input:checked + [class*="__label"]::before, 
+  body .usa-radio__input:checked + [class*="__label"]::before {
+  	background-color: #0071bc;
+  	box-shadow: 0 0 0 2px #0071bc;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/form/*\r\n/how-to/*\r\n/blog/*\r\n/skillmill/*\r\n/recommended/personal-picks\r\n/passports/list\r\n/admin/structure/webform/manage/meeting_room_reservation_request/submission/*/duplicate\r\n/webform/shared_learning_room_reservation/submissions/*\r\n/webform/meeting_room_reservation_request/submissions/*\r\n/meeting-rooms/list\r\n/passports/calendar\r\n/passports/appointment\r\n/collaboration-request\r\n/feedback/*\r\n/rental/survey\r\n/book-a-librarian\r\n/meeting-rooms/request\r\n/meeting-rooms/calendar\r\n/meeting-rooms/calendar/staff\r\n/slr/request\r\n/slr/calendar\r\n/slr/calendar/*\r\n/node/7698994\r\n/ahc/researchcopyorder\r\n/ahc/contact-austin-history-center\r\n/accs-contact\r\n/admin/structure/webform/manage/meeting_room_reservation_request/submission/*/edit\r\n/admin/structure/webform/manage/passport_appointment_request/submission/*/edit\r\n/slr/list\r\n/visit-form\r\n/meeting-rooms\r\n/jobportal/request"
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

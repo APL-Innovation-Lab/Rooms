@@ -1,0 +1,21 @@
+uuid: d4fe103a-de83-4d62-b748-e358a6cd976a
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: ahc_the_covid_19_files
+label: ahc/the-covid-19-files
+code: |-
+  .js-form-type-managed-file .webform-element-description {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /ahc/the-covid-19-files
+contexts: {  }
+conditions_require_all: true

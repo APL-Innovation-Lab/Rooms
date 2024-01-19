@@ -1,0 +1,29 @@
+uuid: a02bd31e-6b2f-4081-9511-870789eb1f49
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+id: _es
+label: /es
+code: |-
+  .block-views-blockrandom-facet-2022a-adult,
+  .block-views-blockrandom-facet-2022a-block-1,
+  .block-views-blockrandom-facet-2022a-block-3,
+  .block-views.block-views-blockrandom-node-block-1,
+  .block-views.block-views-blockrandom-node-block-2,
+  .block-views.block-views-blockrandom-node-block-3 {
+  	display: none;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      es: es
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,34 @@
+uuid: eaa0b0f8-0efd-4465-bc9d-32a0c72dccbf
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: ed11y
+label: ed11y
+code: |-
+  body #ed11y-panel {
+  	z-index: 1000 !important;
+  	position: fixed !important;
+  	bottom: 16px !important;
+  	right: 230px !important;
+  	text-align: left !important;
+  	transform-origin: 100% 100% !important;
+  	border-radius: 4px 4px 8px 4px !important;
+  	transition: opacity .2s !important;
+  	max-width: calc(100vw - 28px) !important;
+  	background: #fff !important;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '*'
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,23 @@
+uuid: 457022ab-8f93-4a95-8981-73586400ef81
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: rooms_calendar
+label: rooms-calendar
+code: |-
+  .fc-timeGridDay-button.fc-button.fc-button-primary.fc-button-active,
+  .fc-head,
+  .fc-day-grid {
+  	display: none !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/rooms-calendar/*\r\n/rooms-calendar/ace/day\r\n"
+contexts: {  }
+conditions_require_all: false

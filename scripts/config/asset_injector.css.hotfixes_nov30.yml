@@ -1,0 +1,22 @@
+uuid: 83187e5c-3a53-4b33-bec5-91768339648d
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: hotfixes_nov30
+label: 'hotfixes nov30'
+code: |-
+  .ui-menu-item-wrapper .views-field.views-field-title {
+  	font-size: 1em !important;
+  	font-weight: normal !important;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/node/*'
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,54 @@
+uuid: bcf7c102-1e3c-42be-8fd8-34693d097484
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+id: locations
+label: Locations
+code: |-
+  .views-field.views-field-field-hours-more-info {
+  	text-align: left;
+  	background: white;
+  }
+  .block.block-views.block-views-blockapl-locations-block-1 {
+  	margin-top: 30px;
+  }
+  .office-hours {
+  	margin-top: 20px;
+  }
+  .views-field.views-field-description-1 a.usa-button {
+      margin: 5px 0;
+  }
+  .usa-button.usa-button-outline img { height: 20px; background-color: #0069aa; padding: 5px; vertical-align: middle; margin-right: 5px; margin-top: 0px; border-radius: 3px; } .apl-print { vertical-align: middle; }
+  .location-description img {
+  	vertical-align: sub;
+  	margin: 0px 7px 0px 0px;
+  	height: 17px;
+  	width: 17px;
+  }
+  .views-element-container.block.block-views.block-views-blockapl-locations-block-1 a {
+  	text-decoration: none;
+  }
+  .views-element-container.block.block-views.block-views-blockapl-locations-block-1 a:hover {
+  	text-decoration: underline;
+  }
+  .views-field-field-hours-more-info p {
+  	padding: 0 15px;
+  	font-weight: bold;
+  	margin: 10px 10px 10px 0;
+  	float: left;
+  	width: 100%;
+  }
+media: all
+preprocess: true
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

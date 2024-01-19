@@ -1,0 +1,35 @@
+uuid: 6168ffff-b5f7-4b3c-a8ba-48d7fdc2b4de
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: margins_fix
+label: 'Margins fix'
+code: |-
+  form {
+  	margin-left: 30px;
+  }
+  #views-exposed-form-my-pages-block-2 {
+  	padding: 0 15px;
+  	margin: 0;
+  	border: 0;
+  	box-shadow: none;
+  	align-items: center !important;
+  }
+  .form-text {
+  	margin-right: 10px;
+  }
+
+  .block-views h2 {
+  	padding: 1px 15px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/user\r\n/user/*\r\n"
+contexts: {  }
+conditions_require_all: true

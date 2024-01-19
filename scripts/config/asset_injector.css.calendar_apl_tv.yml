@@ -1,0 +1,30 @@
+uuid: 7104d2b3-d1ca-4ee9-b7ef-dbc403f39a62
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: calendar_apl_tv
+label: 'calendar - APL TV'
+code: |-
+  #calendar td {
+  	vertical-align: top;
+  	width: 100px;
+  }
+  #calendar a {
+  	display: block;
+  }
+  .thumbnail {
+  	width: 25%;
+  	float: left;
+  	margin: 0 1px 5px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/admin/apltv/*'
+contexts: {  }
+conditions_require_all: true

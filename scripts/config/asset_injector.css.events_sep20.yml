@@ -1,0 +1,21 @@
+uuid: 98d98ba0-557e-4915-aa6b-3257d9b040c7
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: events_sep20
+label: 'events Sep20'
+code: |-
+  #sponsors {
+  	margin-top: 20px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/event/*'
+contexts: {  }
+conditions_require_all: true

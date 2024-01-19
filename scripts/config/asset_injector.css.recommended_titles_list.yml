@@ -1,0 +1,146 @@
+uuid: 1850a114-3ce6-43b5-b4b0-c20eec939b52
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: recommended_titles_list
+label: recommended/titles/list
+code: |-
+  .item_title_description a {
+  	text-decoration: none;
+  }
+  .apl-recently-updated {
+  	position: relative;
+  }
+  .apl-recently-updated::before {
+  	color: gold;
+  	content: "✹";
+  	font-size: 63px;
+  	opacity: 0.6;
+  	position: absolute;
+  	right: 0;
+  	font-weight: bold;
+  	top: -20px;
+  }
+  .block.block-layout-builder.block-field-blocknodepagebody {
+  	margin: -30px 0 20px;
+  }
+  .item_title_description a:hovel {
+  	text-decoration: underline;
+  }
+
+  .block-views-blocksections-block-11 li {
+  	display: block;
+  }
+  .block-views-blocksections-block-11 ul {
+  	margin: 0;
+  }
+  .block-views-blocksections-block-11 li a {
+  	text-decoration: none;
+  }
+  .block-views-blocksections-block-11 li a:hover {
+  	text-decoration: underline;
+  }
+
+  .block-facet-blockfacets23 .facet-item {
+  	display: inline-block;
+  }
+
+  .block-facet-blockfacets23 ul {
+  	margin: 0;
+  }
+  .block-facet-blockfacets23 .facet-item a {
+  	border: 1px solid;
+  	border-radius: 4px;
+  	padding: 10px 15px;
+  	display: block;
+  	margin: 0 10px 10px 0;
+  	text-decoration: none;
+  }
+
+  .block-facet-blockfacets23 .facet-item a:hover {
+  	text-decoration: underline;
+  }
+
+  a[data-drupal-facet-item-id="aud-children"],
+  .children {
+  	background: #9696c9 !important;
+  }
+  a[data-drupal-facet-item-id="aud-teen"],
+  .teen {
+  	background: #009ABE !important;
+  }
+  a[data-drupal-facet-item-id="aud-adult"],
+  .adult {
+  	background: #7DC142 !important;
+  }
+  a[data-drupal-facet-item-id="aud-español"] {
+    background-color: orange;
+  }
+
+  .block-facet-blockintended-audience ul {
+  	margin-left: 0;
+  }
+
+  .block-facet-blockintended-audience li {
+  	display: block;
+  	float: left;
+  	margin-bottom: 15px;
+  }
+
+  .block-facet-blockintended-audience li a {
+  	padding: 10px 15px;
+  	border-radius: 4px;
+  	text-decoration: none;
+  	margin: -5px 10px 0px 0px;
+  	color: white;
+  	display: block;
+  }
+  .block-facet-blockintended-audience li a:hover {
+  	text-decoration: underline;
+  }
+
+  .block-facet--links.block.block-facets.block-facet-blockfacets23 {
+  	clear: left;
+  }
+
+  .vefl-1col:nth-child(1),
+  .vefl-1col:nth-child(3){
+  	width: 360px;
+  	float: left;
+  }
+  .vefl-1col:nth-child(1) > div,
+  .vefl-1col:nth-child(3) > div{
+  	padding: 1px 15px;
+  }
+  .vefl-1col:nth-child(2) {
+  	width: 580px;
+  	float: right;
+  }
+  .vefl-1col {
+  	background:white;
+  }
+  .views-row .item_image img {
+  	max-width: 100%;
+  	height: auto;
+  	width: 100%;
+  }
+
+  @media only screen and (min-width: 0px) and (max-width: 959px) {
+  .vefl-1col:nth-child(2) {
+  	width: 530px;
+  }
+  .view-items-index .views-row {
+  	max-width: 250px;
+  }
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /recommended/titles
+contexts: {  }
+conditions_require_all: true

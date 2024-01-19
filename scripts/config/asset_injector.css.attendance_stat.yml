@@ -1,0 +1,28 @@
+uuid: b05fbff8-a091-48d6-844d-dce7d31aeab1
+langcode: eng
+status: true
+dependencies:
+  module:
+    - node
+id: attendance_stat
+label: 'Attendance Stat'
+code: |-
+  .fieldset__label {
+  	padding-bottom: 0;
+  }
+  #edit-field-node-id-wrapper,
+  #edit-field-library-priority--wrapper .fieldset__label--group {
+    display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      reflection: reflection
+contexts: {  }
+conditions_require_all: true

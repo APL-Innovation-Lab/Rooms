@@ -1,0 +1,84 @@
+uuid: 2556babe-4051-4189-ab10-9e9b29b7328f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: footer_2021
+label: 'footer 2021'
+code: |-
+  #footer {
+  	background-color: #56565a;
+  	padding-bottom: 30px;
+  }
+
+  #footer-links1 {
+  	margin-bottom: 20px;
+  }
+  #more-than-books img {
+  	height: 32px;
+  	margin-top: 20px;
+  }
+  #apl-connect {
+  	text-decoration: none;
+  	color: white;
+  	text-align: right;
+  	display: inherit;
+  	margin: 10px 0;
+  }
+  #connect-with-us {
+  	margin-top: 20px;
+  }
+  .social {
+  	height: 32px;
+  }
+
+  #block-panels-mini-footer-container .inside {
+  	display: flex;
+  	max-width: 960px;
+  	margin: 0 auto;
+  	justify-content: space-between;
+  }
+  #footer li a {
+  	color: white;
+  	text-decoration: none;
+  }
+  #links-container {
+  	display: flex;
+  	justify-content: left;
+  	width: 500px;
+  }
+  #footer-links1 {
+  	margin: 0;
+  }
+  #footer ul {
+  	list-style-type: none;
+  }
+  #footer-links {
+  	border-left: 1px solid white;
+  	padding-left: 20px;
+  }
+  #connect-with-us ul li {
+  	background-position: center bottom;
+  	background-repeat: no-repeat;
+  	background-size: 32px auto;
+  	cursor: pointer;
+  	display: block;
+  	float: left;
+  	height: 32px;
+  	margin-right: 5px;
+  	width: 32px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/admin/*'
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

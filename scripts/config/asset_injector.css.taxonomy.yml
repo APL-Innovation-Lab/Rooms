@@ -1,0 +1,30 @@
+uuid: 4fe7c798-3971-4c40-9cfd-581aa54b2b40
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: taxonomy
+label: Taxonomy
+code: |-
+  .field-title {
+  	font-size: 28px;
+  	font-weight: bold;
+  }
+
+  .office-hours {
+  	background: white;
+  	padding: 0 15px 20px;
+  }
+  .apl-hh.views-row {
+  	padding: 0 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/taxonomy/*\r\n"
+contexts: {  }
+conditions_require_all: true

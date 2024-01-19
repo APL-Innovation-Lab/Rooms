@@ -1,0 +1,83 @@
+uuid: 78396a04-6fc9-49b9-a512-2ae2225740b1
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+    - webform
+id: fixer
+label: fixer
+code: |-
+  #block-panels-mini-footer-container .inside {
+  	display: flex;
+  	max-width: 960px;
+  	margin: 0 auto;
+  	justify-content: space-between;
+  	flex-wrap: wrap;
+  }
+  #more-than-books {
+  	margin-left: 10px;
+  }
+  #footer-links1 {
+  	margin-left: 5px;
+  }
+  .vefl-1col {
+  	background: white;
+  	margin-bottom: 20px;
+  	padding-bottom: 15px;
+  }
+  @media only screen and (min-width: 0px) and (max-width: 959px) {
+  #block-exposedformvirtual-library-searchpage-1 {
+  	width: 500px;
+  }
+  .vefl-1col,
+  #block-views-block-alerts-block-4,
+  .content_footer,
+  #block-views-block-sections-block-1,
+  .layout.layout--onecol,
+  .layout.layout--onecol:nth-child(1),
+  #block-claro2-content,
+  .region.region-content,
+  .d-col-3.t-col-3.m-col-2.layout__region.layout__region--first,
+  .d-col-3,
+  .d-col-9,
+  .page-wrapper .flex-grid,
+  #block-views-block-sections-block-4,
+  #block-views-block-navigation-block-6, #block-austincompletelybooked, #views_block__hero_banner_image_block_1,
+  .view-hero-banner-image
+  {
+  	width: 530px !important;
+  	max-width: 530px !important;
+  	margin: 0 auto;
+  }
+  .apl-sidebar
+  {
+  	width: 500px !important;
+  	max-width: 500px !important;
+  	margin: 0 auto;
+  }
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/slr-request\r\n/rental/survey\r\n/meeting-rooms\r\n/blog/*"
+  'entity_bundle:webform_submission':
+    id: 'entity_bundle:webform_submission'
+    negate: true
+    context_mapping:
+      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+    bundles:
+      event_services_survey: event_services_survey
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

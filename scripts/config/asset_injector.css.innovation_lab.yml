@@ -1,0 +1,69 @@
+uuid: c2a4a747-5814-4ae7-9b44-623b011f2aef
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: innovation_lab
+label: 'Innovation Lab'
+code: |-
+  .block-views h2 {
+  	padding: 20px 15px 0;
+  }
+  .block-views.block-views-blocknavigation-block-2 h2 {
+  	padding: 0;
+  }
+  .block-views  .view-footer {
+  	padding: 0 15px;
+  }
+  .field.field--name-field-image-gallery {
+  	display: flex;
+  	justify-content: space-around;
+  	padding: 35px 15px 0;
+  }
+  .field__item {
+  	margin-left: 15px;
+  }
+  .field__item:nth-child(1) {
+  	margin-left: 0;
+  }
+  .active + .details {
+  	display: block;
+  }
+  .collapsible + div.details {
+  	display: none;
+  }
+  .collapsible.active + div.details {
+  	display: block;
+  }
+  .collapsible {
+  	position: relative;
+  	background-color: #efefef;
+  	padding: 10px;
+  	background-image: url(/library/misc/add.svg),linear-gradient(transparent,transparent);
+  	background-repeat: no-repeat;
+  	background-position: right 5px center;
+  	background-size: 1.5rem;
+  	color: #1b1b1b;
+  	cursor: pointer;
+  }
+  .collapsible.active {
+  	background-image: url(/library/misc/remove.svg),linear-gradient(transparent,transparent);
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/makerspacex\r\n/passportsx\r\n/pasaportesx\r\n/es/pasaportesx"
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

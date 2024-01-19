@@ -1,0 +1,51 @@
+uuid: 98e0b627-eb24-4a17-92d1-fa218b488bf4
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: aplplus_
+label: 'aplplus '
+code: |-
+  .views-field.views-field-field-vimeo {
+  	margin-left: 15px;
+  }
+  .block-field-blocknodepagebody p {
+  	margin: -10px 0 30px;
+  	padding: 0;
+  }
+
+  .views-element-container {
+  	position: relative;
+  }
+
+
+  .aplplus-section {
+  	font-weight: bold;
+  	padding: 0 15px 10px;
+  }
+  .view-aplplus .view-footer {
+  	display: block;
+  	position: absolute;
+  	width: 265px;
+  	top: 205px;
+  	left: 295px;
+  }
+
+  .views-field.views-field-field-vimeo .field-content {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: flex-start;
+  }
+  .video-embed-field-provider-vimeo {
+  	margin: 0 15px 15px 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /aplplus
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,24 @@
+uuid: 62b840be-6e1c-47a0-aa2c-22af32b054e5
+langcode: eng
+status: true
+dependencies:
+  module:
+    - user
+id: hide_status_if_not_mra
+label: 'hide status if not MRA'
+code: |-
+  #edit-status--wrapper {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  user_role:
+    id: user_role
+    negate: true
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      meeting_rooms_administrator: meeting_rooms_administrator
+contexts: {  }
+conditions_require_all: true

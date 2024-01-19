@@ -1,0 +1,21 @@
+uuid: 72ce4268-2903-4f14-bd1e-0ecf5183181e
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: ahc_uswds
+label: 'AHC uswds'
+code: |-
+  body .usa-footer__primary-section {
+  	background: #666a40;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/ahc/*'
+contexts: {  }
+conditions_require_all: true

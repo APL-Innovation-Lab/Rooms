@@ -1,0 +1,59 @@
+uuid: ef9d37ab-ec39-4d36-ad89-7d4c1b8914e9
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: job_portal_
+label: 'Job Portal'
+code: |-
+  body fieldset legend .fieldset-legend {
+  	padding: 0 !important;
+  }
+  .description {
+  	margin-top: 10px;
+  }
+  .field--type-string {
+  	margin-bottom: 25px !important;
+  }
+
+  .usa-form-group.js-form-item.form-item.js-form-type-vertical-tabs.form-item-.js-form-item-.form-no-label {
+  	display: none;
+  }
+  #edit-actions {
+  	margin-top: 20px;
+  }
+
+  .usa-alert__body .item-list li a {
+  	border: none;
+  	padding: 0;
+  	display: inline;
+  }
+
+  .usa-alert--info::before {
+  	background: none;
+  	-webkit-mask: none;
+  	mask: none;
+  }
+
+  .usa-alert--info {
+  	background-color: white;
+  	border: none;
+  }
+
+  .usa-alert--info .usa-alert__body {
+  	padding-left: 0;
+  }
+
+  h1 {
+  	margin: 0 !important;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/jobportal/request\r\n/collaboration-request\r\n/accs-contact\r\n/feedback/databases\r\n/visit-form\r\n/form/resources-feedback\r\n"
+contexts: {  }
+conditions_require_all: true

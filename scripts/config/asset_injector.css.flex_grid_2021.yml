@@ -1,0 +1,159 @@
+uuid: 3b7a92a6-8b14-425d-a579-6be4e5e74691
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - webform
+id: flex_grid_2021
+label: flex-grid-2021
+code: |+
+  .layout.layout--onecol.make-transparent {
+  	background: transparent;
+  	padding: 0;
+  }
+  .apl_submenus {
+  	padding: 10px 20px 10px 0px !important;
+  	border: 1px solid rgba(0,0,0,.2);
+  	border-top: none;
+  }
+  .dropdown-toggle {
+  	padding-right: 20px !important;
+  }
+
+  .apl_menu > li > a:hover, .apl_menu > li > a.active {
+  	border-left: 1px solid rgba(0,0,0,.2);
+  }
+
+  .d-col-3.t-col-3.m-col-2.layout__region.layout__region--first {
+  	width: 360px;
+  }
+
+  .flex-wrapper {
+  margin: 0;
+  padding: 20px;
+  	background: #ebebec;
+  }
+
+  .flex-grid {
+  	display: flex;
+  	justify-content: space-between;
+  	text-align: left;
+  	max-width: 1420px;
+  	margin: 0 auto;
+  		flex-wrap: wrap;
+
+  }
+  .layout--onecol {
+    background:white;
+    margin: 0 auto;
+  }
+
+
+
+
+  @media (min-width: 980px) {
+  #block-claro-content {
+  	padding: 25px 50px;
+  }
+  .layout--onecol {
+  	padding: 0;
+  	width: 960px;
+  }
+  	.flex-grid {margin-top: 2rem;}
+  	.flex-grid:first-child {margin-top: 0;}
+  	
+  	.d-col-1 						{width: 7.05%;}
+  	.d-col-2 						{width: 15.5%;}
+  	.d-col-3, 
+  	.d-col-thirds 					{width: 23.95%;}
+  	.d-col-4, 
+  	.d-col-quarters 				{width: 32.4%;}
+  	.d-col-5 						{width: 40.85%;}
+  	.d-col-6, 
+  	.d-col-halfs					{width: 49.3%;}
+  	.d-col-7 						{width: 57.75%;}
+  	.d-col-8		{width: 66.2%;}
+  	.d-col-9 						{width: 74.65%;}
+  	.d-col-10 						{width: 83.1%;}
+  	.d-col-11 						{width: 91.55%;}
+  	.d-col-12, 
+  	.d-col-full 					{width: 100%;}
+  }
+
+
+
+
+  @media only screen and (min-width: 661px) and (max-width: 979px) {	
+  #block-claro-content {
+  	padding: 25px 10px;
+  }
+  .layout--onecol {width: 80%;padding: 25px 25px}
+
+  	.flex-grid {flex-flow: row wrap;}
+  	
+  	.t-col-4,
+  	.t-col-6,
+  	.t-col-12 {margin-top: 2rem}
+  	
+  	.t-col-4 		{width: 31.46%	}
+  	.t-col-6 		{width: 48.6%;}
+  	.t-col-10 		{width: 83%;}
+  	.t-col-12 		{width: 100%;}
+  	
+  	.flex-grid:first-child .t-col-4,
+  	.flex-grid:first-child .t-col-6,
+  	.flex-grid:first-child .t-col-12 {
+  		 margin-top: 0;
+  	}
+  }
+
+
+
+
+  @media only screen and (min-width: 0px) and (max-width: 660px) {
+  #block-claro-content {
+  	padding: 25px 5px;
+  }
+  .layout--onecol {width: 90%;padding: 25px 5px}
+
+  	.flex-grid {flex-flow: row wrap;}
+  	
+  	.m-col-6,
+  	.m-col-12 {margin-top: 2rem;}
+  	
+  	.m-col-6 		{width: 47.2%;}
+  	.m-col-12		{width: 100%;}
+  	
+  	.flex-grid:first-child .m-col-6,
+  	.flex-grid:first-child .m-col-12 {
+  		 margin-top: 0;
+  	}
+  	.apl_menu {
+  	max-width: 500px !important;
+  	margin-left: 0 !important;
+  }
+  }
+
+
+
+
+media: all
+preprocess: false
+conditions:
+  'entity_bundle:webform_submission':
+    id: 'entity_bundle:webform_submission'
+    negate: true
+    context_mapping:
+      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+    bundles:
+      event_services_survey: event_services_survey
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: true

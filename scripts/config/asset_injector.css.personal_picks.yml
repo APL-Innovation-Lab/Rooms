@@ -1,0 +1,21 @@
+uuid: 0a56f999-eab7-40ad-8c2c-c07dd047df90
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: personal_picks
+label: 'Personal Picks'
+code: |-
+  .block.block-webform.block-webform-block {
+  	padding: 1px 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /recommended/personal-picks
+contexts: {  }
+conditions_require_all: true

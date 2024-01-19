@@ -1,0 +1,33 @@
+uuid: a8a78787-6b56-4e0f-9c62-ce302634d81f
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: ahc_hotfixes
+label: 'ahc hotfixes'
+code: |-
+  .ahc-page .views-row > * {
+  	padding: 15px;
+  }
+  .ahc-page .views-row > div:nth-child(1) {
+  	padding: 0;
+  }
+  .views-field.views-field-field-image-attribution-ahc {
+  	float: right;
+  	margin-top: -1em;
+  	padding-right: 15px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/ahc/*'
+  current_theme:
+    id: current_theme
+    negate: false
+    theme: claro2
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,134 @@
+uuid: 18e11124-e033-465f-8cf7-eff1ab13792c
+langcode: eng
+status: true
+dependencies:
+  module:
+    - node
+    - system
+    - user
+id: slr
+label: SLR
+code: |-
+  input.form-number,
+  #edit-field-slr-duration,
+  #edit-field-slr-webform-0-target-id {
+  	width: auto;
+  }
+  .form-text, .form-email {
+  	max-width: 95%;
+  }
+  #edit-field-slr-webform-0-settings {
+  	display: none;
+  }
+  #edit-field-slr-duration-wrapper option:nth-child(n+9),
+  #edit-field-request-status-wrapper,
+  #edit-field-ac-wrapper{
+  	display: none;
+  }
+  .item-list--comma-list.item-list a {
+  	border: none;
+  	color: white;
+  	text-decoration: none;
+  }
+  .item-list--comma-list.item-list li {
+  	display: block !important;
+  }
+  .item-list__comma-list li::after {
+  	content: "" !important;
+  	display: none;
+  }
+  #node-passport-reservation-form {
+      max-width: 1420px;a
+      margin: 0 auto;
+  }
+  #edit-scheduler-settings,
+  #edit-field-slr-time-end-wrapper,
+  #edit-field-slr-time-start-0,
+  .entity-meta {
+    display: none;
+  }
+  .pp_avail {
+  	border-radius: 4px;
+  	padding: 5px 10px;
+  	margin: 0 10px 10px 0;
+  	display: inline-block;
+  	text-align: center;
+  }
+
+  .pp_avail.inactive {
+  	opacity: 0.5;
+  	display: none;
+  }
+
+  .pp_avail {
+    background: white;
+    color: #003cc5 !important;
+    border: 1px solid blue;
+  }
+
+  .pp_avail.active {
+    background: #003cc5 !important;
+    color: white !important;
+  }
+
+  .pp_avail:hover {
+  	background: #003cc5;
+  	color: white !important;
+  }
+  .pp_less,.pp_less2,.pp_more {
+  	text-decoration: none;
+  }
+  .pp_less:hover,.pp_less2:hover,.pp_more:hover {
+  	text-decoration: underline;
+  }
+  #edit-footer,
+  #edit-field-pp-date-0,
+  .layout-region--node-secondary {
+  	display: none;
+  }
+  .material-icons {
+  	margin-right: 5px;
+  }
+  .layout-region__content {
+  	max-width: 100% !important;
+  	margin: 0 !important;
+  }
+
+  .page-wrapper {
+  	max-width: 960px;
+  	margin: 0 auto;
+  	background: white;
+  	padding: 1px 15px;
+  }
+  .layout-region--node-main {
+  	width: 100% !important;
+  	padding-right: 0 !important;
+  }
+  .content-header.clearfix {
+  	display: none;
+  }
+  #block-claro-content {
+  	padding: 0 !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /slr-request
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      slr: slr
+  user_role:
+    id: user_role
+    negate: true
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles: {  }
+contexts: {  }
+conditions_require_all: true

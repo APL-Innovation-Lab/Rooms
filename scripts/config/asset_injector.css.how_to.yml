@@ -1,0 +1,31 @@
+uuid: 3f25da69-1c33-4f5f-9057-aa2c37d0d862
+langcode: eng
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: how_to
+label: 'How To'
+code: |
+  .field--name-name {
+  	font-size: 28px;
+  	font-weight: bold;
+  	text-transform: capitalize;
+  }
+  .views-field-operations,
+  .views-field-changed {
+  	text-align: right;
+  	width: 13%;
+  }
+media: all
+preprocess: true
+conditions:
+  'entity_bundle:taxonomy_term':
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    context_mapping:
+      taxonomy_term: '@taxonomy_term.taxonomy_term_route_context:taxonomy_term'
+    bundles:
+      how_to: how_to
+contexts: {  }
+conditions_require_all: false

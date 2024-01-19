@@ -1,0 +1,28 @@
+uuid: a88767a1-a29e-423f-86a0-0cb45e5cf4ed
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: recycled_reads
+label: 'Recycled Reads'
+code: |-
+  .view-id-location_info {
+  	margin-bottom: 20px;
+  }
+  .block.block-layout-builder.block-field-blocknodebookstore-pagetitle,
+  .block.block-layout-builder.block-field-blocknodebookstore-pagebody {
+  	padding: 1px 15px;
+  }
+  .views-field.views-field-field-open-hours__ {
+  	margin-top: 20px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/recycled-reads\r\n/recycled-reads/*"
+contexts: {  }
+conditions_require_all: true

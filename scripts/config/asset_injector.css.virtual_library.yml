@@ -1,0 +1,26 @@
+uuid: 83bbb8d1-e791-4b1c-82a4-a5918fb61a4d
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: virtual_library
+label: 'Virtual Library'
+code: |-
+  .block-field-blocknodevirtual-library-pagebody {
+  	background: white;
+  	padding: 1px 20px 20px;
+  }
+  .block-field-blocknodevirtual-library-pagetitle {
+  	background: white;
+  	padding: 20px 20px 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /virtual
+contexts: {  }
+conditions_require_all: true

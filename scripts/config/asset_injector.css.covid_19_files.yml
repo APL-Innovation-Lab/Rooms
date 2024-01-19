@@ -1,0 +1,24 @@
+uuid: 60803f91-57c5-4404-a676-dd13a2ead570
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: covid_19_files
+label: 'COVID-19 Files'
+code: |-
+  #webform-submission-austin-in-quarantine-node-745291-add-form {
+  	padding: 1px 15px;
+  }
+  .form-managed-file__main {
+  	width: 100%;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /ahc/covid-19-files
+contexts: {  }
+conditions_require_all: true

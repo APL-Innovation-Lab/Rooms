@@ -1,0 +1,23 @@
+uuid: 7f6710df-f039-46bd-adce-39c4c1161fc0
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: oakwood_facets
+label: 'oakwood facets'
+code: |-
+  #block-views-block-alerts-block-4,
+  #block-views-block-sections-block-4,
+  .content_footer {
+    display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /ahc/oakwood/facets
+contexts: {  }
+conditions_require_all: true

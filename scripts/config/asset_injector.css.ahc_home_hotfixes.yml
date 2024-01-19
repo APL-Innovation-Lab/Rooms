@@ -1,0 +1,28 @@
+uuid: 00c88c94-2daf-4165-9737-995beb0318ea
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: ahc_home_hotfixes
+label: 'AHC home hotfixes'
+code: |-
+  #block-aplpa-content, #block-uswds-base-content {
+  	margin-top: 0 !important;
+  }
+  .usa-layout-docs__main.desktop\:grid-col-fill {
+  	background-image: none !important;
+  }
+media: all
+preprocess: false
+conditions:
+  current_theme:
+    id: current_theme
+    negate: false
+    theme: aplpa
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/ahc\r\n/ahc/staging"
+contexts: {  }
+conditions_require_all: true

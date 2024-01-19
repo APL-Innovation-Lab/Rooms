@@ -1,0 +1,29 @@
+uuid: 72dac554-3651-48a8-b489-63f560879bf0
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: lists_and_tables
+label: 'lists and tables'
+code: |-
+  .js td .dropbutton-multiple {
+  	max-width: 100%;
+  	margin-right: 2em;
+  	padding-right: 5em;
+  }
+  .view-content {
+  	overflow: scroll;
+  }
+  .bef-exposed-form .form--inline > .form-item {
+  	float: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /meeting-rooms/list
+contexts: {  }
+conditions_require_all: true

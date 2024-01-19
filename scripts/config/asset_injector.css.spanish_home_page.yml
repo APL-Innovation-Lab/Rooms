@@ -1,0 +1,34 @@
+uuid: 7c5bd750-5dea-4337-8892-11f5aa8c2096
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: spanish_home_page
+label: 'Spanish home page'
+code: |-
+  #apl-button5 {
+  	background: #f7a700 url("/library/misc/icons_web_buttons_apl_plus.png") no-repeat scroll 8px 10px !important;
+  	background-size: 66px auto !important;
+  }
+  #apl-button4 {
+  	background: #009abf url("/library/icons_web_buttons_2018-07x.svg") no-repeat scroll 8px 15px !important;
+  	background-size: 66px !important;
+  }
+media: all
+preprocess: true
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      es: es
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+contexts: {  }
+conditions_require_all: true

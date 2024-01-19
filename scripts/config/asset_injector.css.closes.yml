@@ -1,0 +1,29 @@
+uuid: 37bd02e4-9dea-4742-a4d4-0c81bfb71d43
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: closes
+label: Closes
+code: |-
+  #apl-background {
+  position:relative;
+  }
+  #apl-clock {
+  	position: absolute;
+  	z-index: 999;
+  	bottom: 69px;
+  	font-size: 198px;
+  	color: #004869;
+  	right: 39px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/apltv/fullscreen/7691441\r\n/apltv/fullscreen/*"
+contexts: {  }
+conditions_require_all: false

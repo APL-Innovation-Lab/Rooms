@@ -1,0 +1,36 @@
+uuid: c58116b1-0078-45fe-b4b9-5746e83d8a31
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: summer
+label: summer
+code: |-
+  .section-summer .view-activities:nth-child(odd) {
+  	background: #ECE1B5 !important;
+  }
+  .section-summer .view-activities:nth-child(even) {
+  	background: #B5E1EC !important;
+  }
+  .block.block-views.block-views-blockactivities-and-activity-pages-block-1 > h2 {
+  	padding: 1px 15px;
+  }
+  .view-activities.views-row {
+  	padding: 15px;
+  }
+  .block.block-layout-builder.block-field-blocknodeactivity-pagetitle {
+  	margin-left: 15px;
+  }
+  #apl_sections_wrapper {
+  	margin-left: 10px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/summer\r\n/summer/*"
+contexts: {  }
+conditions_require_all: true

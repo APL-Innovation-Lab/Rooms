@@ -1,0 +1,220 @@
+uuid: a0b08906-2459-4180-be77-bb0bc29dcf1d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: ahc
+label: ahc
+code: |2-
+    #home_sections2 {
+      padding: 40px;
+    }
+    .layout--onecol + div .d-col-9.t-col-9.m-col-10.layout__region.layout__region--second {
+  	width: 960px !important;
+  }
+  body #more-than-books h2.pane-title {
+  	margin-left: -8px !important;
+  }
+  .advance-notice {
+  	color: red;
+  }
+  .rteright {
+  	float: right;
+  }
+    img {
+  	max-width: 100%;
+  	height: auto !important;
+  }
+  .block.block-layout-builder.block-field-blocknodeahc-pagefield-image-attribution-ahc {
+  	margin-top: -18px;
+  	text-align: right;
+  	margin-right: 15px;
+  }
+    body div #more-than-books h2.pane-title {
+  	background-image: url(/library/ahc/tagline2.svg) !important;
+  	background-position: 5px 0;
+  	width: 300px;
+  }
+  .views_slideshow_slide a:nth-child(2) {
+  	padding-left: 15px;
+  }
+
+  .block-field-blocknodeahc-pagefield-postscript,
+    .block.block-layout-builder.block-field-blocknodeahc-pagetitle,
+  .block.block-layout-builder.block-field-blocknodeahc-pagebody {
+  	padding: 1px 15px;
+  }
+    .field--name-field-slideshow-ahc {
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-between;
+  }
+    #home_sections2 ul ul {
+      margin: 0 0 20px;
+    }
+    #home_sections2>ul li {
+      background: white;
+      list-style: none;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #home_sections2 ul li ul li {
+      padding: 0 10px 10px;
+      margin: 0;
+    }
+  .section_icon {
+  	height: 150px !important;
+  	border-radius: 75px !important;
+  	width: 150px !important;
+  	margin: 20px auto 40px;
+  }
+    .section_title {
+      height: 4em;
+      font-size: 1.1em;
+      font-weight: bold;
+      color: #333;
+      padding: 20px;
+    }
+    #home_sections2 a {
+      text-decoration: none;
+      display: block;
+    }
+    #home_sections2 a:hover {
+      text-decoration: underline;
+    }
+    .section_icon .material-icons {
+      color: white;
+      font-size: 80px;
+      padding: 32px;
+    }
+    
+    
+
+
+  .field--name-title {
+  	font-size: 2em;
+  	font-weight: bold;
+  }
+  .region-content .node--type-apl-site-content .layout--onecol {
+  	text-align: left !important;
+  }
+
+  .views-exposed-form.views-exposed-form {
+  	display: flex;
+  	flex-wrap: wrap;
+  	align-items: flex-end;
+  	padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  	border: none;
+  	border-radius: 2px;
+  	background-color: transparent;
+  	box-shadow: none;
+  	max-width: 960px;
+  	margin: 0 auto;
+  }
+  .apl-events .view-content {
+  	max-width: 960px;
+  	margin: 0 auto;
+  	display: flex;
+  	flex-wrap: wrap;
+  	justify-content: space-around;
+  }
+  .apl-events-header {
+  	color: #474747;
+  	font-size: 2em;
+  	font-weight: bold;
+  }
+  .apl-events {
+  	background: #f5f5f5;
+  	min-height: 600px;
+  }
+  .apl-events-footer {
+  	text-align: right;
+  }
+  .apl-events-footer a {
+  	color: white;
+  	padding: 10px;
+  	border-radius: 4px;
+  	text-decoration: none;
+  }
+  .apl-events .view-footer {
+  	margin-top: 20px;
+  	margin-bottom: 20px;
+  }
+  .field-event-time div, .field-event-loc a {
+  	display: inline-block;
+  	vertical-align: top;
+  }
+
+  .field-event-loc a {
+  	color: #333;
+  	text-decoration: none;
+  	display: inline-block;
+  	vertical-align: top;
+  }
+
+
+  .region-content .node--type-apl-site-content .layout--onecol {
+  	background: transparent !important;
+  	width: 100%;
+  	text-align: center;
+  }
+
+  .section_icon {
+  	height: 150px !important;
+  	border-radius: 75px !important;
+  	width: 150px !important;
+  	margin: 20px auto 40px;
+  }
+
+
+  .block.block-views.block-views-blockevents-block-1 .view-content {
+  	display: flex;
+  	max-width: 960px;
+  	margin: 0 auto;
+  	justify-content: space-between;
+  	flex-flow: wrap;
+  }
+  .block.block-views.block-views-blockevents-block-1 .views-row {
+  	padding: 10px 0;
+  	text-align: left;
+  }
+
+  .field-event-date {
+  	color: #52bdde;
+  	font-weight: bold;
+  	text-transform: uppercase;
+  	font-size: .8em;
+  }
+  .field-title a {
+  	text-decoration: none;
+  	color: #333;
+  	font-weight: bold;
+  	font-size: 1.1em;
+  	padding-bottom: 40px;
+  	display: block;
+  }
+
+  .layout--onecol:nth-child(2) .layout__region.layout__region--content {
+  	background: white;
+  	max-width: 960px;
+  	margin: 0 auto;
+  	text-align: left;
+  }
+
+  .apl-event {
+  	padding: 20px;
+  	border: none !important;
+  	background: white;
+  	text-align: left;
+  	margin: 20px 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/ahc/*'
+contexts: {  }
+conditions_require_all: true

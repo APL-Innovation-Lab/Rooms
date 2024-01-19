@@ -1,0 +1,25 @@
+uuid: a38d7131-bb85-4b5f-a0f2-edc3f8c6b611
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: edit_actions
+label: 'edit actions'
+code: |-
+  #edit-actions {
+  	display: flex;
+  	align-items: center;
+  	justify-content: left;
+  	gap: 1em;
+  	margin-left: 0;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/admin/*\r\n/taxonomy/term/*"
+contexts: {  }
+conditions_require_all: true

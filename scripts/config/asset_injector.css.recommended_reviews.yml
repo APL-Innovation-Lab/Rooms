@@ -1,0 +1,99 @@
+uuid: 102db329-ea56-48e2-9711-379ecf2671db
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: recommended_reviews
+label: recommended/reviews
+code: |-
+  #block-claro2-content .flex-grid {
+  	float: right;
+  }
+
+  .block-views-blocksections-block-11 a {
+  	text-decoration: none;
+  }
+  .block-views-blocksections-block-11 a:hover {
+  	text-decoration: underline;
+  }
+
+  #block-claro2-content .layout.layout--onecol {
+  	background: white !important;
+  	width: 330px !important;
+  	padding: 1px 15px !important;
+  	text-align: left;
+  	float: left;
+  	clear: none;
+  }
+
+
+  .block-views-blocksections-block-11 li {
+  	list-style-type: none;
+  	padding: 0;
+  	margin: 0;
+  	margin-left: -20px;
+  }
+
+  #block-panels-mini-footer-container .inside {
+  	display: flex;
+  	max-width: 960px;
+  	margin: 0 auto;
+  	justify-content: space-between;
+  	flex-wrap: wrap;
+  }
+  #more-than-books {
+  	margin-left: 10px;
+  }
+  #footer-links1 {
+  	margin-left: 5px;
+  }
+  @media only screen and (min-width: 0px) and (max-width: 660px) {
+  .content_footer,
+  #block-views-block-sections-block-1 {
+  	width: 580px;
+  	margin: 0 auto;
+  }
+    
+  #block-claro2-content .layout.layout--onecol {
+    width: 550px !important;
+  	max-width: 550px !important;
+  }  
+
+  #block-claro2-content,
+  .layout.layout--onecol:nth-child(1),
+  .layout.layout--onecol:nth-child(2) {
+  	width: 580px !important;
+  	max-width: 580px !important;
+  }
+  }
+
+  @media only screen and (min-width: 660px)  and (max-width: 960px) {
+  .content_footer,
+  #block-views-block-sections-block-1 {
+  	width: 100%;
+  	margin: 0 auto;
+  }
+    
+  #block-claro2-content .layout.layout--onecol {
+    width: 100% !important;
+    max-width: 100% !important;
+  }  
+
+  #block-claro2-content,
+  .layout.layout--onecol:nth-child(1),
+  .layout.layout--onecol:nth-child(2) {
+  	width: 100% !important;
+  	max-width: 100% !important;
+  }
+
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/recommended/reviews\r\n/events/book-clubs"
+contexts: {  }
+conditions_require_all: true

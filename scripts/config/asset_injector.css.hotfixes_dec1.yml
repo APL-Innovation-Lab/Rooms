@@ -1,0 +1,22 @@
+uuid: f3dcdffb-f5c2-4897-90c8-d9498792d9df
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: hotfixes_dec1
+label: 'hotfixes dec1'
+code: |-
+
+  .location-address {
+  	margin-bottom: 1em;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/taxonomy/term/*\r\n/cepeda-branch"
+contexts: {  }
+conditions_require_all: false

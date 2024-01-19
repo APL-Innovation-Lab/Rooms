@@ -1,0 +1,25 @@
+uuid: 0ba127ae-46aa-4372-8102-4cf57f55fc3f
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: holiday_schedule
+label: 'Holiday Schedule'
+code: |-
+  .block.block-layout-builder.block-field-blocknodepagetitle,
+  .block.block-layout-builder.block-field-blocknodepagebody {
+  	padding: 1px 15px;
+  }
+  .usa-button.usa-button-outline.apl-lang {
+  	float: right;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/holiday-schedule\r\n/horario-de-dias-festivos"
+contexts: {  }
+conditions_require_all: true

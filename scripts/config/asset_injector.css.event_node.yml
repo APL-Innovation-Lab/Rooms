@@ -1,0 +1,75 @@
+uuid: c7876aca-a735-486d-9186-06d79948deb5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: event_node
+label: 'Event Node'
+code: |-
+  .field-title {
+  	font-size: 40px !important;
+  	font-weight: bold;
+  	margin-bottom: 20px !important;
+  }
+  .view-sponsors img {
+  	max-width: 200px;
+  }
+  .view-sponsors {
+  	margin-top: 1em;
+  }
+  .event_subtitle .apl-carousel div {
+  	width: 100%;
+  	font-weight: bold;
+  }
+  .messages__content .usa-button.usa-button-outline {
+  	text-decoration: none;
+  }
+  .messages__content .usa-button.usa-button-outline:hover {
+  	text-decoration: underline;
+  }
+  #block-intendedaudience-2 h2, 
+  #block-intendedaudience-2 > div {
+  	padding: 1px 15px;
+  }
+
+  #block-intendedaudience-2 {
+  	background: white;
+  }
+  #apl-events-nav {
+  	display: flex;
+  	flex-wrap: wrap;
+  }
+  .children {
+  	background: #9696c9 !important;
+  }
+
+  .teen {
+  	background: #009ABE !important;
+  }
+
+  .adult {
+  	background: #7DC142 !important;
+  }
+  .apl-rec-age,
+  .apl-event-summary {
+  	margin-bottom: 20px;
+  }
+  .apl-free {
+  	margin: 20px 0 10px;
+  }
+  .apl-item-list {
+  	margin: 20px 20px 0 0;
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      event: event
+contexts: {  }
+conditions_require_all: false

@@ -1,0 +1,22 @@
+uuid: ad34a833-d4c4-4295-ab73-418b7899d8ef
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: meeting_rooms_events_spacing
+label: 'Meeting Rooms events spacing'
+code: |-
+  html body .event {
+  	
+  	width: 100px !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /meeting-rooms/calendar/staff
+contexts: {  }
+conditions_require_all: true

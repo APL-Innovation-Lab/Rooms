@@ -1,0 +1,95 @@
+uuid: efe6a4b3-06a7-4b86-99a7-aaef8941049b
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: slr_request_
+label: 'SLR Request'
+code: |-
+  .region.region-content {
+  	background: white;
+  }
+  .room_wrapper {
+  	margin: 10px 0 20px;
+  }
+  #block-views-block-slr-alert-block-1 {
+    display: none;
+  }
+  #block-uswds-content  #block-views-block-slr-alert-block-1 {
+    display: block;
+  }
+  .slr-alert .field-content {
+  	background: #f7a700;
+  	padding: 10px 15px 10px;
+  	margin: 10px 0;
+  }
+  .room-option.active {
+  	border: 1px solid black;
+  	padding: 1em;
+  	display: inline-block;
+  	border-radius: 3px;
+  }
+  .room_name {
+  	margin-bottom: 5px;
+  }
+  .form-item--room,
+  .form-item--time-start,
+  .form-item--time-end,
+  .form-item-room,
+  .form-item-time-start,
+  .form-item-time-end,
+  .check_date,
+  .inactive {
+    display: none;
+  }
+  .active {
+    display: block;
+  }
+
+
+  .pp_avail.inactive {
+  	opacity: 0.5;
+  	display: none;
+  }
+
+  .pp_avail.active {
+    background: green !important;
+    color: white !important;
+  }
+
+  .pp_avail:hover {
+  	background: green;
+  	color: white !important;
+  }
+
+  .pp_avail {
+  	margin: 0 5px 10px;
+  	padding: 10px;
+  	background: white;
+  	border-radius: 3px;
+  	text-decoration: none !important;
+  	border: 2px solid green;
+  	display: inline-block;
+  	width: 175px;
+  	text-align: center;
+  }
+
+  #avail_label {
+  	display: block;
+  	margin-top: 20px;
+  }
+
+  .new_check {
+  	margin: 0px 0 10px;
+  	display: block;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/slr/request\r\n/webform/shared_learning_room_reservation/submissions/*/edit"
+contexts: {  }
+conditions_require_all: true

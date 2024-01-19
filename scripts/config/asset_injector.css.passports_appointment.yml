@@ -1,0 +1,127 @@
+uuid: bc2f44a9-b8fa-4644-87c6-4d99bf0a2b7a
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+    - webform
+id: passports_appointment
+label: passports/appointment
+code: |-
+  .date_wrapper .pp-avail.inactive,
+  .date_wrapper .pp-avail.nnot_availablee,
+  .is_admin .date_wrapper .pp-avail.nnot_availablee.inactive,
+  .pp-avail.inactive {
+  	display: none;
+  }
+  .usa-checkbox.js-form-item.form-item.js-form-type-checkbox.form-item--i-understand-that-arriving-more-than-15-minutes-late-will-resul.js-form-item--i-understand-that-arriving-more-than-15-minutes-late-will-resul {
+  	margin-top: 30px;
+  }
+  .is_admin .date_wrapper .pp-avail.nnot_availablee {
+  	display: inline-block;
+  	border: 2px solid red;
+  }
+
+  #block-claro2-content form {
+  	background: white;
+  	padding: 1px 15px;
+  }
+  .form-item-time-hour {
+  	display: none;
+  }
+  .js-form-item.form-item.js-form-type-item.form-type--item.js-form-item-total-people.form-item--total-people {
+  	color: red;
+  }
+  .date_wrapper p {
+  	margin: 0;
+  }
+  .fieldset__wrapper--group .form-type--textfield {
+  	width: 45%;
+  	float: left;
+  	margin-right: 15px;
+  }
+  #block-claro2-content form {
+  	background: white;
+  	padding: 1px 15px;
+  }
+  .date_wrapper {
+  	margin-top: 20px;
+  }
+  .date_wrapper .pp-avail:hover,
+  .date_wrapper .pp-avail.active {
+  	background: #0071bc;
+  	color: white;
+  }
+
+
+  .date_wrapper .pp-avail {
+  	color: #0071bc;
+  	margin: 0 5px 10px;
+  	padding: 5px;
+  	background: white;
+  	border-radius: 3px;
+  	text-decoration: none;
+  	border: 1px solid #0071bc;
+  	display: inline-block;
+  	width: 120px;
+  	text-align: center;
+  }
+
+  .date_wrapper .pp-avail:hover,
+  .date_wrapper .pp-avail:active,
+  .date_wrapper .pp-avail.active, {
+  	text-decoration: underline;
+  }
+  .fieldset__wrapper--group .form-type--textfield {
+  	width: 45%;
+  	float: left;
+  	margin-right: 15px;
+  }
+  /*
+  .tabs-wrapper,
+  .form-item--time-hour {
+  	display: none !important;
+  }
+  */
+  .form-item---i-understand-that-arriving-more-than-15-minutes-late-will-resul,
+  #edit-what-is-your-5-digit-zip-code---wrapper,
+  #edit-name--wrapper,
+  #webform-computed-total_people-wrapper {
+  	clear: both;
+  }
+  .form-item--email,
+  .js-webform-states-hidden.js-form-item.form-item.js-form-type-number.form-type--number.js-form-item-number-of-applicants-16-and-over.form-item--number-of-applicants-16-and-over {
+  	width: 45%;
+  	float: left;
+  	margin-right: 15px;
+  }
+  .form-item--phone,
+  .js-webform-states-hidden.js-form-item.form-item.js-form-type-number.form-type--number.js-form-item-number-of-applicants-age-15-or-younger.form-item--number-of-applicants-age-15-or-younger {
+  	width: 45%;
+  	float: left;
+  }
+
+  #edit-select-a-service--wrapper,
+  .js-form-item.form-item.js-form-type-textfield.form-type--textfield.js-form-item-what-is-your-5-digit-zip-code--postal-code.form-item--what-is-your-5-digit-zip-code--postal-code {
+  	margin: 0;
+  }
+  .date_wrapper {
+  	padding-bottom: 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/passports/appointment\r\n/admin/structure/webform/manage/passport_appointment_request/submission/*/edit"
+  webform:
+    id: webform
+    negate: false
+    context_mapping:
+      webform: '@webform.webform_route_context:webform'
+      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+    webforms:
+      passport_appointment_request: passport_appointment_request
+contexts: {  }
+conditions_require_all: false

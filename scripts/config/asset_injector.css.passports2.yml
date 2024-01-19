@@ -1,0 +1,46 @@
+uuid: 3cc2da06-2ce5-4686-8a06-513e2f0a83c6
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: passports2
+label: passports
+code: |-
+  .vefl-1col {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 30px;
+  }
+
+  .apl-sidebar ul {
+  	padding: 0;
+  	margin: 0;
+  }
+  .apl-sidebar ul li {
+  	list-style: none;
+  }
+  .apl-sidebar ul li a {
+  	text-decoration: none;
+  }
+  .apl-sidebar ul li a:hover {
+  	text-decoration: underline;
+  }
+  .views-element-container.block.block-views.block-views-blocknavigation-block-2 {
+  	padding: 0 15px;
+  }
+  h3.collapsible {
+  	margin-top: 0;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/passports\r\n/pasaportes"
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,29 @@
+uuid: cb59f2d8-329d-4536-83c1-997a8618a83a
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: uswds_2_column
+label: 'uswds 2 column'
+code: |-
+  .layout-container {
+  	background: whitesmoke;
+  }
+  .d-col-3, .d-col-9 {
+  	background: white;
+  	box-shadow: 3px 3px 8px silver;
+  	margin-bottom: 20px;
+  	margin-right: 0 !important;
+  	margin-top: 0;
+  	padding-bottom: 30px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/meeting-rooms\r\n/blog/*"
+contexts: {  }
+conditions_require_all: false

@@ -1,0 +1,21 @@
+uuid: 2d219957-2b58-48fb-875e-92aebeb460c1
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: events_item
+label: 'Events Item'
+code: |-
+  .views-field.views-field-field-biblio-item-url {
+  	padding: 0 15px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/events/*\r\n/event/*"
+contexts: {  }
+conditions_require_all: true

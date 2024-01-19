@@ -1,0 +1,15 @@
+uuid: 029bbf4d-79bf-47a9-a27c-2f401bc1d61b
+langcode: eng
+status: true
+dependencies: {  }
+id: fixes
+label: Fixes
+code: |-
+  .biblio-list {
+  	width: 100%;
+  }
+media: all
+preprocess: false
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,60 @@
+uuid: dcac00ee-53d3-4673-aea8-2388bfb9afa7
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: _locations_map
+label: /locations/map
+code: |-
+  body #block-claro2-content .layout.layout--onecol:nth-child(2) {
+  	float: right;
+  	width: 580px !important;
+  	background: none;
+  }
+  .views-field.views-field-body ul li {
+  	list-style-type: none;
+  }
+  .view-navigation ul {
+  	margin: 0 !important;
+  }
+  .layout--onecol .layout__region {
+  	width: auto !important;
+  }
+  .views-field-body a,
+  .views-field-name a {
+  	text-decoration: none;
+  }
+  .views-field-body a:hover,
+  .views-field-name a:hover {
+  	text-decoration: underline;
+  }
+
+  #block-claro2-content .layout.layout--onecol > div {
+    padding: 1px 15px;
+  }
+  body #block-claro2-content .layout.layout--onecol:nth-child(2) > div {
+    padding: 0;
+  }
+  #block-claro2-content .layout.layout--onecol {
+  	background: white !important;
+  	width: 360px !important;
+  	float: left;
+  	clear: none;
+  }
+
+
+  @media only screen and (min-width: 0px) and (max-width: 959px) {
+  #block-claro2-content .layout.layout--onecol {
+  	width: 100% !important;
+  }
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /locations/map
+contexts: {  }
+conditions_require_all: true

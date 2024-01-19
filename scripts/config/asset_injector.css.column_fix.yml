@@ -1,0 +1,21 @@
+uuid: fb6a3325-4873-4bed-b556-9e6277451111
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: column_fix
+label: 'column fix'
+code: |-
+  .d-col-9.t-col-9.m-col-10.layout__region.layout__region--second {
+  	width: 100% !important;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /slr/calendar
+contexts: {  }
+conditions_require_all: true

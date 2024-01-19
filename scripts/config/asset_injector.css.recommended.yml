@@ -1,0 +1,48 @@
+uuid: c869ff3b-9887-4c78-a37f-d4e1a18082c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: recommended
+label: recommended
+code: |-
+  .view-items-index .view-content {
+  	display: flex;
+  	max-width: 580px;
+  	justify-content: space-around;
+  	flex-wrap: wrap;
+  }
+  .view-items-index .views-row {
+  	max-width: 180px;
+  	margin-bottom: 20px;
+  }
+  /*
+  .facet-item__status.js-facet-deactivate::before {
+  	content: "⮿";
+  	padding: 0 10px;
+  	margin: 0 0 0 -15px;
+  	color: white;
+  }
+
+  .facet-item__status.js-facet-deactivate {
+  	color: transparent;
+  	width: 8px;
+  	display: inline-block;
+  }
+  .block-facet-blockintended-audience .facet-item__status.js-facet-deactivate::before {
+  	color: white;
+  }
+
+  .block-facet-blockfacets23 .facet-item__status.js-facet-deactivate::before {
+  	color: #0036b1;
+  }*/
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/recommended/*'
+contexts: {  }
+conditions_require_all: true

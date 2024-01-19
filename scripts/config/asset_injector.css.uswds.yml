@@ -1,0 +1,55 @@
+uuid: cb035b86-399b-412b-b46a-29b93e95cd78
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+id: uswds
+label: uswds
+code: |+
+  .usa-button.usa-button-outline,
+  .usa-button.usa-button-outlined,
+  .usa-button.usa-button-outline:hover,
+  .usa-button.usa-button-outlined:hover {
+    background-color: white;
+    color: #0071bc;
+  }
+  .usa-button {
+  	background-color: #0071bc;
+  	appearance: none;
+  	-webkit-appearance: none;
+  	border: 0;
+  	border-radius: 3px;
+  	color: white;
+  	cursor: pointer;
+  	display: inline-block;
+  /*	font-family: "Source Sans Pro","Helvetica","Arial",sans-serif;*/
+  	font-weight: normal;
+  	line-height: 1;
+  	margin-bottom: 0.5em;
+  	margin-right: 0.5em;
+  	margin-top: 0.5em;
+  	outline: none;
+  	padding: .6em .8em;
+  	text-align: center;
+  	text-decoration: none;
+  	width: auto;
+  	-webkit-font-smoothing: antialiased;
+  }
+  .usa-button:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+contexts: {  }
+conditions_require_all: false

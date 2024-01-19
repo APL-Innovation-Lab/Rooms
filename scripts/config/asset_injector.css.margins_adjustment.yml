@@ -1,0 +1,70 @@
+uuid: 8db6bf27-f4fc-435d-985f-fc44ba591c47
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - system
+id: margins_adjustment
+label: 'margins adjustment'
+code: |
+  #block-logoandnavigation {
+  	margin: 0 auto;
+  }
+  #apl_nav1 a {
+    display: inline-block;
+    padding: 12px 8px 8px;
+  }
+  article .field--name-title {
+  	font-size: 42px;
+  	font-weight: bold;
+  }
+  .layout__region--content {
+  	margin-bottom: 40px;
+  }
+  .page-node-type-apl-site-content .content-header,
+  .page-node-type-teen-page .content-header {
+  	margin: 0;
+  	padding: 0;
+  }
+  .page-node-type-apl-site-content .page-wrapper .layout-container .page-content,
+  .page-node-type-teen-page .page-wrapper .layout-container .page-content {
+  	margin: 0;
+  }
+
+  .page-node-type-teen-page .page-wrapper .layout-container,
+  .page-node-type-apl-site-content .page-wrapper .layout-container {
+  	margin: 0;
+  		padding: 0;
+  }
+  .page-wrapper .layout-container {
+  	margin: 0 !important;
+  	padding: 0 !important;
+  }
+  .region-content .layout--onecol {
+  	background: transparent !important;
+  	width: 100%;
+  	text-align: center;
+  }
+media: all
+preprocess: true
+conditions:
+  node_type:
+    id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      apl_site_content: apl_site_content
+      database: database
+      event: event
+      highighted_images: highighted_images
+      page: page
+      teen_page: teen_page
+  current_theme:
+    id: current_theme
+    theme:
+      claro2: claro2
+    negate: false
+contexts: {  }
+conditions_require_all: true

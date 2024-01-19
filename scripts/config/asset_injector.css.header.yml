@@ -1,0 +1,103 @@
+uuid: fe7f4128-a2da-43c4-8ff7-3ff3d651ccbd
+langcode: en
+status: false
+dependencies: {  }
+id: header
+label: header
+code: |
+  @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;900&display=swap');
+  body {
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 17px;
+  }
+  #new_lang {
+  	position: absolute;
+  	color: white;
+  }
+  #apl_nav1 .d-col-12.t-col-12.m-col-12 {
+  	text-align: right;
+  }
+  #apl_nav1 {
+  	background: #333333;
+  }
+
+  .language-link.is-active::after {
+  	content: " ˇ";
+  	font-size: 1.4em;
+  	vertical-align: top;
+  }
+
+  .language-link {
+  	background: green;
+  	display: block;
+  	padding: 10px;
+  }
+
+  ul.links li, ul.inline li {
+  	width: 6em;
+  	margin-left: -10px;
+  }
+  .language-link.is-active::after {
+  	content: " ˇ";
+  }
+  .page-content {
+    margin-top: 0;
+  }
+  .layout-container {
+    margin: 0 !important;
+  }
+  #apl_nav1 a {
+    display: inline-block;
+    padding: 12px 8px 8px;
+  }
+  .content-header {
+    background-color: white !important;
+    margin-bottom: 0;
+  }
+  #apl_nav1 .material-icons {
+    color: white;
+  }
+  #apl_nav1 a:hover {
+    opacity: .8;
+  }
+  #apl_nav1 .material-icons:hover {
+    color: #f8f8f8;
+  }
+  #apl_logo_a {
+    padding: 0 !important;
+  }
+  #apl_nav3 div {
+    text-align: center;
+  }
+  #apl_nav3 div a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    padding: 36px 20px;
+    color: #333;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  #apl_nav3 div a:hover {
+    background: white;
+  }
+  /*
+  ul.links li.is-active {
+    display: none;
+  }*/
+  ul.links {
+    list-style: none;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding-top: 10px;
+  }
+  ul.links a {
+    text-decoration: none;
+  }
+media: all
+preprocess: true
+conditions: {  }
+contexts: {  }
+conditions_require_all: true

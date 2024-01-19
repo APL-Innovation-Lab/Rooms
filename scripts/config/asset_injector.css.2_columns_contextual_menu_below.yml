@@ -1,0 +1,29 @@
+uuid: 021f1e5b-7ecc-4904-ab13-14a603deda05
+langcode: eng
+status: true
+dependencies:
+  module:
+    - node
+id: 2_columns_contextual_menu_below
+label: '2 columns, contextual menu below'
+code: |-
+  .layout.layout--onecol {
+  	max-width: 580px;
+  	float: right;
+  }
+
+  .layout.layout--onecol:nth-child(2) {
+  	max-width: 300px;
+  }
+media: all
+preprocess: false
+conditions:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
+contexts: {  }
+conditions_require_all: false

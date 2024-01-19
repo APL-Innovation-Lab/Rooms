@@ -1,0 +1,30 @@
+uuid: 1008e1c7-cdae-438e-a00a-30ab4970b1c9
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+    - system
+id: gateway_pages
+label: 'gateway pages'
+code: |-
+  .usa-layout-docs__main.desktop\:grid-col-fill {
+    background-image: none !important;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      es: es
+      en: en
+  request_path:
+    id: request_path
+    negate: false
+    pages: "<front>\r\n/ahc\r\n/es\r\n/staging/1\r\n/en"
+contexts: {  }
+conditions_require_all: true

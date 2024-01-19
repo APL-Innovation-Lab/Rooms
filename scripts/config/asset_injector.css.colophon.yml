@@ -1,0 +1,38 @@
+uuid: e0912832-2af1-4085-b45d-78929b7aaabf
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: colophon
+label: Colophon
+code: |-
+  .usa-footer__secondary-section,
+  .view-colophon {
+  	display: none;
+  }
+  .colophon.reveal {
+  	display: block !important;
+  	font-size: x-large;
+  	padding: 2em;
+  	line-height: 1.7em;
+  	background: black;
+  	color: white;
+  	border-color: white;
+  }
+  .reveal {
+  	display: block !important;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '/stage/*'
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

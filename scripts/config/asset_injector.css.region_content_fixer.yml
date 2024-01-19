@@ -1,0 +1,21 @@
+uuid: ae4697f3-a688-430e-8000-0c469b5aad6a
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: region_content_fixer
+label: 'region-content fixer'
+code: |-
+  .region.region-content {
+  	max-width: 960px !important;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/virtual/*'
+contexts: {  }
+conditions_require_all: true

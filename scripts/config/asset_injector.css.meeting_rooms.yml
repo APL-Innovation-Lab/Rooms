@@ -1,0 +1,28 @@
+uuid: 89f4ca9c-6a48-4c1d-9d24-43fda98a416f
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: meeting_rooms
+label: Misc
+code: |-
+  .block.block-layout-builder.block-field-blocknodepagetitle,
+  .block.block-layout-builder.block-field-blocknodepagebody {
+  	padding: 1px 15px;
+  }
+  .social li {
+  	display: inline-block;
+  }
+  ul + h2 {
+  	margin-top: 20px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/meeting-rooms\r\n/storytime-info\r\n/central/*\r\n/*"
+contexts: {  }
+conditions_require_all: true

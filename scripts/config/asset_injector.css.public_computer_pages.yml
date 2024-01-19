@@ -1,0 +1,22 @@
+uuid: 3f9d0e9c-7545-4ba0-b51b-2790304eaeee
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: public_computer_pages
+label: 'Public Computer Pages'
+code: |-
+  .field.field--name-body {
+  	background: white;
+  	padding: 0px 20px;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/public-computer-home/*'
+contexts: {  }
+conditions_require_all: true

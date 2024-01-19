@@ -1,0 +1,22 @@
+uuid: 0f83ebab-86f4-4419-b22c-50ebb797a630
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: images_inventory
+label: 'images inventory'
+code: |-
+  img {
+  	max-width: 100px;
+  	height: auto;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /images-inventory
+contexts: {  }
+conditions_require_all: true

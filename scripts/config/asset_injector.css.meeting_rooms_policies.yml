@@ -1,0 +1,22 @@
+uuid: 388f1d02-10be-42a2-b4e8-50cea285457c
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: meeting_rooms_policies
+label: 'Meeting Rooms Policies'
+code: |-
+  .align-left {
+  	float: left;
+  	margin: 0 20px 20px 0;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /meeting-rooms/policies
+contexts: {  }
+conditions_require_all: true

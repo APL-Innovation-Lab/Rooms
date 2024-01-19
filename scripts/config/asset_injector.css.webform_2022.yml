@@ -1,0 +1,81 @@
+uuid: e8cfd7f2-eb9b-416d-a6cc-7b8d937775e8
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: webform_2022
+label: 'Webform 2022'
+code: |-
+  .fieldset__wrapper {
+  	margin: 0;
+  }
+  .content-header.clearfix {
+  	padding: 0;
+  }
+  #links-container {
+  	padding-left: 5px;
+  }
+  .webform-submission-form {
+  	padding: 5px;
+  }
+
+  .webform-likert-table[data-likert-answers-count] th, 
+  .webform-likert-table[data-likert-answers-count] th:first-child, 
+  .webform-likert-table td, 
+  .webform-likert-table td:first-child {
+  	width: 15%;
+  	max-width: 25%;
+  	padding-right: 5px;
+  }
+  .webform-likert-table[data-likert-answers-count] th:first-child, 
+  .webform-likert-table td:first-child {
+  	width: 25%;
+  	max-width: 25%;
+  	text-align: left;
+  }
+
+  .fieldset {
+  	border: none;
+  	box-shadow: none;
+  }
+  .fieldset__label,
+  .form-item__label {
+  	font-weight: normal;
+  	font-size: 16px;
+  	line-height: 24px;
+  }
+  .content_footer,
+  body,
+  .layout-container {
+  	background: white;
+  }
+  .webform-likert-table[data-likert-answers-count] th, 
+  .webform-likert-table[data-likert-answers-count] th:first-child, 
+  .webform-likert-table td, 
+  .webform-likert-table td:first-child {
+
+  }
+  td, th {
+  	padding: 0;
+  }
+  #connect-with-us,
+  .webform-likert-label.visually-hidden {
+  	display: none;
+  }
+  .fieldset__label {
+  	padding-left: 0;
+  }
+
+  .webform-likert-table-wrapper th, .webform-likert-table-wrapper td {
+  	text-align: left;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /rental/survey
+contexts: {  }
+conditions_require_all: true

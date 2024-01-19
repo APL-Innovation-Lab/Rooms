@@ -1,0 +1,53 @@
+uuid: 1439190f-0536-4f3e-9b9b-4ebb5461fe5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+id: home_page_etc
+label: 'home page etc'
+code: |-
+  .apl-links {
+  	display: none;
+  }
+
+  #apl-buttons a {
+    color: #fff;
+    display: block;
+    font-weight: 900;
+    padding: 10px 0 10px 86px !important;
+  }
+  #apl-button1 {
+    background: #a93439 url("/library/accounts_icon.svg") no-repeat scroll 8px 0 !important;
+  }
+  #apl-button2 {
+    background: #76bc21 url("/library/virtual_library_icon.svg") no-repeat scroll 4px -2.5px !important;
+  }
+  #apl-button3 {
+    background: #00998a url("/library/icons_web_buttons_2018-08x.svg") no-repeat scroll 8px 0px !important;
+  }
+  #apl-button4 {
+    background: #009abf url("/library/icons_web_buttons_2018-07x.svg") no-repeat scroll 8px 0px !important;
+  }
+  #apl-button5 {
+    background: #f7a700 url("/library/misc/icons_web_buttons_apl_plus.png") no-repeat scroll 8px 0px !important;
+    background-size: contain !important;
+  }
+  .apl-nav2 {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+  }
+media: all
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      eng: eng
+      es: es
+contexts: {  }
+conditions_require_all: true

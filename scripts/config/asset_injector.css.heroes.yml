@@ -1,0 +1,71 @@
+uuid: dc3a9eb9-420b-4f74-878c-3b80385d9163
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+id: heroes
+label: Heroes
+code: |-
+  body, html {
+      height: 100%;
+  }
+  .node__content .layout.layout--onecol,
+  .views_slideshow_cycle_teaser_section,
+  .views_slideshow_cycle_slide {
+  	width: 100%;
+  	padding: 0;
+  }
+  header + .layout-container {
+          margin: 0 !important;
+  }
+  .hero-image {
+  	width: 100% !important;
+  	height: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+  .region-content .node--type-apl-site-content .layout--onecol {
+  	background: #00A3CC;
+  	width: 100%;
+  	text-align: center;
+  }
+  #home_sections li {
+  	list-style: none;
+  }
+  #home_sections > ul li {
+  	background: white;
+  	width: 200px;
+  	float: left;
+  }
+  #home_sections ul {
+  	margin: 0;
+  }
+  #home_sections > ul {
+  	display: flex;
+  	justify-content: space-between;
+  }
+  #home_sections {
+    margin: 0 auto;
+    max-width: 1420px;
+  }
+media: all
+preprocess: true
+conditions:
+  current_theme:
+    id: current_theme
+    theme:
+      claro2: claro2
+    negate: false
+contexts: {  }
+conditions_require_all: true

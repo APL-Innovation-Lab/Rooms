@@ -1,0 +1,110 @@
+uuid: f5097c8e-ab9c-4a35-8936-aeb76fca6fdc
+langcode: eng
+status: true
+dependencies:
+  module:
+    - system
+id: chat
+label: chat
+code: |
+  #ask_title span {
+  	display: inline !important;
+  }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) and (max-device-width: 640px) {
+     #block-block-237.active {
+         position: static;
+     }
+  #ask_title:hover {
+    filter: brightness(100%);
+  }
+  }
+  #libchat_9467931c20bf27a0ed2e294d322f132f {
+  	padding: 0;
+          max-width: 580px;
+  }
+
+  #block-block-237 {
+  	position: fixed; 
+  	bottom: 0px;
+  	right: 0px;
+  	z-index: 999;
+  }
+  #ask_all {
+    margin: 10px;
+  }
+
+  .active #ask_all {
+    margin: 0px;
+  }
+  #ask_top {
+  	height: 100%;
+  	padding: 0 !important;
+  }
+  #ask_title {
+  	background-color: #a93439;
+          border-radius: 3px;
+          color: white;
+          line-height: 1.3em;
+          padding: 10px;
+          font-size: 17px;
+  }
+
+  #ask_top:hover {
+  	border: 3px solid white;
+          border-radius: 3px;
+          text-decoration: none;
+          filter: brightness(95%);
+  }
+
+  #ask_top.active {
+  	border: 3px solid white;
+          border-radius: 3px;
+          text-decoration: none;
+          filter: brightness(100%);
+  }
+  #ask_top.active:hover {
+  	    filter: brightness(95%);
+  }
+
+  #ask_top {
+  	border: 3px solid white;
+          border-radius: 3px;
+          text-decoration: none;
+  }
+  .active #ask_title {
+  	background-color: white !important;
+  	color: black;
+  	font-size: 20px;
+  	background-image: url(/sites/all/themes/apl2016/css/img/minus-black.svg);
+  	background-position: 540px center;
+  	background-size: 20px 32px;
+  	background-repeat: no-repeat;
+          box-shadow: none;
+  }
+  .active #ask_title img {
+  	display: none;
+  }
+  #ask_title {
+  	font-weight: bold;
+  	box-shadow: 3px 3px 5px silver;
+  }
+  #ask_title img {
+  	height: 32px !important;
+  	vertical-align: middle;
+  }
+  #ask_title span {
+  	padding: 5px;
+  }
+media: all
+preprocess: false
+conditions:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "/admin/*\r\n/user/*"
+  current_theme:
+    id: current_theme
+    negate: true
+    theme: aplpa
+contexts: {  }
+conditions_require_all: true

@@ -1,0 +1,21 @@
+uuid: 5c56a359-3482-4ef9-8291-2c60219bcccc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: feeds
+label: Feeds
+code: |-
+  .form-item__description {
+  	display: none;
+  }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /feed/add/apl_item_feed_feed
+contexts: {  }
+conditions_require_all: true
