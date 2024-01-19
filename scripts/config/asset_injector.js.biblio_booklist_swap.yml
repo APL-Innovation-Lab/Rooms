@@ -1,0 +1,48 @@
+uuid: 75502245-d41b-42b7-a290-509a0ed4b0fa
+langcode: eng
+status: true
+dependencies:
+  module:
+    - language
+id: biblio_booklist_swap
+label: 'Biblio booklist swap'
+code: |
+  document.addEventListener("DOMContentLoaded", function() {
+  	console.log('booklist swap');
+    // Find the div with id 'booklist_id'
+    const booklistDiv = document.getElementById("booklist_id");
+    
+    if (booklistDiv) {
+      // Get the booklist ID value from the div's text content
+      const booklistId = booklistDiv.textContent.trim();
+    
+      // Create the iframe element
+      const iframeElement = document.createElement("iframe");
+    
+      // Set iframe attributes
+      iframeElement.setAttribute("src", `//austin.bibliocommons.com/list/list_browse/user/${booklistId}`);
+      iframeElement.setAttribute("height", "315");
+      iframeElement.setAttribute("width", "550");
+      iframeElement.setAttribute("frameBorder", "0");
+      iframeElement.setAttribute("scrolling", "no");
+    
+      // Replace the div with the new iframe
+      booklistDiv.parentNode.replaceChild(iframeElement, booklistDiv);
+    }
+  });
+noscript: ''
+noscriptRegion: {  }
+jquery: false
+header: false
+preprocess: false
+conditions:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      es: es
+      en: en
+contexts: {  }
+conditions_require_all: true
