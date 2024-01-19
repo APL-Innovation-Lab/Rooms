@@ -1,0 +1,23 @@
+uuid: 9775dddf-8f0f-4fde-8836-6579e593de0b
+langcode: eng
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.feeds_item
+    - taxonomy.vocabulary.rooms
+  module:
+    - feeds
+id: taxonomy_term.rooms.feeds_item
+field_name: feeds_item
+entity_type: taxonomy_term
+bundle: rooms
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

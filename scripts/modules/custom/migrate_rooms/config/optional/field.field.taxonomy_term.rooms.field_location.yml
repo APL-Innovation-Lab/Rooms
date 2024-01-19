@@ -1,0 +1,23 @@
+uuid: 51211d5e-5aa8-4e52-9ae7-65b18f9a4f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_location
+    - taxonomy.vocabulary.rooms
+id: taxonomy_term.rooms.field_location
+field_name: field_location
+entity_type: taxonomy_term
+bundle: rooms
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

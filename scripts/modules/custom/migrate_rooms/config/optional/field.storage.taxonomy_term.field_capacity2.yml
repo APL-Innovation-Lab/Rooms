@@ -1,0 +1,20 @@
+uuid: bb91df65-bc2d-471d-ba18-e1fba02ea9ea
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_capacity2
+field_name: field_capacity2
+entity_type: taxonomy_term
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

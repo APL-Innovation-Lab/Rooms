@@ -1,0 +1,25 @@
+uuid: 7f1724ac-a815-45af-8cdf-7c074742ac80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_capacity2
+    - taxonomy.vocabulary.rooms
+id: taxonomy_term.rooms.field_capacity2
+field_name: field_capacity2
+entity_type: taxonomy_term
+bundle: rooms
+label: Capacity
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

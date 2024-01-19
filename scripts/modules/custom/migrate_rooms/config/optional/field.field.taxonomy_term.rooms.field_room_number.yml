@@ -1,0 +1,19 @@
+uuid: bf7b09a7-e3e1-4169-9cee-1aea6db2bdc0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_room_number
+    - taxonomy.vocabulary.rooms
+id: taxonomy_term.rooms.field_room_number
+field_name: field_room_number
+entity_type: taxonomy_term
+bundle: rooms
+label: 'Room Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

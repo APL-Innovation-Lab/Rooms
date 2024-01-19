@@ -1,0 +1,23 @@
+uuid: 5c651f78-1ac0-46d5-885f-3d49a163722e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_is_slr
+    - taxonomy.vocabulary.rooms
+id: taxonomy_term.rooms.field_is_slr
+field_name: field_is_slr
+entity_type: taxonomy_term
+bundle: rooms
+label: 'is SLR'
+description: 'Selecting this option makes the room bookable by the public using the Shared Learning Room Reservation system.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: SLR
+  off_label: other
+field_type: boolean

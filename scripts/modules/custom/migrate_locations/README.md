@@ -1,23 +1,31 @@
-A demonstration of a simple import of a JSON file.
+#### Overview
+The `migrate_locations` module is designed to facilitate the migration of location data into the Drupal site. It uses Drupal taxonomies to organize and manage the location data effectively.
 
-REQUIREMENTS
-============
-You need the contrib modules Migrate Plus and Migrate Tools.
-To make the products.json file available for import, the file will be copied
-from the artifacts folder to your sites/default/files folder.
+#### Requirements
+- Drupal environment set up with `ddev`.
+- Drush installed and configured.
 
-USAGE
-=====
-Enable the module, check status, import all products and rollback with Drush
-drush en migrate_json_example
-drush migrate-status
-drush migrate-import product
-drush migrate-rollback product
+#### Installation
+1. To enable the `migrate_locations` module, run the following command in your Drupal root directory:
+   ```
+   ddev drush en migrate_locations
+   ```
 
-See config/optional/migrate_plus.migration.product.yml for details about the
-migration.
+#### Usage
+- **Check Migration Status:**  
+  To view the current status of the migration, use:
+  ```
+  ddev drush migrate:status
+  ```
 
-Thanks to Jeff Geerling and Christophe for the original code:
-https://www.jeffgeerling.com/blog/2016/migrate-custom-json-feed-drupal-8-migrate-source-json
+- **Import Data:**  
+  To import location data, execute:
+  ```
+  ddev drush migrate:import apl_dev_locations
+  ```
 
-https://colorfield.be/blog/drupal-8-json-custom-migration
+- **Rollback:**  
+  If you need to rollback the last import, use:
+  ```
+  ddev drush migrate:rollback apl_dev_locations
+  ```

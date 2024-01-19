@@ -1,0 +1,95 @@
+uuid: e8e5f258-a1a0-48f7-8407-58b43e223d74
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_locations
+      - migrate_rooms
+id: apl_dev_rooms
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - taxonomy
+migration_group: apl_dev
+label: Rooms
+source:
+  plugin: url
+  data_fetcher_plugin: file
+  data_parser_plugin: json
+  urls:
+    - 'public://migrate_rooms/rooms.json'
+  item_selector: room
+  fields:
+    -
+      name: tid
+      selector: tid
+    -
+      name: name
+      selector: name
+    -
+      name: short_name
+      selector: short_name
+    -
+      name: room_number
+      selector: room_number
+    -
+      name: is_slr
+      selector: is_slr
+    -
+      name: location
+      selector: location
+    -
+      name: image_file
+      selector: image_file
+    -
+      name: map_file
+      selector: map_file
+    -
+      name: capacities
+      selector: capacities
+    -
+      name: floor
+      selector: floor
+    -
+      name: description
+      selector: description
+  ids:
+    tid:
+      type: integer
+process:
+  vid:
+    plugin: default_value
+    default_value: rooms
+  name: name
+  tid: tid
+  field_short_name: short_name
+  field_room_number: room_number
+  field_is_slr: is_slr
+  field_location: location
+  description: description
+  field_slr_image:
+    plugin: image_import
+    source: image_file
+    destination: 'public://rooms/'
+    alt: name
+    skip_on_missing_source: true
+
+  field_map: 
+    plugin: image_import
+    source: map_file
+    destination: 'public://rooms/'
+    alt: name
+    skip_on_missing_source: true
+  field_capacity2: capacities
+  field_slr_floor: floor
+  sticky:
+    plugin: default_value
+    default_value: 0
+  uid:
+    plugin: default_value
+    default_value: 0
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies: {  }
