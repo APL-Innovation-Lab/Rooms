@@ -101,6 +101,11 @@ ddev drush site:install standard \
   --account-pass=111 -y
 
 
+# add repository source for contrib modules
+ddev composer config repositories.drupal composer https://packages.drupal.org/8
+
+ddev composer require drupal/migrate_plus
+ddev composer require drupal/migrate_file
 # Define paths
 
 # Get the absolute path of the custom modules directory
@@ -114,8 +119,42 @@ mkdir -p $DRUPAL_MODULES_PATH/custom
 # Copy custom modules
 cp -r $REPO_MODULES_PATH/* $DRUPAL_MODULES_PATH/custom/
 
+CONFIG_FILES_PATH="$(cd "${PROJECT_ROOT}/scripts/config" && pwd)"
+SYNC_DIR="$PROJECT_DIR/sites/default/files/sync/" 
+
+cp -r $CONFIG_FILES_PATH/* $SYNC_DIR
+
+
 ddev drush en hi_how_are_you
 ddev drush hhay-cn
+
+
+# require Webform 6, Webform REST, Webform Views, Asset Injector, Views Data Export, Field Permissions modules
+ddev composer require 'drupal/webform:^6'
+ddev composer require 'drupal/webform_rest:^4'
+ddev composer require 'drupal/webform_views:^5'
+ddev composer require 'drupal/asset_injector'
+ddev composer require 'drupal/views_data_export'
+ddev composer require 'drupal/field_permissions'
+
+# enable the modules and dependencies
+ddev drush en webform_views -y
+ddev drush en webform_rest -y
+ddev drush en asset_injector -y
+ddev drush en views_data_export -y
+ddev drush en field_permissions -y
+ddev drush en content_translation -y
+ddev drush en layout_builder -y
+
+ddev drush en migrate_locations -y
+ddev drush migrate:import apl_dev_locations
+
+ddev drush en migrate_rooms -y
+ddev drush migrate:import apl_dev_rooms
+
+# export the current config
+ddev drush cex -y
+
 
 
 # Provide information about accessing the site
@@ -127,3 +166,10 @@ ddev launch
 echo "--~~~~~~~~~~~~~~~----------~~~~~~~~~~~~~~~~~~~~~~~---"
 echo "True love will find you in the end. --Daniel Johnston"
 echo "---~~~~~~~~~~~-------~~~~~~~~~~~~~~~~----~~~~~~~~~~~-"
+
+
+echo "-----"
+echo "next: copy the 'scripts/config/*.yml' files into the /sites/default/files/sync folder"
+echo " ...then do"
+echo "ddev drush cim"
+echo "----"

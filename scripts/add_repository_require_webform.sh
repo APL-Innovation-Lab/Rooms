@@ -16,6 +16,7 @@ ddev drush en asset_injector -y
 ddev drush en views_data_export -y
 ddev drush en field_permissions -y
 ddev drush en content_translation -y
+ddev drush en layout_builder -y
 
 # export the current config
 ddev drush cex
