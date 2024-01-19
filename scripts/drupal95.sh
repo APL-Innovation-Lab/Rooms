@@ -166,10 +166,3 @@ ddev launch
 echo "--~~~~~~~~~~~~~~~----------~~~~~~~~~~~~~~~~~~~~~~~---"
 echo "True love will find you in the end. --Daniel Johnston"
 echo "---~~~~~~~~~~~-------~~~~~~~~~~~~~~~~----~~~~~~~~~~~-"
-
-
-echo "-----"
-echo "next: copy the 'scripts/config/*.yml' files into the /sites/default/files/sync folder"
-echo " ...then do"
-echo "ddev drush cim"
-echo "----"
