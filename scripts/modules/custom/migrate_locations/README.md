@@ -1,5 +1,5 @@
 #### Overview
-The `migrate_locations` module is designed to facilitate the migration of location data into the Drupal site. It uses Drupal taxonomies to organize and manage the location data effectively.
+The `migrate_locations` module is for migration of Library Location data into the Drupal site as taxonomy terms of the Library Location vocabulary.
 
 #### Requirements
 - Drupal environment set up with `ddev`.
