@@ -1,0 +1,531 @@
+status: open
+weight: 0
+open: null
+close: null
+uid: 69420
+template: false
+archive: false
+id: shared_learning_room_reservation
+title: 'Shared Learning Room Reservation'
+description: ''
+category: ''
+elements: |-
+  introduction:
+    '#type': processed_text
+    '#admin_title': Introduction
+    '#text': |
+      <h1>Reserve a Shared Learning Room</h1>
+
+      <p>The Shared Learning Rooms at the <strong>Central Library</strong> are <strong>free of charge</strong> and available to any person or group for activities such as study groups, workshops, or meetings. Rooms hold between 4-10 people. If you have a bigger group, check out our other <a href="/meeting-rooms">meeting rooms</a>.</p>
+
+      <p><a class="usa-button usa-button-outline" href="/slr/calendar" target="_blank">View the reservations calendar</a></p>
+
+      <p><strong>Before you book</strong></p>
+
+      <ul>
+      	<li>Rooms can hold 4, 8 or 10 people</li>
+      	<li>Request from 15 minutes up to a 2-hour block of time</li>
+      	<li>Rooms can be booked up to 2 weeks and not less than 2 hours in advance</li>
+      	<li>Individuals can make 1 reservation per day and up to 5 reservations per month</li>
+      	<li>Beverages with lids are allowed. Please no food in the rooms</li>
+      	<li>If the reserving party is more than 15 minutes late, they forfeit the reservation</li>
+      </ul>
+    '#format': full_html
+  agreement:
+    '#type': checkbox
+    '#title': 'I agree to abide by the Shared Learning Room Policy.'
+    '#description': '<a href="/policies/shared-learning-rooms">Shared Learning Rooms Policy (.pdf)</a>'
+    '#description_display': before
+    '#required': true
+  meeting_topic:
+    '#type': textfield
+    '#title': 'Meeting Topic'
+    '#required': true
+  how_many_people_:
+    '#type': number
+    '#title': 'How many people?'
+    '#min': 1
+    '#max': 10
+    '#required': true
+  duration:
+    '#type': select
+    '#title': Duration
+    '#options':
+      15: '15 minutes'
+      30: '30 minutes'
+      45: '45 minutes'
+      60: '1 hour'
+      75: '1 hour 15 minutes'
+      90: '1 hour 30 minutes'
+      105: '1 hour 45 minutes'
+      120: '2 hours'
+      180: '3 hours'
+      240: '4 hours'
+      300: '5 hours'
+      360: '6 hours'
+      420: '7 hours'
+      480: '8 hours'
+      540: '9 hours'
+      600: '10 hours'
+      660: '11 hours'
+      720: '12 hours'
+      780: '13 hours'
+      840: '14 hours'
+      900: '15 hours'
+    '#required': true
+    '#default_value': '120'
+  reservation_date:
+    '#type': date
+    '#title': 'Reservation Date'
+    '#required': true
+  full_name:
+    '#type': textfield
+    '#title': 'Full Name'
+    '#required': true
+  email:
+    '#type': email
+    '#title': Email
+    '#required': true
+    '#pattern': '^((?!\+).)*$'
+    '#pattern_error': 'Special characters are not allowed'
+  room:
+    '#type': webform_entity_select
+    '#title': Room
+    '#target_type': taxonomy_term
+    '#selection_handler': views
+    '#selection_settings':
+      view:
+        view_name: slrs
+        display_name: entity_reference_1
+        arguments: {  }
+    '#required': true
+  time_start:
+    '#type': datetime
+    '#title': 'Time Start'
+    '#date_date_format': ''
+    '#date_year_range': '2021:2031'
+    '#date_time_format': ''
+    '#date_time_step': '900'
+    '#required': true
+  time_end:
+    '#type': datetime
+    '#title': 'Time End'
+    '#date_date_format': ''
+    '#date_year_range': '2021:2031'
+    '#date_time_format': ''
+    '#required': true
+  status:
+    '#type': radios
+    '#title': Status
+    '#options':
+      1: 'Awaiting Confirmation'
+      2: Confirmed
+      3: Expired
+      4: Canceled
+      5: Denied
+    '#default_value': '1'
+    '#access_create_roles': {  }
+css: "#webform-submission-shared-learning-room-reservation-delete-form {\r\n\tcolor: transparent;\r\n}\r\n.item-list {\r\n\theight: 0;\r\n}\r\n"
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /slr/request
+  page_confirm_path: ''
+  page_theme_name: uswds
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: false
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: false
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: true
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url_message
+  confirmation_url: '/slr/calendar?date=[webform_submission:values:reservation_date]'
+  confirmation_title: ''
+  confirmation_message: 'Thank you for making a Shared Learning Room reservation, an email confirmation has been sent!'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: true
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: true
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles:
+      - administrator
+      - slr_admin
+      - slr_internal
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles:
+      - administrator
+      - slr_admin
+      - slr_internal
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles:
+      - anonymous
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles:
+      - administrator
+      - slr_admin
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  administer:
+    roles:
+      - administrator
+      - slr_admin
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles:
+      - administrator
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: false
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Thank you for reserving a shared learning room at Central Library'
+      body: "<p style=\"color:black;\">Thank you for making a shared learning room reservation at Central Library, which is located at 710 W Cesar Chavez St, Austin, TX 78701.</p>\r\n\r\n<p style=\"color:black;\"><span class=\"deets\" style=\"color:black\">Room: [webform_submission:values:room:entity:name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Date: [webform_submission:values:reservation_date:just_date]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Start Time: [webform_submission:values:time_start:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">End Time: [webform_submission:values:time_end:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Name: [webform_submission:values:full_name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Topic: [webform_submission:values:meeting_topic]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Status: Confirmed</span></p>\r\n\r\n<p style=\"color:black;\">By booking a room, you agree to abide by the <a href=\"http://austinlibrary.com/downloads/shared_learning_rooms_policy.pdf\">shared learning room policy</a>.</p>\r\n\r\n<p style=\"color:black;\">Don&#39;t need the room anymore? <a href=\"https://library.austintexas.gov/webform/shared_learning_room_reservation/submissions/[webform_submission:sid]/delete?token=[webform_submission:token]\">Cancel</a> before your reservation time so someone else can book your room.</p>\r\n\r\n<p style=\"color:black;\">Questions? Call 512-974-7400 (option 1) or <a href=\"http://library.austintexas.libanswers.com/\">Ask a Librarian</a>.</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  awaiting_confirmation_webform_submission_values_meeting_topic_:
+    id: email
+    handler_id: awaiting_confirmation_webform_submission_values_meeting_topic_
+    label: 'Awaiting Confirmation'
+    notes: ''
+    status: false
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+    weight: 1
+    settings:
+      states:
+        - completed
+        - updated
+      to_mail: bryce.benton@austintexas.gov
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Confirm your shared learning room reservation at Central Library'
+      body: "<p style=\"color:black;\">Thank you for making a shared learning room reservation at Central Library, which is located at 710 W Cesar Chavez St, Austin, TX 78701.<br />\r\n<br />\r\nPlease confirm your shared learning room reservation by opening the <a href=\"https://library.austintexas.gov/slr/confirm/[webform_submission:uuid]\">confirmation page</a> and selecting &quot;Confirm&quot;. Please confirm your reservation within 30 minutes, or it will expire.</p>\r\n\r\n<p style=\"color:black;\"><span class=\"deets\" style=\"color:black\">Room: [webform_submission:values:room:entity:name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Date: [webform_submission:values:reservation_date:just_date]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Start Time: [webform_submission:values:time_start:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">End Time: [webform_submission:values:time_end:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Name: [webform_submission:values:full_name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Topic: [webform_submission:values:meeting_topic]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Status: Awaiting Confirmation<br />\r\n<br />\r\n<a href=\"https://library.austintexas.gov/slr/confirm/[webform_submission:uuid]\" style=\"padding:10px;border:1px solid;font-weight:bold\">Confirm</a></span></p>\r\n\r\n<p style=\"color:black;\">By booking a room, you agree to abide by the <a href=\"http://austinlibrary.com/downloads/shared_learning_rooms_policy.pdf\">shared learning room policy</a>.</p>\r\n\r\n<p style=\"color:black;\">Don&#39;t need the room anymore? <a href=\"https://library.austintexas.gov/webform/shared_learning_room_reservation/submissions/[webform_submission:sid]/delete?token=[webform_submission:token]\">Cancel</a> before your reservation time so someone else can book your room.</p>\r\n\r\n<p style=\"color:black;\">Questions? Call 512-974-7400 (option 1) or <a href=\"http://library.austintexas.libanswers.com/\">Ask a Librarian</a>.</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  confirmed_webform_submission_values_meeting_topic_:
+    id: email
+    handler_id: confirmed_webform_submission_values_meeting_topic_
+    label: Confirmed
+    notes: ''
+    status: false
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '2'
+    weight: 2
+    settings:
+      states:
+        - completed
+        - updated
+      to_mail: bryce.benton@austintexas.gov
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Confirmed: Your shared learning room at Central Library'
+      body: "<p style=\"color:black;\">Thank you for confirming your shared learning room reservation at Central Library, which is located at 710 W Cesar Chavez St, Austin, TX 78701.</p>\r\n\r\n<p style=\"color:black;\"><span class=\"deets\" style=\"color:black\">Room: [webform_submission:values:room:entity:name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Date: [webform_submission:values:reservation_date:just_date]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Start Time: [webform_submission:values:time_start:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">End Time: [webform_submission:values:time_end:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Name: [webform_submission:values:full_name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Topic: [webform_submission:values:meeting_topic]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Status: Confirmed</span><br />\r\n&nbsp;</p>\r\n\r\n<p style=\"color:black;\">By booking a room, you agree to abide by the <a href=\"http://austinlibrary.com/downloads/shared_learning_rooms_policy.pdf\">shared learning room policy</a>.</p>\r\n\r\n<p style=\"color:black;\">Don&#39;t need the room anymore? <a href=\"https://library.austintexas.gov/webform/shared_learning_room_reservation/submissions/[webform_submission:sid]/delete?token=[webform_submission:token]\">Cancel</a> before your reservation time so someone else can book your room.</p>\r\n\r\n<p style=\"color:black;\">Questions? Call 512-974-7400 (option 1) or <a href=\"http://library.austintexas.libanswers.com/\">Ask a Librarian</a>.</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  expired:
+    id: email
+    handler_id: expired
+    label: Expired
+    notes: ''
+    status: false
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '3'
+    weight: 3
+    settings:
+      states:
+        - updated
+      to_mail: bryce.benton@austintexas.gov
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Expired: Your shared learning room at Central Library'
+      body: "<p style=\"color:black;\">Your shared learning room reservation expired.</p>\r\n\r\n<p style=\"color:black;\"><span class=\"deets\" style=\"color:black\">Room: [webform_submission:values:room:entity:name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Date: [webform_submission:values:reservation_date:just_date]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Start Time: [webform_submission:values:time_start:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">End Time: [webform_submission:values:time_end:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Name: [webform_submission:values:full_name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Topic: [webform_submission:values:meeting_topic]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Status: Expired</span></p>\r\n\r\n<p style=\"color:black;\">Questions? Call 512-974-7400 (option 1) or <a href=\"http://library.austintexas.libanswers.com/\">Ask a Librarian</a>.</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  check_if_reservation_overlaps:
+    id: apl_webform_custom_validator
+    handler_id: check_if_reservation_overlaps
+    label: 'Check if reservation overlaps'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 4
+    settings: {  }
+  email_1:
+    id: email
+    handler_id: email_1
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 5
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Thank you for reserving a shared learning room at Central Library'
+      body: "<p style=\"color:black;\">Thank you for making a shared learning room reservation at Central Library, which is located at 710 W Cesar Chavez St, Austin, TX 78701.</p>\r\n\r\n<p style=\"color:black;\"><span class=\"deets\" style=\"color:black\">Room: [webform_submission:values:room:entity:name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Date: [webform_submission:values:reservation_date:just_date]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Start Time: [webform_submission:values:time_start:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">End Time: [webform_submission:values:time_end:just_time]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Name: [webform_submission:values:full_name]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Topic: [webform_submission:values:meeting_topic]</span><br />\r\n<span class=\"deets\" style=\"color:black\">Status: Confirmed</span></p>\r\n\r\n<p style=\"color:black;\">By booking a room, you agree to abide by the <a href=\"http://austinlibrary.com/downloads/shared_learning_rooms_policy.pdf\">shared learning room policy</a>.</p>\r\n\r\n<p style=\"color:black;\">Don&#39;t need the room anymore? <a href=\"https://library.austintexas.gov/webform/shared_learning_room_reservation/submissions/[webform_submission:sid]/delete?token=[webform_submission:token]\">Cancel</a> before your reservation time so someone else can book your room.</p>\r\n\r\n<p style=\"color:black;\">Questions? Call 512-974-7400 (option 1) or <a href=\"http://library.austintexas.libanswers.com/\">Ask a Librarian</a>.</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }

@@ -1,0 +1,1531 @@
+status: open
+weight: 0
+open: null
+close: null
+uid: 69420
+template: false
+archive: false
+id: meeting_room_reservation_request
+title: 'Meeting Room Reservation Request'
+description: ''
+category: ''
+elements: |-
+  status:
+    '#type': radios
+    '#title': Status
+    '#options':
+      1: 'Awaiting Confirmation'
+      2: Confirmed
+      3: Canceled
+      4: Denied
+    '#default_value': '1'
+  message_to_customer:
+    '#type': textarea
+    '#title': 'Message to Customer'
+    '#states_clear': false
+    '#access_create_roles': {  }
+    '#access_update_roles':
+      - administrator
+      - meeting_rooms_administrator
+    '#access_view_roles':
+      - administrator
+      - meeting_rooms_administrator
+  is_this_meeting_for_internal_use_:
+    '#type': checkbox
+    '#title': 'Is this meeting for Internal use?'
+    '#access_create_roles':
+      - administrator
+      - meeting_rooms_administrator
+      - internal_group_representative
+  markup:
+    '#type': webform_markup
+    '#markup': |-
+      <h1>Meeting Room Reservation Request</h1>
+
+      <p>Austin Public Library Meeting Rooms at branches are <strong>free of charge</strong> and designed to meet <strong>non-commercial</strong>, informational, educational, cultural and civic needs. Library Meeting Rooms are ideal for discussion groups, panels, lectures, conferences and seminars. If you have a smaller group, check out our <a href="/slr/request">shared learning rooms</a> at the Central Library.<br />
+      <br />
+      <strong>Please note</strong></p>
+
+      <ul>
+      	<li>If you are booking less than three days in advance of your planned event, please contact the branch directly to assure your request is processed in time.</li>
+      	<li><span style="font-size:11pt"><span style="font-family:&quot;Calibri&quot;,sans-serif"><span style="font-size:12.0pt">Reservations may be made up to <strong>90 days</strong> in advance</span></span></span></li>
+      	<li><span style="font-size:12.0pt"><span style="font-family:&quot;Calibri&quot;,sans-serif">To provide an opportunity for all groups to use the meeting rooms, a group may reserve one meeting room <strong>up to 3 times in a rolling 90 day period</strong></span></span></li>
+      	<li>Rooms cannot be booked for days or times when the library is not open</li>
+      </ul>
+
+      <p><a class="usa-button usa-button-outline" href="/meeting-rooms/calendar" target="_blank">View the reservations calendar</a></p>
+
+      <p><strong>Before you book</strong></p>
+
+      <ul>
+      	<li>Groups or organizations must be not-for-profit</li>
+      	<li>Must not use the meeting room for commercial activity</li>
+      	<li>Meeting must be free and open to the public</li>
+      	<li>Must agree to abide by <a href="/meeting-rooms/policies">meeting room policies</a> and <a href="/meeting-rooms/ahc">Austin History Center guidelines</a></li>
+      	<li>Must agree to abide by the <a href="/meeting-rooms/policies#care">Care and Use of Facilities guidelines</a></li>
+      	<li>Must include 3 or more individuals</li>
+      </ul>
+  i_agree_to_ensure_that_my_organization_will_abide_by_the_policie:
+    '#type': checkbox
+    '#title': 'I agree to ensure that my organization will abide by the policies of the Library with regard to meeting room use.'
+    '#required': true
+    '#states':
+      invisible:
+        ':input[name="is_this_meeting_for_internal_use_"]':
+          checked: true
+    '#states_clear': false
+  group:
+    '#type': details
+    '#title': 'Group or Organization Information'
+    '#open': true
+    '#states':
+      invisible:
+        ':input[name="is_this_meeting_for_internal_use_"]':
+          checked: true
+    '#states_clear': false
+    group_name:
+      '#type': textfield
+      '#title': 'Group or Organization Name'
+      '#required': true
+    purpose_of_group:
+      '#type': textarea
+      '#title': 'Purpose of Group or Organization'
+      '#required': true
+    website:
+      '#type': textfield
+      '#title': Website
+    markup_01:
+      '#type': webform_markup
+      '#markup': '<h3>Group or Organization Contact Information</h3>'
+    group_representative_full_name:
+      '#type': textfield
+      '#title': 'Full Name'
+      '#required': true
+    group_representative_phone_number:
+      '#type': tel
+      '#title': 'Phone Number'
+      '#required': true
+    group_representative_email_address:
+      '#type': email
+      '#title': 'Email Address'
+      '#required': true
+  meeting_room_reservation:
+    '#type': details
+    '#title': 'Meeting Room Reservation'
+    '#open': true
+    topic:
+      '#type': textfield
+      '#title': Topic
+      '#required': true
+    expected_attendance:
+      '#type': number
+      '#title': 'Expected Attendance'
+      '#required': true
+      '#min': 3
+      '#max': 125
+    duration:
+      '#type': select
+      '#title': Duration
+      '#options':
+        15: '15 minutes'
+        30: '30 minutes'
+        45: '45 minutes'
+        60: '1 hour'
+        75: '1 hour 15 minutes'
+        90: '1 hour 30 minutes'
+        105: '1 hour 45 minutes'
+        120: '2 hours'
+        135: '2 hours 15 minutes'
+        150: '2 hours 30 minutes'
+        165: '2 hours 45 minutes'
+        180: '3 hours'
+        195: '3 hours 15 minutes'
+        210: '3 hours 30 minutes'
+        225: '3 hours 45 minutes'
+        240: '4 hours'
+        255: '4 hours 15 minutes'
+        270: '4 hours 30 minutes'
+        285: '4 hours 45 minutes'
+        300: '5 hours'
+        315: '5 hours 15 minutes'
+        330: '5 hours 30 minutes'
+        345: '5 hours 45 minutes'
+        360: '6 hours'
+        375: '6 hours 15 minutes'
+        390: '6 hours 30 minutes'
+        405: '6 hours 45 minutes'
+        420: '7 hours'
+        435: '7 hours 15 minutes'
+        450: '7 hours 30 minutes'
+        465: '7 hours 45 minutes'
+        480: '8 hours'
+        495: '8 hours 15 minutes'
+        510: '8 hours 30 minutes'
+        525: '8 hours 45 minutes'
+        540: '9 hours'
+        555: '9 hours 15 minutes'
+        570: '9 hours 30 minutes'
+        585: '9 hours 45 minutes'
+        600: '10 hours'
+        615: '10 hours 15 minutes'
+        630: '10 hours 30 minutes'
+        645: '10 hours 45 minutes'
+        660: '11 hours'
+        675: '11 hours 15 minutes'
+        690: '11 hours 30 minutes'
+        705: '11 hours 45 minutes'
+        720: '12 hours'
+        735: '12 hours 15 minutes'
+        750: '12 hours 30 minutes'
+        765: '12 hours 45 minutes'
+        780: '13 hours'
+        795: '13 hours 15 minutes'
+        810: '13 hours 30 minutes'
+        825: '13 hours 45 minutes'
+        840: '14 hours'
+        855: '14 hours 15 minutes'
+        870: '14 hours 30 minutes'
+        885: '14 hours 45 minutes'
+        900: '15 hours'
+      '#required': true
+      '#default_value': '120'
+    date:
+      '#type': date
+      '#title': Date
+      '#required': true
+    location:
+      '#type': webform_entity_select
+      '#title': Location
+      '#required': true
+      '#target_type': taxonomy_term
+      '#selection_handler': views
+      '#selection_settings':
+        view:
+          view_name: locations_with_rooms
+          display_name: entity_reference_2
+          arguments: {  }
+    meeting_room:
+      '#type': webform_entity_select
+      '#title': 'Meeting Room'
+      '#target_type': taxonomy_term
+      '#selection_handler': views
+      '#selection_settings':
+        view:
+          view_name: meeting_rooms
+          display_name: entity_reference_1
+          arguments: {  }
+      '#required': true
+    date_time_start:
+      '#type': datetime
+      '#title': 'Date/Time Start'
+      '#date_date_element': text
+      '#date_year_range': '2021:2050'
+      '#date_time_element': text
+      '#date_time_format': 'H:i'
+      '#date_time_step': '900'
+      '#required': true
+    date_time_end:
+      '#type': datetime
+      '#title': 'Date/Time End'
+      '#required': true
+      '#date_date_element': text
+      '#date_year_range': '2021:2050'
+      '#date_time_element': text
+      '#date_time_step': '900'
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /meeting-rooms/request
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: source_entity_webform
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: false
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: true
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: true
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: url_message
+  confirmation_url: '/meeting-rooms/calendar?date=[webform_submission:values:date]&loc=[webform_submission:values:location:entity:tid]'
+  confirmation_title: ''
+  confirmation_message: 'Thank you for requesting a Meeting Room at the Austin Public Library. We will process your request within two business days.'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: true
+  confirmation_exclude_token: true
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: true
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles:
+      - administrator
+      - meeting_rooms_administrator
+      - internal_group_representative
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles:
+      - administrator
+      - meeting_rooms_administrator
+      - internal_group_representative
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles:
+      - administrator
+      - meeting_rooms_administrator
+      - internal_group_representative
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles:
+      - administrator
+      - pio
+      - meeting_rooms_administrator
+      - internal_group_representative
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles:
+      - administrator
+      - meeting_rooms_administrator
+      - internal_group_representative
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  administer:
+    roles:
+      - administrator
+      - meeting_rooms_administrator
+    users: {  }
+    permissions: {  }
+  test:
+    roles:
+      - administrator
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles:
+      - administrator
+      - meeting_rooms_administrator
+    users: {  }
+    permissions: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: 'Email to Public (Confirmed)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="is_this_meeting_for_internal_use_"]':
+          unchecked: true
+        ':input[name="status"]':
+          value: '2'
+    weight: 0
+    settings:
+      states:
+        - completed
+        - updated
+      to_mail: '[webform_submission:values:group_representative_email_address:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Confirmed: Austin Public Library room request'
+      body: "<p style=\"color:black\">Confirmed: Austin Public Library room request<br />\r\n<br />\r\n[webform_submission:values:message_to_customer]</p>\r\n\r\n<p style=\"color:black\">Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Confirmed</p>\r\n\r\n<p style=\"color:black;\">Don&#39;t need the room anymore? <a href=\"https://library.austintexas.gov/webform/meeting_room_reservation_request/submissions/[webform_submission:sid]/delete?token=[webform_submission:token]\">Cancel</a> before your reservation time so someone else can book your room.</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_internal:
+    id: email
+    handler_id: email_to_internal
+    label: 'Email to Internal'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="is_this_meeting_for_internal_use_"]':
+          checked: true
+        ':input[name="status"]':
+          value: '2'
+    weight: 1
+    settings:
+      states:
+        - updated
+      to_mail: '[webform:author:mail]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Confirmed: Austin Public Library room request'
+      body: "<p style=\"color:black\">Confirmed: Austin Public Library room request<br />\r\n<br />\r\n[webform_submission:values:message_to_customer]</p>\r\n\r\n<p style=\"color:black\">Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Confirmed</p>\r\n\r\n<p style=\"color:black;\">Don&#39;t need the room anymore? <a href=\"https://library.austintexas.gov/webform/meeting_room_reservation_request/submissions/[webform_submission:sid]/delete?token=[webform_submission:token]\">Cancel</a> before your reservation time so someone else can book your room.</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_public_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_public_awaiting_confirmation_
+    label: 'Email to Public (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="is_this_meeting_for_internal_use_"]':
+          unchecked: true
+        ':input[name="status"]':
+          '!value': '2'
+    weight: 2
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:group_representative_email_address:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: Austin Public Library room request'
+      body: "<p style=\"color:black\">Awaiting Confirmation: Austin Public Library room request<br />\r\n<br />\r\nWe will process your request within two business days.</p>\r\n\r\n<p style=\"color:black\">Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation</p>\r\n\r\n<p style=\"color:black;\">Don&#39;t need the room anymore? <a href=\"https://library.austintexas.gov/webform/meeting_room_reservation_request/submissions/[webform_submission:sid]/delete?token=[webform_submission:token]\">Cancel</a> before your reservation time so someone else can book your room.</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_public_canceled_:
+    id: email
+    handler_id: email_to_public_canceled_
+    label: 'Email to Public (Canceled)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="is_this_meeting_for_internal_use_"]':
+          unchecked: true
+    weight: 3
+    settings:
+      states:
+        - deleted
+      to_mail: '[webform_submission:values:group_representative_email_address:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Canceled: Austin Public Library room request'
+      body: "<p style=\"color:black\">Canceled: Austin Public Library room request<br />\r\n<br />\r\n[webform_submission:values:message_to_customer]</p>\r\n\r\n<p style=\"color:black\">Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Canceled</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_public_canceled_by_mra_:
+    id: email
+    handler_id: email_to_public_canceled_by_mra_
+    label: 'Email to Public (Canceled by MRA)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '3'
+    weight: 4
+    settings:
+      states:
+        - updated
+      to_mail: '[webform_submission:values:group_representative_email_address:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Canceled: Austin Public Library room request'
+      body: "<p style=\"color:black\">Canceled: Austin Public Library room request<br />\r\n<br />\r\n[webform_submission:values:message_to_customer]</p>\r\n\r\n<p style=\"color:black\">Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Canceled</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_acb_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_acb_awaiting_confirmation_
+    label: 'Email to MRA-ACB (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '194'
+    weight: 5
+    settings:
+      states:
+        - completed
+      to_mail: 'William.Donaldson@austintexas.gov,Doreen.Boyd@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D194"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_ahc_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_ahc_awaiting_confirmation_
+    label: 'Email to MRA-AHC (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '183'
+    weight: 6
+    settings:
+      states:
+        - completed
+      to_mail: 'Augustine.Miranda@austintexas.gov,jenna.cooper@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D183"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_acp_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_acp_awaiting_confirmation_
+    label: 'Email to MRA-ACP (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '186'
+    weight: 7
+    settings:
+      states:
+        - completed
+      to_mail: 'madison.schimmel@austintexas.gov,heath.rezabek@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D186"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_aok_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_aok_awaiting_confirmation_
+    label: 'Email to MRA-AOK (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '195'
+    weight: 8
+    settings:
+      states:
+        - completed
+      to_mail: 'michelle.baker@austintexas.gov,jenkins.lumpkin@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D195"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_aho_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_aho_awaiting_confirmation_
+    label: 'Email to MRA-AHO (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '196'
+    weight: 9
+    settings:
+      states:
+        - completed
+      to_mail: 'Lela.Ellison@austintexas.gov,justin.green@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D196"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_alw_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_alw_awaiting_confirmation_
+    label: 'Email to MRA-ALW (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '197'
+    weight: 10
+    settings:
+      states:
+        - completed
+      to_mail: 'johnathon.parsons@austintexas.gov,stephanie.hart@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D197"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_amr_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_amr_awaiting_confirmation_
+    label: 'Email to MRA-AMR (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '198'
+    weight: 11
+    settings:
+      states:
+        - completed
+      to_mail: Briana.Garza@austintexas.gov
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D198"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_ami_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_ami_awaiting_confirmation_
+    label: 'Email to MRA-AMI (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '199'
+    weight: 12
+    settings:
+      states:
+        - completed
+      to_mail: Richard.Monthie@austintexas.gov
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D199"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_anv_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_anv_awaiting_confirmation_
+    label: 'Email to MRA-ANV (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '200'
+    weight: 13
+    settings:
+      states:
+        - completed
+      to_mail: 'Traey.Amescua@austintexas.gov,Michael.Abramov@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D200"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_aoq_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_aoq_awaiting_confirmation_
+    label: 'Email to MRA-AOQ (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '202'
+    weight: 14
+    settings:
+      states:
+        - completed
+      to_mail: 'Julie.Brown@austintexas.gov,kimthu.nguyen@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D202"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_aph_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_aph_awaiting_confirmation_
+    label: 'Email to MRA-APH (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '203'
+    weight: 15
+    settings:
+      states:
+        - completed
+      to_mail: 'Jeffrey.Melkerson@austintexas.gov,Steve.Reich@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D203"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_arz_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_arz_awaiting_confirmation_
+    label: 'Email to MRA-ARZ (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '205'
+    weight: 16
+    settings:
+      states:
+        - completed
+      to_mail: 'Carlos.Pin@austintexas.gov,bryce.wilson@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D205"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_ase_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_ase_awaiting_confirmation_
+    label: 'Email to MRA-ASE (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '207'
+    weight: 17
+    settings:
+      states:
+        - completed
+      to_mail: 'Irene.Magana-Noverola@austintexas.gov,Rachele.Merliss@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D207"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_asr_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_asr_awaiting_confirmation_
+    label: 'Email to MRA-ASR (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '208'
+    weight: 18
+    settings:
+      states:
+        - completed
+      to_mail: Elizabeth.Gibson@austintexas.gov
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D208"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_atb_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_atb_awaiting_confirmation_
+    label: 'Email to MRA-ATB (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '209'
+    weight: 19
+    settings:
+      states:
+        - completed
+      to_mail: 'Danny.Walker@austintexas.gov,mark.pfannenstiel@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D209"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_ato_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_ato_awaiting_confirmation_
+    label: 'Email to MRA-ATO (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '210'
+    weight: 20
+    settings:
+      states:
+        - completed
+      to_mail: 'Michelle.Beebower@austintexas.gov,ayne.ray@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D210"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_auh_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_auh_awaiting_confirmation_
+    label: 'Email to MRA-AUH (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '185'
+    weight: 21
+    settings:
+      states:
+        - completed
+      to_mail: 'Steven.Raab@austintexas.gov,patrick.owens@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D185"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_auh_awaiting_confirmation__1:
+    id: email
+    handler_id: email_to_mra_auh_awaiting_confirmation__1
+    label: 'Email to MRA-AWK (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '201'
+    weight: 22
+    settings:
+      states:
+        - completed
+      to_mail: 'sharlisa.addison@austintexas.gov,Travis.Coley@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D201"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_awp_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_awp_awaiting_confirmation_
+    label: 'Email to MRA-AWP (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '184'
+    weight: 23
+    settings:
+      states:
+        - completed
+      to_mail: 'Kelly.Overton@austintexas.gov,katrina.townsend@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D184"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_mra_ayb_awaiting_confirmation_:
+    id: email
+    handler_id: email_to_mra_ayb_awaiting_confirmation_
+    label: 'Email to MRA-AYB (Awaiting Confirmation)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '1'
+        ':input[name="location"]':
+          value: '211'
+    weight: 24
+    settings:
+      states:
+        - completed
+      to_mail: 'Brandon.Boykin@austintexas.gov,Rebecca.Rich-Wulfmeyer@austintexas.gov'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Awaiting Confirmation: [webform_submission:values:group_name] room request'
+      body: "Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Awaiting Confirmation<br />\r\n<br />\r\nUpdate this request:<br />\r\nhttps://library.austintexas.gov/admin/structure/webform/manage/meeting_room_reservation_request/submission/[webform_submission:sid]/edit?destination=/meeting-rooms/list%3Fwebform_submission_value_2%3D1%26loc%3D211"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_to_public_denied_by_mra_:
+    id: email
+    handler_id: email_to_public_denied_by_mra_
+    label: 'Email to Public (Denied by MRA)'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="status"]':
+          value: '4'
+    weight: 25
+    settings:
+      states:
+        - updated
+      to_mail: '[webform_submission:values:group_representative_email_address:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Denied: Austin Public Library room request'
+      body: "<p style=\"color:black\">Denied: Austin Public Library room request<br />\r\n<br />\r\n[webform_submission:values:message_to_customer]</p>\r\n\r\n<p style=\"color:black\">Group: [webform_submission:values:group_name]<br />\r\nTopic: [webform_submission:values:topic]<br />\r\nExpected attendance: [webform_submission:values:expected_attendance]<br />\r\nLocation: [webform_submission:values:location:entity:name]<br />\r\nRoom: [webform_submission:values:meeting_room:entity:name]<br />\r\nDate: [webform_submission:values:date:just_date] - [webform_submission:values:date_time_start:just_time] to [webform_submission:values:date_time_end:just_time]<br />\r\nStatus: Denied</p>"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: true
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+variants: {  }
