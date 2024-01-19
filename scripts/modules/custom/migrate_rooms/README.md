@@ -1,5 +1,5 @@
 #### Overview
-The `migrate_rooms` module is tailored for migrating room data into the Drupal site. It efficiently manages room data through Drupal taxonomies.
+The `migrate_rooms` module is for migrating room data into the Drupal site as taxonomy terms of the Rooms vocabulary.
 
 #### Requirements
 - Drupal environment set up with `ddev`.
