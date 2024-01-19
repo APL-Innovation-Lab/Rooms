@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * USWDS Base sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+/**
+ * Implements hook_preprocess().
+ */
+function uswds_base_subtheme_preprocess(&$variables) {
+  // Set the path to the base theme.
+  $variables['active_theme_path'] = base_path() . \Drupal::theme()->getActiveTheme()->getPath();
+  $variables['uswds_images'] = $variables['active_theme_path'] . '/node_modules/@uswds/uswds/dist/img/';
+}

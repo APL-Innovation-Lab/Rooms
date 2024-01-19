@@ -1,0 +1,25 @@
+name: 'APL subtheme'
+type: theme
+description: 'A child theme of the USWDS base theme'
+core_version_requirement: ^9
+base theme: uswds_base
+
+libraries:
+  - aplpa/assets
+  - aplpa/global-styling
+
+regions:
+  header_top: 'Above Header'
+  header: 'Header'
+  primary_menu: 'Primary Menu'
+  secondary_menu: 'Secondary Menu'
+  sidebar_first: 'First sidebar'
+  sidebar_second: 'Second sidebar'
+  breadcrumb: 'Breadcrumb'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  hero: 'Hero'
+  content: 'Content'
+  footer_menu: 'Footer Menu'
+  footer: 'Primary Footer'
+  footer_secondary: 'Secondary Footer'

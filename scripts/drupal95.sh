@@ -119,12 +119,6 @@ mkdir -p $DRUPAL_MODULES_PATH/custom
 # Copy custom modules
 cp -r $REPO_MODULES_PATH/* $DRUPAL_MODULES_PATH/custom/
 
-CONFIG_FILES_PATH="$(cd "${PROJECT_ROOT}/scripts/config" && pwd)"
-SYNC_DIR="$PROJECT_DIR/sites/default/files/sync/" 
-
-cp -r $CONFIG_FILES_PATH/* $SYNC_DIR
-
-
 ddev drush en hi_how_are_you
 ddev drush hhay-cn
 
@@ -155,7 +149,16 @@ ddev drush migrate:import apl_dev_rooms
 # export the current config
 ddev drush cex -y
 
+CONFIG_FILES_PATH="$(cd "${PROJECT_ROOT}/scripts/config" && pwd)"
+SYNC_DIR="$PROJECT_DIR/sites/default/files/sync/" 
 
+cp -r $CONFIG_FILES_PATH/* $SYNC_DIR
+ddev drush cim -y
+
+THEMES_PATH="$(cd "${PROJECT_ROOT}/scripts/themes" && pwd)"
+NEW_THEMES_DIR="$PROJECT_DIR/themes/" 
+
+cp -r $THEMES_PATH/* $NEW_THEMES_DIR
 
 # Provide information about accessing the site
 ddev describe

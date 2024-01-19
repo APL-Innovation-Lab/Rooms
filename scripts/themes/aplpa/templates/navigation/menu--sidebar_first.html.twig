@@ -1,0 +1,64 @@
+{#
+/**
+ * @file
+ * Override of system/menu.html.twig for a sidebar menu.
+ */
+#}
+
+{% import _self as menus %}
+
+{#
+  We call a macro which calls itself to render the full tree.
+  @see http://twig.sensiolabs.org/doc/tags/macro.html
+#}
+{{ menus.menu_links(items, 0, attributes) }}
+
+{% macro menu_links(items, menu_level, parent, attributes) %}
+  {% import _self as menus %}
+
+  {% if items %}
+    <ul class="{% if menu_level == 0 %}usa-sidenav{% else %}usa-sidenav__sublist{% endif %}">
+      {% for item in items %}
+        {%
+          set item_classes = [
+          'usa-sidenav__item',
+          item.is_expanded and item.below ? 'expanded dropdown',
+          item.in_active_trail ? 'active active-trail',
+          loop.first ? 'first',
+          loop.last ? 'last',
+        ]
+        %}
+
+        {% if item.url.getOption('attributes') %}
+          {% set link_attributes = create_attribute(item.url.getOption('attributes')) %}
+        {% else %}
+          {% set link_attributes = create_attribute() %}
+        {% endif %}
+
+        {% if item.url.isRouted and item.url.routeName == '<nolink>' %}
+          {% set menu_item_type = 'nolink' %}
+        {% elseif item.url.isRouted and item.url.routeName == '<button>' %}
+          {% set menu_item_type = 'button' %}
+        {% else %}
+          {% set menu_item_type = 'link' %}
+        {% endif %}
+
+        {% set link_attributes = link_attributes.addClass(menu_item_type) %}
+
+        {% if item.in_active_trail %}
+          {% set link_attributes = link_attributes.addClass('usa-current') %}
+        {% endif %}
+
+        <li{{ item.attributes.addClass(item_classes) }}>
+          {{ link(item.title, item.url, link_attributes) }}
+          {% if item.is_expanded and menu_level < 2 and item.below %}
+            {{ menus.menu_links(item.below, menu_level + 1, megamenu, loop.index, item, duplicate_parent, attributes) }}
+          {% elseif item.is_expanded and menu_level == 0 and item.below %}
+            {{ menus.menu_links(item.below, menu_level + 1, megamenu, loop.index, item, duplicate_parent, attributes) }}
+            {{ _self.menu_links(item.below, attributes.removeClass(classes), menu_level + 1, classes, dropdown_classes, attributes) }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}

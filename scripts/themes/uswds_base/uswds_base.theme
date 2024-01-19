@@ -1,0 +1,69 @@
+<?php
+
+/**
+ * @file
+ * Theme file for the USWDS Base theme.
+ */
+
+require_once dirname(__FILE__) . '/includes/base_themes.inc';
+require_once dirname(__FILE__) . '/includes/blocks.inc';
+require_once dirname(__FILE__) . '/includes/menus.inc';
+require_once dirname(__FILE__) . '/preprocess/preprocess.inc';
+
+/**
+ * Implements hook_theme().
+ */
+function uswds_base_theme($existing, $type, $theme, $path) {
+  return [
+    'government_banner' => [
+      'path' => $path . '/templates/uswds',
+      'variables' => [
+        'image_base' => [],
+      ],
+    ],
+    'details_layout_builder' => [
+      'base hook' => 'details',
+      'path' => $path . '/templates/layout_builder',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function uswds_base_library_info_alter(&$libraries, $extension) {
+  if ($extension == 'uswds_base' && isset($libraries['framework']) && !empty(theme_get_setting('cdn_provider'))) {
+
+    // Default to min if available.
+    // CSS.
+    if (!empty(theme_get_setting('cdn_custom_css_min'))) {
+      $cdn_css = theme_get_setting('cdn_custom_css_min');
+    }
+    else {
+      $cdn_css = theme_get_setting('cdn_custom_css');
+    }
+    // JS.
+    if (!empty(theme_get_setting('cdn_custom_js_min'))) {
+      $cdn_js = theme_get_setting('cdn_custom_js_min');
+    }
+    else {
+      $cdn_js = theme_get_setting('cdn_custom_js');
+    }
+
+    // Apply.
+    $libraries['framework']['css']['theme'][$cdn_css] = ['type:' => 'external'];
+    $libraries['framework']['js'][$cdn_js] = ['type:' => 'external'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for form templates.
+ *
+ * @param array $suggestions
+ * @param array $variables
+ */
+function uswds_base_theme_suggestions_details_alter(array &$suggestions, array $variables) {
+  if (isset($variables['element']['#attributes']['class']) && $variables['element']['#attributes']['class'][0] === 'js-layout-builder-category') {
+    array_splice($suggestions, 1, 0, 'details_layout_builder');
+  }
+}

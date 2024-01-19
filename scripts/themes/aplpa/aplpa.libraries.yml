@@ -1,0 +1,13 @@
+assets:
+  version: VERSION
+  css:
+    theme:
+      assets/css/uswds.css: {}
+  js:
+    assets/js/uswds.min.js: {}
+
+global-styling:
+  css:
+    theme:
+      css/styles.css: {}
+

@@ -1,0 +1,100 @@
+uswds_base.settings:
+  type: theme_settings
+  label: 'USWDS Base settings'
+  mapping:
+    cdn_provider:
+      type: string
+      label: 'CDN Provider'
+    cdn_custom_img:
+      type: string
+      label: 'CDN Custom img'
+    cdn_custom_css:
+      type: string
+      label: 'CDN Custom CSS'
+    cdn_custom_css_min:
+      type: string
+      label: 'CDN Custom CSS.min'
+    cdn_custom_js:
+      type:  string
+      label: 'CDN Custom js'
+    cdn_custom_js_min:
+      type: string
+      label: 'CDN Custom js.min'
+    uswds_header_style:
+      type: string
+      label: 'Choose a style of header to use'
+    uswds_header_mega:
+      type: integer
+      label: 'Use megamenu in header'
+    uswds_header_mega_display_second:
+      type: integer
+      label: 'Megamenu: Display second level as headers'
+    uswds_government_banner:
+      type: integer
+      label: 'Display the official U.S. government banner at the top of each page?'
+    uswds_footer_style:
+      type: string
+      label: 'Choose a style of footer to use'
+    uswds_footer_agency:
+      type: integer
+      label: 'Add agency information in the footer?'
+    uswds_footer_agency_name:
+      type: string
+      label: 'Footer agency name'
+    uswds_footer_agency_url:
+      type: string
+      label: 'Footer agency URL'
+    uswds_footer_agency_logo:
+      type: string
+      label: 'Path to footer agency logo'
+    uswds_contact_center:
+      type: string
+      label: 'Name of contact center'
+    uswds_email:
+      type: string
+      label: 'Email'
+    uswds_phone:
+      type: string
+      label: 'Phone'
+    uswds_facebook:
+      type: string
+      label: 'Facebook link'
+    uswds_instagram:
+      type: string
+      label: 'Instagram'
+    uswds_linkedin:
+      type: string
+      label: 'Linkedin'
+    uswds_twitter:
+      type: string
+      label: 'Twitter link'
+    uswds_youtube:
+      type: string
+      label: 'Youtube link'
+    uswds_rss:
+      type: string
+      label: 'RSS feed'
+    uswds_paragraphs_edge_to_edge:
+      type: integer
+      label: 'paragraphs edge to edge'
+    uswds_menu_accordion_duplicate_parent:
+      type: integer
+      label: 'Duplicate parent menu items as first item in dropdowns.'
+    uswds_menu_bypass:
+      type: config_object
+      mapping:
+        primary_menu:
+          type: integer
+          label: 'Bypass primary menu'
+        secondary_menu:
+          type: integer
+          label: 'Bypass secondary menu'
+        sidebar_first:
+          type: integer
+          label: 'Bypass sidebar first menu'
+        sidebar_second:
+          type: integer
+          label: 'Bypass sidebar second menu'
+        footer_menu:
+          type: integer
+          label: 'Bypass footer menu'

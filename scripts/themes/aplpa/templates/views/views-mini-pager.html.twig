@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Theme override for a views mini-pager.
+ *
+ * Available variables:
+ * - items: List of pager items.
+ *
+ * @see template_preprocess_views_mini_pager()
+ */
+#}
+{% if items.previous or items.next %}
+  <nav aria-label="{{ 'Pagination'|t }}" class="usa-pagination">
+    <ul class="usa-pagination__list js-pager__items">
+
+      {% if items.previous %}
+        <li class="usa-pagination__item usa-pagination__arrow">
+          <a href="{{ items.previous.href }}" aria-label="{{ 'Previous page'|t }}"{{ items.previous.attributes.addClass('usa-pagination__link', 'usa-pagination__previous-page')|without('href', 'title', 'rel', 'aria-label') }}>
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use xlink:href="{{ uswds_images }}sprite.svg#navigate_before"></use>
+            </svg>
+            <span class="usa-pagination__link-text"> {{ 'Previous'|t }} </span>
+          </a>
+        </li>
+      {% endif %}
+
+      {% if items.current %}
+        <li class="usa-pagination__item usa-pagination__page-no">
+          <a href="{{ items.current.href }}" aria-label="{{ 'Page @number'|t({'@number': items.current.text}) }}" aria-current="page"{{ items.current.attributes.addClass('usa-pagination__button', 'usa-current')|without('href', 'title', 'aria-label', 'aria-current') }}>{{ items.current.text }}</a>
+        </li>
+      {% endif %}
+
+      {% if items.next %}
+        <li class="usa-pagination__item usa-pagination__arrow">
+          <a href="{{ items.next.href }}" aria-label="{{ 'Next page'|t }}"{{ items.next.attributes.addClass('usa-pagination__link', 'usa-pagination__next-page')|without('href', 'title', 'rel', 'aria-label') }}>
+            <span class="usa-pagination__link-text"> {{ 'Next'|t }} </span>
+            <svg class="usa-icon" aria-hidden="true" role="img">
+              <use xlink:href="{{ uswds_images }}sprite.svg#navigate_next"></use>
+            </svg>
+          </a>
+        </li>
+      {% endif %}
+
+    </ul>
+  </nav>
+{% endif %}
