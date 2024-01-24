@@ -20,8 +20,9 @@ PROJECT_NAME=${1:-"$DEFAULT_PROJECT_NAME"}
 # Define Drupal version and project directory
 DRUPAL_VERSION="9.5"
 PROJECT_DIR="$HOME/$PROJECT_NAME"
+PROJECT_ROOT_DIR="$HOME/$PROJECT_ROOT"
 
-echo "Setting up project: $PROJECT_NAME in directory: $PROJECT_DIR"
+echo "Setting up project: $PROJECT_NAME from $PROJECT_ROOT_DIR in directory: $PROJECT_DIR"
 
 
 # Check if the provided project name is different from the default
@@ -159,7 +160,7 @@ NEW_THEMES_DIR="$PROJECT_DIR/themes/"
 cp -r $THEMES_PATH/* $NEW_THEMES_DIR
 
 
-ddev import-db --file=$PROJECT_DIR/backups/hi_how_are_you/db.sql.gz
+ddev import-db --file=$PROJECT_ROOT_DIR/backups/hi_how_are_you/db.sql.gz
 
 # export the current config
 ddev drush cex -y
