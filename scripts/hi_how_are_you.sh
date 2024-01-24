@@ -104,8 +104,8 @@ ddev drush site:install standard \
 # add repository source for contrib modules
 ddev composer config repositories.drupal composer https://packages.drupal.org/8
 
-ddev composer require drupal/migrate_plus
-ddev composer require drupal/migrate_file
+#ddev composer require drupal/migrate_plus
+#ddev composer require drupal/migrate_file
 # Define paths
 
 # Get the absolute path of the custom modules directory
@@ -164,6 +164,7 @@ ddev import-db --file=$PROJECT_ROOT/backups/hi_how_are_you/db.sql.gz
 
 # export the current config
 ddev drush cex -y
+ddev drush cr
 ddev launch
 
 # Provide information about accessing the site
