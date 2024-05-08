@@ -3,7 +3,7 @@
 
 Welcome to the "Rooms" project, a development version of the room reservation system used by the Austin Public Library for booking Shared Learning Rooms. This repository, a collaborative effort between the Austin Public Library and Open Austin, is a fork of [APL-Innovation-Lab/APL-CMS](https://github.com/APL-Innovation-Lab/APL-CMS).
 
-## Project Overview
+## Overview
 
 The "Rooms" project is an integral part of a broader initiative by the Austin Public Library Innovation Lab, aiming to extend and enhance our production environment at [library.austintexas.gov](https://library.austintexas.gov). This initiative is the first step in a series of projects that build upon each other, with a focus on sustainable and scalable development.
 
